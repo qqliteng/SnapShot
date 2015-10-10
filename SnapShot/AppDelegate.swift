@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import PKRevealController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let frontViewController: FrontViewController = FrontViewController()
+        let leftViewController: LeftViewController = LeftViewController()
+        let revealController: PKRevealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
+        
+        self.window?.rootViewController = revealController
+        
         return true
     }
 
