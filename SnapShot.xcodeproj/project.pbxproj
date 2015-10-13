@@ -16,6 +16,8 @@
 		027F16321BC762C700D9B721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027F16301BC762C700D9B721 /* LaunchScreen.storyboard */; };
 		027F163D1BC762C800D9B721 /* SnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F163C1BC762C800D9B721 /* SnapShotTests.swift */; };
 		027F16481BC762C800D9B721 /* SnapShotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F16471BC762C800D9B721 /* SnapShotUITests.swift */; };
+		0284B2C21BCBA798007779A4 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284B2C11BCBA798007779A4 /* CardCell.swift */; settings = {ASSET_TAGS = (); }; };
+		0284B2C41BCBA7AD007779A4 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0284B2C31BCBA7AD007779A4 /* CardCell.xib */; settings = {ASSET_TAGS = (); }; };
 		B05B60A36145281EB59C405C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DFFBBF8D222EA135C2405F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		027F16431BC762C800D9B721 /* SnapShotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapShotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027F16471BC762C800D9B721 /* SnapShotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotUITests.swift; sourceTree = "<group>"; };
 		027F16491BC762C800D9B721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0284B2C11BCBA798007779A4 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		0284B2C31BCBA7AD007779A4 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardCell.xib; path = ../CardCell.xib; sourceTree = "<group>"; };
 		27DFFBBF8D222EA135C2405F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36641F4D68FB6F42685324F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		532A0CC2C5DA932C31807160 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0273CA521BCCADFE00918455 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				027F16261BC762C700D9B721 /* FrontViewController.swift */,
+				0256646C1BC8A02B00A04D21 /* LeftViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		027F16181BC762C700D9B721 = {
 			isa = PBXGroup;
 			children = (
@@ -108,9 +121,9 @@
 		027F16231BC762C700D9B721 /* SnapShot */ = {
 			isa = PBXGroup;
 			children = (
+				0273CA521BCCADFE00918455 /* Controllers */,
+				0284B2C51BCBA7B8007779A4 /* Views */,
 				027F16241BC762C700D9B721 /* AppDelegate.swift */,
-				027F16261BC762C700D9B721 /* FrontViewController.swift */,
-				0256646C1BC8A02B00A04D21 /* LeftViewController.swift */,
 				027F16281BC762C700D9B721 /* Main.storyboard */,
 				027F162E1BC762C700D9B721 /* Assets.xcassets */,
 				027F16301BC762C700D9B721 /* LaunchScreen.storyboard */,
@@ -136,6 +149,15 @@
 				027F16491BC762C800D9B721 /* Info.plist */,
 			);
 			path = SnapShotUITests;
+			sourceTree = "<group>";
+		};
+		0284B2C51BCBA7B8007779A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0284B2C11BCBA798007779A4 /* CardCell.swift */,
+				0284B2C31BCBA7AD007779A4 /* CardCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		10AFD4644B4AC336E7E07C94 /* Pods */ = {
@@ -264,6 +286,7 @@
 				027F16321BC762C700D9B721 /* LaunchScreen.storyboard in Resources */,
 				027F162F1BC762C700D9B721 /* Assets.xcassets in Resources */,
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
+				0284B2C41BCBA7AD007779A4 /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0284B2C21BCBA798007779A4 /* CardCell.swift in Sources */,
 				027F16271BC762C700D9B721 /* FrontViewController.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,

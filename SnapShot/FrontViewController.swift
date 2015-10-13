@@ -16,26 +16,6 @@ class FrontViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let url = "http://api.openweathermap.org/data/2.5/forecast"
-        let params = ["lat":39.0, "lon":41.0]
-        print(params)
-        
-        Alamofire.request(.GET, url, parameters: params)
-            .responseJSON { response in
-                if(response.result.error != nil) {
-                    print("Error: \(response.description)")
-                    print(response.request)
-                    print(response.response)
-                    
-                }
-                else {
-                    print("Success: \(url)")
-                    print(response.request)
-                    let json = JSON(response.result.value!)
-                    print(json)
-                }
-        }
-        
         
     }
 

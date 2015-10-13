@@ -18,11 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let frontViewController: FrontViewController = FrontViewController()
-        let leftViewController: LeftViewController = LeftViewController()
+        let frontViewController: FrontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as! FrontViewController
+        let leftViewController: LeftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as! LeftViewController
         let revealController: PKRevealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
+        let navController = self.window?.rootViewController as! UINavigationController
         
-        self.window?.rootViewController = revealController
+        navController.pushViewController(revealController, animated: false)
+        //self.window?.rootViewController = revealController
         
         return true
     }
