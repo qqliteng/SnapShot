@@ -1,26 +1,147 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PG5-8l-tWK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Front View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="frontViewController" id="BYZ-38-t0r" customClass="FrontViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZuP-nl-ijU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="ZuP-nl-ijU" id="O9y-WF-cYe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1188.5" y="149.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x2M-r0-j0R">
+            <objects>
+                <navigationController id="PG5-8l-tWK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Smf-Dl-1R6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4LD-jx-1vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="248"/>
+        </scene>
+        <!--Left View Controller-->
+        <scene sceneID="gfH-96-E0r">
+            <objects>
+                <viewController storyboardIdentifier="leftViewController" id="oUG-s8-Jeb" customClass="LeftViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pAZ-mt-2Vz"/>
+                        <viewControllerLayoutGuide type="bottom" id="NjA-27-laC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TG2-Ei-Rt6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="用户 ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9j-r2-dDB">
+                                <rect key="frame" x="105" y="129" width="55" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kq-Nn-zqB">
+                                <rect key="frame" x="18" y="242" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="摄影分类"/>
+                                <connections>
+                                    <action selector="serviceCataButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="hjw-yU-TcF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-gT-8wZ">
+                                <rect key="frame" x="18" y="297" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="我的咔嚓"/>
+                                <connections>
+                                    <action selector="userProfileButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="bQT-Fs-RkV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPL-wC-qOC">
+                                <rect key="frame" x="18" y="347" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="团拍"/>
+                                <connections>
+                                    <action selector="groupAppointmentButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="K58-9L-ivB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbZ-HV-Aqg">
+                                <rect key="frame" x="18" y="404" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="优惠活动"/>
+                                <connections>
+                                    <action selector="couponButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="30i-8X-Fec"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0u-yw-LeL">
+                                <rect key="frame" x="206" y="637" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="关于"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D93-S3-k48">
+                                <rect key="frame" x="20" y="129" width="70" height="64"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个性签名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PT-53-bec">
+                                <rect key="frame" x="105" y="172" width="68" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48v-kY-B7b">
+                                <rect key="frame" x="18" y="637" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="设置"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-W8-W6f">
+                                <rect key="frame" x="191" y="129" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="身份转换"/>
+                                <connections>
+                                    <action selector="changStatusButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="Uhw-hU-u9k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="profileImage" destination="D93-S3-k48" id="AV2-iJ-yJy"/>
+                        <outlet property="signatureLabel" destination="0PT-53-bec" id="ojh-gg-xcv"/>
+                        <outlet property="userIDLabel" destination="p9j-r2-dDB" id="iui-L4-R4j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIt-Kb-Qgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="1080"/>
         </scene>
     </scenes>
 </document>
