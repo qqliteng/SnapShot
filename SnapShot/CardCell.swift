@@ -7,3 +7,35 @@
 //
 
 import Foundation
+import UIKit
+
+class CardCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var displayImage: UIImageView!
+    
+    @IBOutlet weak var photographerIDLabel: UILabel!
+    
+    @IBOutlet weak var photographerPriceLabel: UILabel!
+    
+    
+    @IBOutlet weak var servicesCataLabel: UILabel!
+    
+    
+    @IBAction func appointButton(sender: AnyObject) {
+    }
+    
+   
+    @IBAction func markButton(sender: AnyObject) {
+    }
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+}

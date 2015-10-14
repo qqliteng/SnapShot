@@ -10,6 +10,34 @@ import Foundation
 import UIKit
 
 class LeftViewController: UIViewController {
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    @IBOutlet weak var userIDLabel: UILabel!
+    
+    @IBOutlet weak var signatureLabel: UILabel!
+    
+    @IBAction func changStatusButton(sender: AnyObject) {
+    }
+    
+    @IBAction func serviceCataButton(sender: AnyObject) {
+    }
+    
+    @IBAction func userProfileButton(sender: AnyObject) {
+    }
+    
+    
+    @IBAction func groupAppointmentButton(sender: AnyObject) {
+    }
+    
+    
+    @IBAction func couponButton(sender: AnyObject) {
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.profileImage.image = UIImage(named: "profileImageDefault")
+    }
+    
     override func viewDidLoad() {
         
     }
