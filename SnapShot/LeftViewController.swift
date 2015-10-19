@@ -39,7 +39,7 @@ class LeftViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        
+        self.view.backgroundColor = UIColor(red: 6/255, green: 191/255, blue: 141/255, alpha: 1)
     }
     
     override func didReceiveMemoryWarning() {

@@ -11,7 +11,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Qa-DD-6LE">
-                    <rect key="frame" x="8" y="8" width="183" height="134"/>
+                    <rect key="frame" x="8" y="8" width="165" height="134"/>
                     <animations/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="摄影师：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW9-zg-UyE">
@@ -71,7 +71,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="我要约摄影师"/>
                     <connections>
-                        <action selector="appointButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="D6B-sD-hc3"/>
+                        <action selector="appointButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="cJh-f8-OQ8"/>
                     </connections>
                 </button>
             </subviews>
@@ -81,12 +81,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="displayImage" destination="9Qa-DD-6LE" id="a3c-8y-sZe"/>
-                <outlet property="makeAppointmentButton" destination="Owc-In-8Oc" id="sI0-rJ-tpl"/>
-                <outlet property="photographerID" destination="PeI-Rl-JXL" id="IPu-3f-qVZ"/>
                 <outlet property="photographerIDLabel" destination="PeI-Rl-JXL" id="O8B-aj-1l7"/>
-                <outlet property="photographerPrice" destination="cDt-wo-osV" id="fUK-u8-KHg"/>
                 <outlet property="photographerPriceLabel" destination="cDt-wo-osV" id="fXt-g4-aYM"/>
-                <outlet property="servicesCata" destination="rMJ-mJ-40P" id="7fO-LM-otg"/>
                 <outlet property="servicesCataLabel" destination="rMJ-mJ-40P" id="NfE-ub-K8h"/>
             </connections>
             <point key="canvasLocation" x="587.5" y="143"/>

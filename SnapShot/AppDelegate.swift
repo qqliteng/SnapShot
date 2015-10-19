@@ -18,10 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         let frontViewController: FrontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as! FrontViewController
         let leftViewController: LeftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as! LeftViewController
         let revealController: PKRevealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
-        let navController = self.window?.rootViewController as! UINavigationController
+        revealController.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
+        revealController.recognizesPanningOnFrontView = true
+        let navController = SPNavigationViewController()
+        
+        self.window?.rootViewController = navController
+//        navController.navigationBar.barTintColor = UIColor(red: 2/255, green: 191/255, blue: 141/255, alpha: 1)
+//        navController.navigationBar.translucent = true
+//        navController.navigationItem.title = "SnapShot"
+//        navController.navigationItem.setLeftBarButtonItem(UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: nil), animated: false)
+//        print(navController.navigationItem.title)
+        
         
         navController.pushViewController(revealController, animated: false)
         //self.window?.rootViewController = revealController

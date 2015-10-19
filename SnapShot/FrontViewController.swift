@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate {
 
     @IBOutlet weak var mainTableView: UITableView!
     override func viewDidLoad() {
@@ -18,7 +18,8 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Do any additional setup after loading the view, typically from a nib.
         let nib = UINib(nibName: "CardCell", bundle: nil)
         mainTableView.registerNib(nib, forCellReuseIdentifier: "cardCell")
-        
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +28,22 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        if  section == 0 {
+            
+            return 1
+        }else {
+            
+            return 2
+        }
+
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            return CGFloat(IN_WINDOW_HEIGHT)
+        } else {
+            return CGFloat(TABLE_CELL_HEIGHT)
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -39,11 +55,64 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.contentView.backgroundColor = UIColor.clearColor()
             cell.clipsToBounds = true
             
-            var slideRect = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: tableView.frame.width, height: CGFloat(IMAGE_HEIGHT)))
+            var slideRect = CGRect(origin: CGPoint(x: 0, y: 60), size: CGSize(width: tableView.frame.width, height: CGFloat(IMAGE_HEIGHT)))
             
-            var slideView = 
+            var slideView = SlidScrollView (frame: slideRect)
+            slideView.initWithFrameRect(slideRect)
+            slideView.delegate = self
+            
+            cell.addSubview(slideView)
+            
+            return cell
+        } else {
+            
+            let tmp = tableView.dequeueReusableCellWithIdentifier("cardCell")
+            
+            if tmp == nil {
+                cell = CardCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cardCell")
+            } else {
+                cell = tmp!
+            }
+            
+            let c = cell as! CardCell
+            
+            if indexPath.section == 0 {
+                cell = doReturnCell(indexPath.row - 1)
+            } else {
+                cell = self.doReturnCell(indexPath.row)
+            }
+            return cell
         }
     }
 
+    
+    private func doReturnCell(row:Int) -> UITableViewCell {
+        
+        let cell = mainTableView.dequeueReusableCellWithIdentifier("cardCell") as! CardCell
+        cell.photographerIDLabel.text = "XXXX"
+        cell.photographerPriceLabel.text = "400"
+        cell.displayImage.image = UIImage(named: "cellDefaultImage")
+        
+        return cell
+    }
+    
+    
+    //=======================UITableViewDelegate 的实现===================================
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+                return 0
+        }
+        
+        return CGFloat(SECTION_HEIGHT)
+    }
+    
+    func SlideScrollViewDidClicked(index: Int) {
+        print(index)
+    }
+    
 }
 
