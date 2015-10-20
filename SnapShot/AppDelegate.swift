@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NSThread .sleepForTimeInterval(1)
         
-        
-        
         let frontViewController: FrontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as! FrontViewController
         let leftViewController: LeftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as! LeftViewController
         let revealController: PKRevealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)

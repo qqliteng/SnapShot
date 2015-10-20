@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mYa-3L-vla" id="VcI-lP-v3l">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -126,7 +126,7 @@
                                 <animations/>
                                 <state key="normal" title="设置"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="18" y="750" width="30" height="30"/>
+                                    <rect key="frame" x="40" y="667" width="30" height="30"/>
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-W8-W6f">
@@ -134,7 +134,7 @@
                                 <animations/>
                                 <state key="normal" title="身份转换"/>
                                 <connections>
-                                    <action selector="changStatusButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="Uhw-hU-u9k"/>
+                                    <action selector="changeStatusButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="jdX-6C-6d1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0u-yw-LeL">
@@ -142,17 +142,46 @@
                                 <animations/>
                                 <state key="normal" title="关于"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="143" y="750" width="30" height="30"/>
+                                    <rect key="frame" x="143" y="667" width="30" height="30"/>
                                 </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWc-GZ-Cus">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="注销登录"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="18" y="468" width="60" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="logoutButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="N8w-Eg-eJe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dWc-GZ-Cus"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="dWc-GZ-Cus"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="aboutButton" destination="y0u-yw-LeL" id="SUS-xT-Wne"/>
+                        <outlet property="changeStatuesButton" destination="cEc-W8-W6f" id="yx5-iF-fvD"/>
+                        <outlet property="couponButton" destination="RbZ-HV-Aqg" id="JJ3-ub-YjT"/>
+                        <outlet property="groupAppointmentButton" destination="PPL-wC-qOC" id="fwF-Za-iJj"/>
+                        <outlet property="logoutButton" destination="dWc-GZ-Cus" id="rrj-7g-scD"/>
                         <outlet property="profileImage" destination="D93-S3-k48" id="AV2-iJ-yJy"/>
+                        <outlet property="serviceCataButton" destination="6Kq-Nn-zqB" id="Aeb-5H-VWk"/>
+                        <outlet property="settingButton" destination="48v-kY-B7b" id="BEl-pc-WiB"/>
                         <outlet property="signatureLabel" destination="0PT-53-bec" id="ojh-gg-xcv"/>
                         <outlet property="userIDLabel" destination="p9j-r2-dDB" id="iui-L4-R4j"/>
+                        <outlet property="userProfileButton" destination="fgg-gT-8wZ" id="xbY-wx-PIg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIt-Kb-Qgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
