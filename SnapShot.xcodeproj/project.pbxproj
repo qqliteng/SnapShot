@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022487F31BCF4B3B0019D7CF /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024C7D3D1BD4EE0A002666FB /* SPNavigationViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		024C7D401BD4FD47002666FB /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024C7D3F1BD4FD47002666FB /* Banner.swift */; settings = {ASSET_TAGS = (); }; };
-		024C7D421BD4FD6C002666FB /* Banner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024C7D411BD4FD6C002666FB /* Banner.xib */; settings = {ASSET_TAGS = (); }; };
 		0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256646C1BC8A02B00A04D21 /* LeftViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		02715DFF1BCE29CF008A11D7 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02715DFE1BCE29CF008A11D7 /* logo.jpg */; settings = {ASSET_TAGS = (); }; };
 		02715E041BCE2B94008A11D7 /* Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02715E031BCE2B94008A11D7 /* Icon.jpg */; settings = {ASSET_TAGS = (); }; };
@@ -48,8 +46,6 @@
 /* Begin PBXFileReference section */
 		022487F31BCF4B3B0019D7CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		024C7D3D1BD4EE0A002666FB /* SPNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPNavigationViewController.swift; sourceTree = "<group>"; };
-		024C7D3F1BD4FD47002666FB /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
-		024C7D411BD4FD6C002666FB /* Banner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Banner.xib; sourceTree = "<group>"; };
 		0256646C1BC8A02B00A04D21 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		02715DFE1BCE29CF008A11D7 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = Assets.xcassets/Icon.imageset/logo.jpg; sourceTree = "<group>"; };
 		02715E031BCE2B94008A11D7 /* Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon.jpg; sourceTree = "<group>"; };
@@ -145,6 +141,7 @@
 		027F16231BC762C700D9B721 /* SnapShot */ = {
 			isa = PBXGroup;
 			children = (
+				02E068921BD6222600530B8F /* Model */,
 				02715E001BCE2ADE008A11D7 /* Icons */,
 				0273CA521BCCADFE00918455 /* Controllers */,
 				0284B2C51BCBA7B8007779A4 /* Views */,
@@ -183,10 +180,15 @@
 				0284B2C11BCBA798007779A4 /* CardCell.swift */,
 				0284B2C31BCBA7AD007779A4 /* CardCell.xib */,
 				02715E071BCE5A77008A11D7 /* SlideScrollView.swift */,
-				024C7D3F1BD4FD47002666FB /* Banner.swift */,
-				024C7D411BD4FD6C002666FB /* Banner.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		02E068921BD6222600530B8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		10AFD4644B4AC336E7E07C94 /* Pods */ = {
@@ -314,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				027F16321BC762C700D9B721 /* LaunchScreen.storyboard in Resources */,
-				024C7D421BD4FD6C002666FB /* Banner.xib in Resources */,
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
 				02715E041BCE2B94008A11D7 /* Icon.jpg in Resources */,
 				02715DFF1BCE29CF008A11D7 /* logo.jpg in Resources */,
@@ -394,7 +395,6 @@
 			files = (
 				0284B2C21BCBA798007779A4 /* CardCell.swift in Sources */,
 				027F16271BC762C700D9B721 /* FrontViewController.swift in Sources */,
-				024C7D401BD4FD47002666FB /* Banner.swift in Sources */,
 				024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
