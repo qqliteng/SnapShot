@@ -19,7 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        NSThread .sleepForTimeInterval(1)
+        
+        
+        
         let frontViewController: FrontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as! FrontViewController
         let leftViewController: LeftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as! LeftViewController
         let revealController: PKRevealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)

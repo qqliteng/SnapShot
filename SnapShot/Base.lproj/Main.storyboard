@@ -75,7 +75,7 @@
                                 <rect key="frame" x="105" y="129" width="55" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kq-Nn-zqB">
@@ -110,11 +110,6 @@
                                     <action selector="couponButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="30i-8X-Fec"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0u-yw-LeL">
-                                <rect key="frame" x="143" y="562" width="30" height="30"/>
-                                <animations/>
-                                <state key="normal" title="关于"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D93-S3-k48">
                                 <rect key="frame" x="20" y="129" width="70" height="64"/>
                                 <animations/>
@@ -123,13 +118,16 @@
                                 <rect key="frame" x="105" y="172" width="68" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48v-kY-B7b">
                                 <rect key="frame" x="20" y="562" width="30" height="30"/>
                                 <animations/>
                                 <state key="normal" title="设置"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="18" y="750" width="30" height="30"/>
+                                </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-W8-W6f">
                                 <rect key="frame" x="25" y="91" width="60" height="30"/>
@@ -138,6 +136,14 @@
                                 <connections>
                                     <action selector="changStatusButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="Uhw-hU-u9k"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0u-yw-LeL">
+                                <rect key="frame" x="143" y="562" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="关于"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="143" y="750" width="30" height="30"/>
+                                </variation>
                             </button>
                         </subviews>
                         <animations/>

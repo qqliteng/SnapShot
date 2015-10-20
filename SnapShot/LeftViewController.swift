@@ -34,15 +34,23 @@ class LeftViewController: UIViewController {
     @IBAction func couponButton(sender: AnyObject) {
     }
     
+    var isLogin:Bool = false
+    
     override func viewWillAppear(animated: Bool) {
+        
         self.profileImage.image = UIImage(named: "profileImageDefault")
     }
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor(red: 6/255, green: 191/255, blue: 141/255, alpha: 1)
+        
     }
     
     override func didReceiveMemoryWarning() {
+        
+    }
+    
+    func initLeftViewController(){
         
     }
 }

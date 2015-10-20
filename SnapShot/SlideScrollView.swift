@@ -49,10 +49,8 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         
         let firstImageView: UIImageView = UIImageView(frame: CGRectMake(0, 0, viewSize.size.width, viewSize.size.height))
         firstImageView.hnk_setImageFromURL(NSURL(string: tempArray[tempArray.count - 1])!)
-        print(tempArray[tempArray.count - 1])
-        print(tempArray[0])
         self.scrollView.addSubview(firstImageView)
-        self.titleArray.insert(titleArray[0], atIndex: 0)
+        self.titleArray.insert(titleArray[titleArray.count - 1], atIndex: 0)
         
         for var i = 0; i < tempArray.count; i++ {
             let imageView: UIImageView = UIImageView(frame: CGRectMake(viewSize.size.width * CGFloat(i + 1), 0, viewSize.size.width, viewSize.size.height))
@@ -63,7 +61,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         let lastImageView: UIImageView = UIImageView(frame: CGRectMake(viewSize.size.width * CGFloat((tempArray.count + 1)), 0, viewSize.size.width, viewSize.size.height))
         lastImageView.hnk_setImageFromURL(NSURL(string: tempArray[0])!)
         self.scrollView.addSubview(lastImageView)
-        self.titleArray.append(titleArray[titleArray.count - 1])
+        self.titleArray.append(titleArray[1])
         print(titleArray)
         
         
@@ -104,7 +102,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         noteTitle.numberOfLines = 0
         noteTitle.lineBreakMode = NSLineBreakMode.ByCharWrapping
         
-        noteTitle.text = self.titleArray[0]
+        noteTitle.text = self.titleArray[1]
         noteTitle.frame = CGRect(origin: CGPoint(x: 10, y: 130), size: CGSize(width: 300, height: 50))
         
         let maskImage = UIImage(named: "HomeImageMask")
@@ -139,6 +137,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         var currentPageNumber = self.pageControl.currentPage
         
         self.scrollView .scrollRectToVisible(CGRectMake(CGFloat(currentPageNumber + 2) * pageWidth, 0, viewSize.size.width, viewSize.size.height), animated: true)
+        self.noteTitle.text = self.titleArray[currentPageNumber + 2]
         
         currentPageNumber++
         
@@ -147,7 +146,6 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
             currentPageNumber = 0
         }
         
-        self.noteTitle.text = self.titleArray[pageControl.currentPage]
         self.pageControl.currentPage = currentPageNumber
     
     }
@@ -168,7 +166,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         } else {
             self.pageControl.currentPage = currentPageIndex - 1
         }
-        self.noteTitle.text = self.titleArray[pageControl.currentPage]
+        self.noteTitle.text = self.titleArray[pageControl.currentPage + 1]
         self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "autoShowNextPage", userInfo: nil, repeats: true)
     }
     
