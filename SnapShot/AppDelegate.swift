@@ -14,7 +14,7 @@ import PKRevealController
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -31,16 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = SPNavigationViewController()
         
         self.window?.rootViewController = navController
-//        navController.navigationBar.barTintColor = UIColor(red: 2/255, green: 191/255, blue: 141/255, alpha: 1)
-//        navController.navigationBar.translucent = true
-//        navController.navigationItem.title = "SnapShot"
-//        navController.navigationItem.setLeftBarButtonItem(UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: nil), animated: false)
-//        print(navController.navigationItem.title)
         
         
         navController.pushViewController(revealController, animated: false)
-        //self.window?.rootViewController = revealController
-        
         return true
     }
 
