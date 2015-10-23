@@ -16,6 +16,8 @@ let SCROLL_HEIGHT:Float = 80
 let IMAGE_HEIGHT:Float = 400
 let IN_WINDOW_HEIGHT:Float = 250
 let TITLE_HEIGHT:Float = 44
+let PROFILE_CELL_HEIGHT: Float = 120
+let VALUE_CELL_HEIGHT:Float = 140
 
 let SCREEN_WIDTH:Float = Float(UIScreen.mainScreen().bounds.width)
 let SCREEN_HEIGHT:Float = Float(UIScreen.mainScreen().bounds.height)

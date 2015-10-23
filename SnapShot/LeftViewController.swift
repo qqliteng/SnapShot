@@ -77,7 +77,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
             self.loginButton?.layer.cornerRadius = 5.0
             self.loginButton?.layer.borderWidth = 1.0
             self.loginButton?.layer.borderColor =  UIColor.whiteColor().CGColor
-            self.loginButton?.setTitle("登陆", forState:  UIControlState.Normal)
+            self.loginButton?.setTitle("登录", forState:  UIControlState.Normal)
             self.loginButton?.addTarget(self, action: "loginViewDisplay", forControlEvents: UIControlEvents.TouchUpInside)
             self.view.addSubview(self.loginButton!)
             
@@ -167,7 +167,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     func login() {
         print(self.userIDInputTextfield?.text)
         print(self.passwordTextField?.text)
-        let alertView = UIAlertView(title: "登陆成功", message: "已经登录:用户名：\(self.userIDInputTextfield?.text)======密码：\(self.passwordTextField?.text)", delegate: self, cancelButtonTitle: "确定")
+        let alertView = UIAlertView(title: "登录成功", message: "已经登录:用户名：\(self.userIDInputTextfield?.text)======密码：\(self.passwordTextField?.text)", delegate: self, cancelButtonTitle: "确定")
         alertView.show()
         self.isLogin = true
         self.initLeftViewController()
@@ -237,7 +237,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     }
     
     func register() {
-        let alertView = UIAlertView(title: "登陆成功", message: "已经登录:用户名：\(self.userIDInputTextfield?.text)======密码：\(self.passwordTextField?.text)=======\(self.phoneNumTextField?.text)", delegate: self, cancelButtonTitle: "确定")
+        let alertView = UIAlertView(title: "登录成功", message: "已经登录:用户名：\(self.userIDInputTextfield?.text)======密码：\(self.passwordTextField?.text)=======\(self.phoneNumTextField?.text)", delegate: self, cancelButtonTitle: "确定")
         alertView.show()
         self.isLogin = true
         self.initLeftViewController()
@@ -253,6 +253,8 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func userProfileButton(sender: AnyObject) {
         print("serviceCataButton button is pressed!")
+        let profileViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("profileViewController") as! ProfileViewController
+        self.navigationController?.pushViewController(profileViewController, animated: true)
     }
     
     
