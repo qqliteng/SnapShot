@@ -11,21 +11,29 @@ import CoreData
 import PKRevealController
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, SPNavigationBarDelegate {
 
     var window: UIWindow?
-
+    var navController: SPNavigationViewController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        NSThread .sleepForTimeInterval(1)
+        
         let frontViewController: FrontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as! FrontViewController
         let leftViewController: LeftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as! LeftViewController
         let revealController: PKRevealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
-        let navController = self.window?.rootViewController as! UINavigationController
+        revealController.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
+        revealController.recognizesPanningOnFrontView = true
+        self.navController = SPNavigationViewController()
         
-        navController.pushViewController(revealController, animated: false)
-        //self.window?.rootViewController = revealController
+        self.window?.rootViewController = navController
         
+        
+        self.navController!.pushViewController(revealController, animated: false)
         return true
     }
 
@@ -115,6 +123,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func addBackButton() {
+        let navBarItem: UINavigationItem = UINavigationItem(title: "XXXX")
+        navBarItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction")
+        self.navController?.navigationBarHidden = true
+        self.navController?.SPNavigationBarItem?.setLeftBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction"), animated: false)
+        self.navController?.SPNavigationBarItem?.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction")
+        self.navController?.SPNavigationBar?.pushNavigationItem(navBarItem, animated: false)
+        
+//        
+//        self.navController?.SPNavigationBarItem?.title = "XXXX"
+//        self.navController?.SPNavigationBarItem?.leftItemsSupplementBackButton = true
+//        self.navController?.SPNavigationBarItem?.leftBarButtonItem = nil
+        
+    }
+    
 
 }
 
