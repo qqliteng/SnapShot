@@ -14,8 +14,9 @@ import PKRevealController
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var navigationController: UINavigationController?
+    var revealController: PKRevealController?
     
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -25,15 +26,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let frontViewController: FrontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as! FrontViewController
         let leftViewController: LeftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as! LeftViewController
-        let revealController: PKRevealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
-        revealController.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
-        revealController.recognizesPanningOnFrontView = true
-        let navController = SPNavigationViewController()
+        self.revealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
+        self.revealController!.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
+        self.revealController!.recognizesPanningOnFrontView = true
+        self.revealController!.title = "咔嚓"
         
-        self.window?.rootViewController = navController
+        self.navigationController = UINavigationController()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 2/255, green: 191/255, blue: 141/255, alpha: 1)
+        let titleShadow: NSShadow = NSShadow()
+        titleShadow.shadowColor = UIColor(red: 218/255, green: 147/255, blue: 171/255, alpha: 1)
+        titleShadow.shadowOffset = CGSizeMake(1, 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Heiti SC", size: 24.0)!, NSShadowAttributeName:titleShadow]
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+//        let SPNavigationBarItem = UINavigationItem()
+//        SPNavigationBarItem.title = "SnapShot"
+//        SPNavigationBarItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "searchButtonAction")
+//        self.navigationController?.navigationController?.navigationItem.title = "SnapShot"
+//        self.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "")
+//        self.navigationController?.navigationItem.title = "SnapShot"
+        
+        self.window?.rootViewController = navigationController
         
         
-        navController.pushViewController(revealController, animated: false)
+        self.navigationController!.pushViewController(revealController!, animated: false)
         return true
     }
 
@@ -123,6 +140,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func addBackButton() {
+//        let navBarItem: UINavigationItem = UINavigationItem(title: "XXXX")
+//        navBarItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction")
+//        self.navigationController?.navigationBarHidden = true
+//        self.navigationController?.navigationItem.setLeftBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction"), animated: false)
+//        self.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction")
+      
+//
+//        self.navController?.SPNavigationBarItem?.title = "XXXX"
+//        self.navController?.SPNavigationBarItem?.leftItemsSupplementBackButton = true
+//        self.navController?.SPNavigationBarItem?.leftBarButtonItem = nil
+        
+    }
+    
 
 }
 

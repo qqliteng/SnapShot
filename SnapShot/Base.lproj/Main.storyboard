@@ -318,6 +318,88 @@
             </objects>
             <point key="canvasLocation" x="1490" y="894.75"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1cU-8u-v0v">
+            <objects>
+                <viewController id="8Gh-O6-scE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mEE-gk-fj3"/>
+                        <viewControllerLayoutGuide type="bottom" id="qXs-xE-gjA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yeR-nQ-WrT">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-dF-mW8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="55" y="20" width="304" height="44"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="8Gh-O6-scE" id="0cX-qv-GBE"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zsF-PI-RxB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fgt-Zb-dht">
+                                    <size key="itemSize" width="107" height="107"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZMi-5H-eVy">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="107" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                    </collectionViewCell>
+                                </cells>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                </variation>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="KIt-dF-mW8"/>
+                                <exclude reference="zsF-PI-RxB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="KIt-dF-mW8"/>
+                                <include reference="zsF-PI-RxB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="bxZ-s0-Rff" id="27g-Lo-Qsz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLG-vp-sfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="bxZ-s0-Rff">
+                    <connections>
+                        <outlet property="delegate" destination="8Gh-O6-scE" id="7z6-RS-oev"/>
+                        <outlet property="searchBar" destination="KIt-dF-mW8" id="d2i-Pj-GDa"/>
+                        <outlet property="searchContentsController" destination="8Gh-O6-scE" id="MQ8-hr-IKZ"/>
+                        <outlet property="searchResultsDataSource" destination="8Gh-O6-scE" id="HQb-Vx-hsX"/>
+                        <outlet property="searchResultsDelegate" destination="8Gh-O6-scE" id="6XK-DZ-aFs"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="2087" y="775.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cellDefaultImage" width="500" height="409"/>
