@@ -14,12 +14,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OMGHTTPURLRQ.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PKRevealController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PromiseKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>69064AA98A5E8B79C6E1E856DBFF382A</key>
+		<key>2378217FC5A9815F5F372E054D2BF374</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>98707F6B740D263236A9C4BE50D85EF4</key>
+		<key>74DEC968BA872046C00738395516F2DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB7BEA18449CB9BD3AB268F07F8CC864</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D02BA7DC4E7C08B258705A4C9F0E417A</key>
+		<key>C63E2D2EF023BACCE5536A1DF1E92C55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED8FB3FE168090DBB1A3D53E25C94F01</key>
+		<key>C7BAEFFAB1498A39A02B0F6FDF7E8DAF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF81E819ACCAF2695D525E2D6CCA36EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

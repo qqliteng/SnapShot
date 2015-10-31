@@ -23,10 +23,16 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
     
     
     override func viewDidLoad() {
+        self.title = "我的咔嚓"
+        let leftButton = ViewWidgest.addLeftButton("backButtonImage", imageAfter: "backButtonSelectedImage")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+        leftButton.addTarget(self, action: "pushView", forControlEvents: UIControlEvents.TouchUpInside)
+        
         self.artsCollectionView.delegate = self
         self.artsCollectionView.dataSource = self
         self.artsCollectionView.backgroundColor = UIColor.clearColor()
         
+        self.profileTableView.scrollEnabled = false
         self.profileTableView.delegate = self
         self.profileTableView.dataSource = self
         self.profileTableView.separatorColor = UIColor.clearColor()
@@ -72,7 +78,10 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
         }
     }
     
-    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.reloadData()
+    }
     //==================UICollectionViewDataSource====================================================//
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (self.artsImageArray?.count)!
@@ -82,7 +91,8 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell:ArtsCell = artsCollectionView.dequeueReusableCellWithReuseIdentifier("artsCell", forIndexPath: indexPath) as! ArtsCell
         cell.albumIDLabel.text = "\(indexPath.section):\(indexPath.row)"
-//        cell.artsImageView.hnk_setImageFromURL(self.artsImageArray[1])
+        
+        cell.artsImageView.hnk_setImageFromURL(NSURL(string: self.artsImageArray[indexPath.row])!)
         return cell
     }
     
@@ -95,6 +105,10 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
     
     func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
+    }
+
+    func pushView() {
+        self.navigationController!.popToRootViewControllerAnimated(true)
     }
 
     

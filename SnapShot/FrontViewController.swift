@@ -16,10 +16,12 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.title = "咔嚓"
         let nib = UINib(nibName: "CardCell", bundle: nil)
         mainTableView.registerNib(nib, forCellReuseIdentifier: "cardCell")
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "popToSearchViewController")
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,9 +57,9 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.contentView.backgroundColor = UIColor.clearColor()
             cell.clipsToBounds = true
             
-            var slideRect = CGRect(origin: CGPoint(x: 0, y: 60), size: CGSize(width: tableView.frame.width, height: CGFloat(IMAGE_HEIGHT)))
+            let slideRect = CGRect(origin: CGPoint(x: 0, y: 60), size: CGSize(width: tableView.frame.width, height: CGFloat(IMAGE_HEIGHT)))
             
-            var slideView = SlidScrollView (frame: slideRect)
+            let slideView = SlidScrollView (frame: slideRect)
             slideView.initWithFrameRect(slideRect)
             slideView.delegate = self
             
@@ -74,7 +76,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
                 cell = tmp!
             }
             
-            let c = cell as! CardCell
+            _ = cell as! CardCell
             
             if indexPath.section == 0 {
                 cell = doReturnCell(indexPath.row - 1)
@@ -112,6 +114,14 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func SlideScrollViewDidClicked(index: Int) {
         print(index)
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func popToSearchViewController() {
+        
     }
     
 }
