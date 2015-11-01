@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4ea-IX-sVs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4ea-IX-sVs">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
@@ -318,43 +318,41 @@
             </objects>
             <point key="canvasLocation" x="1490" y="894.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="1cU-8u-v0v">
             <objects>
-                <viewController id="8Gh-O6-scE" sceneMemberID="viewController">
+                <viewController id="8Gh-O6-scE" customClass="SearchViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mEE-gk-fj3"/>
                         <viewControllerLayoutGuide type="bottom" id="qXs-xE-gjA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yeR-nQ-WrT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-dF-mW8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXl-ay-UrW">
+                                <rect key="frame" x="64" y="55" width="286" height="44"/>
                                 <animations/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="55" y="20" width="304" height="44"/>
-                                </variation>
                                 <connections>
-                                    <outlet property="delegate" destination="8Gh-O6-scE" id="0cX-qv-GBE"/>
+                                    <outlet property="delegate" destination="8Gh-O6-scE" id="Myz-ro-vcf"/>
                                 </connections>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zsF-PI-RxB">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lST-7X-hTA">
+                                <rect key="frame" x="0.0" y="116" width="414" height="620"/>
                                 <animations/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fgt-Zb-dht">
-                                    <size key="itemSize" width="107" height="107"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J0R-dL-1YJ">
+                                    <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZMi-5H-eVy">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lTz-6H-CtD">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="107" height="107"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -362,43 +360,40 @@
                                         <animations/>
                                     </collectionViewCell>
                                 </cells>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                                </variation>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fip-4B-b0o">
+                                <rect key="frame" x="360" y="62" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRY-Iv-NqM">
+                                <rect key="frame" x="9" y="62" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="KIt-dF-mW8"/>
-                                <exclude reference="zsF-PI-RxB"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <include reference="KIt-dF-mW8"/>
-                                <include reference="zsF-PI-RxB"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="bxZ-s0-Rff" id="27g-Lo-Qsz"/>
+                        <outlet property="SPSearchBar" destination="HXl-ay-UrW" id="lgd-5U-zby"/>
+                        <outlet property="cancelButton" destination="oRY-Iv-NqM" id="4be-hu-zUT"/>
+                        <outlet property="locationButton" destination="Fip-4B-b0o" id="4YZ-nr-hLF"/>
+                        <outlet property="searchViewCollectionView" destination="lST-7X-hTA" id="jVZ-hb-Fbe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLG-vp-sfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="bxZ-s0-Rff">
                     <connections>
                         <outlet property="delegate" destination="8Gh-O6-scE" id="7z6-RS-oev"/>
-                        <outlet property="searchBar" destination="KIt-dF-mW8" id="d2i-Pj-GDa"/>
                         <outlet property="searchContentsController" destination="8Gh-O6-scE" id="MQ8-hr-IKZ"/>
                         <outlet property="searchResultsDataSource" destination="8Gh-O6-scE" id="HQb-Vx-hsX"/>
                         <outlet property="searchResultsDelegate" destination="8Gh-O6-scE" id="6XK-DZ-aFs"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2087" y="775.5"/>
+            <point key="canvasLocation" x="2112" y="814"/>
         </scene>
     </scenes>
     <resources>
