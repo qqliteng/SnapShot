@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.revealController!.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
         self.revealController!.recognizesPanningOnFrontView = true
         self.revealController!.title = "咔嚓"
+        self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
         
         self.navigationController = UINavigationController()
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 2/255, green: 191/255, blue: 141/255, alpha: 1)
@@ -141,20 +142,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func addBackButton() {
-//        let navBarItem: UINavigationItem = UINavigationItem(title: "XXXX")
-//        navBarItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction")
-//        self.navigationController?.navigationBarHidden = true
-//        self.navigationController?.navigationItem.setLeftBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction"), animated: false)
-//        self.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction")
-      
-//
-//        self.navController?.SPNavigationBarItem?.title = "XXXX"
-//        self.navController?.SPNavigationBarItem?.leftItemsSupplementBackButton = true
-//        self.navController?.SPNavigationBarItem?.leftBarButtonItem = nil
-        
+    func popToSearchView() {
+        let searchViewController = SearchViewController()
+        self.navigationController?.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(searchViewController, animated: true)
     }
-    
 
 }
 

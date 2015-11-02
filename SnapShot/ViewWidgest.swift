@@ -18,7 +18,7 @@ class ViewWidgest {
     }
     
     static func addLeftButton(buttonName:String) -> UIButton {
-        let leftBtn: UIButton = UIButton(frame: CGRect(x: 5, y: 10, width: 60, height: 30))
+        let leftBtn: UIButton = UIButton(frame: CGRect(x: 2, y: 5, width: 60, height: 30))
         leftBtn.setTitle(buttonName, forState:  UIControlState.Normal)
         return leftBtn
     }
@@ -31,7 +31,7 @@ class ViewWidgest {
     }
     
     static func addRightButton(buttonName:String) -> UIButton {
-        let rightBtn: UIButton = UIButton(frame: CGRect(x: Int(SCREEN_WIDTH - 65), y: 10, width: 60, height: 30))
+        let rightBtn: UIButton = UIButton(frame: CGRect(x: Int(SCREEN_WIDTH - 62), y: 5, width: 60, height: 30))
         rightBtn.setTitle(buttonName, forState: UIControlState.Normal)
         return rightBtn
     }

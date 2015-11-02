@@ -318,28 +318,18 @@
             </objects>
             <point key="canvasLocation" x="1490" y="894.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="1cU-8u-v0v">
             <objects>
-                <viewController id="8Gh-O6-scE" sceneMemberID="viewController">
+                <viewController id="8Gh-O6-scE" customClass="SearchViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mEE-gk-fj3"/>
                         <viewControllerLayoutGuide type="bottom" id="qXs-xE-gjA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yeR-nQ-WrT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-dF-mW8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <animations/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="55" y="20" width="304" height="44"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="8Gh-O6-scE" id="0cX-qv-GBE"/>
-                                </connections>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zsF-PI-RxB">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
@@ -371,19 +361,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="KIt-dF-mW8"/>
                                 <exclude reference="zsF-PI-RxB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="KIt-dF-mW8"/>
                                 <include reference="zsF-PI-RxB"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="SVCollectionView" destination="zsF-PI-RxB" id="HIA-XQ-tbv"/>
                         <outlet property="searchDisplayController" destination="bxZ-s0-Rff" id="27g-Lo-Qsz"/>
                     </connections>
                 </viewController>
@@ -391,7 +380,6 @@
                 <searchDisplayController id="bxZ-s0-Rff">
                     <connections>
                         <outlet property="delegate" destination="8Gh-O6-scE" id="7z6-RS-oev"/>
-                        <outlet property="searchBar" destination="KIt-dF-mW8" id="d2i-Pj-GDa"/>
                         <outlet property="searchContentsController" destination="8Gh-O6-scE" id="MQ8-hr-IKZ"/>
                         <outlet property="searchResultsDataSource" destination="8Gh-O6-scE" id="HQb-Vx-hsX"/>
                         <outlet property="searchResultsDelegate" destination="8Gh-O6-scE" id="6XK-DZ-aFs"/>
