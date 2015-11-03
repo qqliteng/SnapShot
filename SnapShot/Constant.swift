@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 //主页上得各种高度的变量
-let TABLE_CELL_HEIGHT : Float = 150
+let TABLE_CELL_HEIGHT : Float = 120
 let SECTION_HEIGHT:Float = 24
 let SCROLL_HEIGHT:Float = 80
 let IMAGE_HEIGHT:Float = 400

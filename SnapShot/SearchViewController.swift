@@ -37,6 +37,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         self.SVsearchBar?.removeFromSuperview()
         self.locationBtn?.removeFromSuperview()
         self.cancelBtn?.removeFromSuperview()
+        
+        let navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
+        navBtn.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
+        self.navigationController?.navigationBar.addSubview(navBtn)
     }
     
     func initSearchBar() {
@@ -145,7 +149,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     
     //=======================UITableViewDelegate 的实现===================================
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 5
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
