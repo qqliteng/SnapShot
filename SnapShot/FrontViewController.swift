@@ -18,8 +18,8 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "咔嚓"
-        let nib = UINib(nibName: "CardCell", bundle: nil)
-        mainTableView.registerNib(nib, forCellReuseIdentifier: "cardCell")
+        let nib = UINib(nibName: "FrontCell", bundle: nil)
+        mainTableView.registerNib(nib, forCellReuseIdentifier: "frontCell")
         mainTableView.delegate = self
         mainTableView.dataSource = self
         self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "popToSearchViewController")
@@ -36,7 +36,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             return 1
         }else {
             
-            return 2
+            return 1
         }
 
     }
@@ -45,7 +45,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         if indexPath.section == 0 && indexPath.row == 0 {
             return 44
         } else {
-            return CGFloat(TABLE_CELL_HEIGHT)
+            return 300
         }
     }
     
@@ -89,7 +89,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //=======================UITableViewDelegate 的实现===================================
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
