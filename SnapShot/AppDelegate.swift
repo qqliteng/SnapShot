@@ -34,10 +34,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.revealController!.title = "咔嚓"
 
         self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
+        self.navigationController = UINavigationController()
+        
+        
+        
+        
+        self.window?.rootViewController = self.initNavigationController()
+        
+        
+        self.navigationController!.pushViewController(revealController!, animated: false)
+        return true
+    }
+
+    func initNavigationController()-> UINavigationController {
+        self.navigationController = nil
+        self.navigationController = UINavigationController()
+        
         self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
         self.navBtn?.addTarget(self, action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        self.navigationController = UINavigationController()
         self.navigationController?.navigationBar.addSubview(self.navBtn!)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 0)
         let titleShadow: NSShadow = NSShadow()
@@ -46,15 +60,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Heiti SC", size: 24.0)!, NSShadowAttributeName:titleShadow]
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        
-        
-        self.window?.rootViewController = navigationController
-        
-        
-        self.navigationController!.pushViewController(revealController!, animated: false)
-        return true
+        return self.navigationController!
     }
-
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

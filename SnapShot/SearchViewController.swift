@@ -16,13 +16,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     var cancelBtn: UIButton?
     var searchBtn: UIButton?
     var displayController: UISearchController?
-    
+    var navBtn: UIButton?
     
     @IBOutlet weak var SVTableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         self.initSearchBar()
         let nib = UINib(nibName: "CardCell", bundle: nil)
         if self.SVTableView != nil {
@@ -37,10 +39,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         self.SVsearchBar?.removeFromSuperview()
         self.locationBtn?.removeFromSuperview()
         self.cancelBtn?.removeFromSuperview()
-        
-        let navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
-        navBtn.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
-        self.navigationController?.navigationBar.addSubview(navBtn)
+        let appDelegate = AppDelegate()
+        appDelegate.initNavigationController()
+//        self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
+//        self.navBtn?.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
+//        self.navigationController?.navigationBar.addSubview(navBtn!)
     }
     
     func initSearchBar() {
