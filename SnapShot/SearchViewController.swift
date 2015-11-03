@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SearchViewController: UIViewController, UISearchBarDelegate, UISearchControllerDelegate, UISearchDisplayDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class SearchViewController: UIViewController, UISearchBarDelegate, UISearchControllerDelegate, UISearchDisplayDelegate, UICollectionViewDelegate {
     
     var SVsearchBar: UISearchBar?
     var locationBtn: UIButton?
@@ -70,7 +70,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         self.searchBtn?.addTarget(self, action: "SearchBtnAction", forControlEvents: UIControlEvents.TouchUpInside)
         
     }
+
     
+    
+    //---------------------UISearchBarDelegate-------------//
     func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         return true
     }
@@ -79,6 +82,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         
     }
     
+
     func LocationBtnAction() {
     
     }
@@ -104,6 +108,13 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         let image: UIImageView = UIImageView(image: UIImage(named: "profileDefault"))
         cell.addSubview(image)
         return cell
+    }
 
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        return true
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        
     }
 }

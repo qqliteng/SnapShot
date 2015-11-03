@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.revealController!.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
         self.revealController!.recognizesPanningOnFrontView = true
         self.revealController!.title = "咔嚓"
+
         self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
-        
         self.navigationController = UINavigationController()
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 2/255, green: 191/255, blue: 141/255, alpha: 1)
         let titleShadow: NSShadow = NSShadow()
@@ -142,11 +142,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+
     func popToSearchView() {
         let searchViewController = SearchViewController()
         self.navigationController?.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(searchViewController, animated: true)
     }
-
 }
 
