@@ -48,7 +48,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         self.initLeftViewController()
-        self.view.backgroundColor = UIColor(red: 6/255, green: 191/255, blue: 141/255, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
         
     }
     

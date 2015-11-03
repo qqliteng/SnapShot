@@ -22,13 +22,7 @@ class CardCell: UITableViewCell {
     @IBOutlet weak var servicesCataLabel: UILabel!
     
     
-    @IBAction func appointButton(sender: AnyObject) {
-    }
-    
-   
-    @IBAction func markButton(sender: AnyObject) {
-    }
-    
+        
     
     override func awakeFromNib() {
         super.awakeFromNib()

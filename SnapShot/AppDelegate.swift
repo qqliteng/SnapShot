@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var navigationController: UINavigationController?
     var revealController: PKRevealController?
-    
+    var frontViewController: FrontViewController?
+    var leftViewController: LeftViewController?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -24,16 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NSThread .sleepForTimeInterval(1)
         
-        let frontViewController: FrontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as! FrontViewController
-        let leftViewController: LeftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as! LeftViewController
+        self.frontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as? FrontViewController
+         self.leftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as? LeftViewController
         self.revealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
         self.revealController!.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
         self.revealController!.recognizesPanningOnFrontView = true
         self.revealController!.title = "咔嚓"
 
         self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
+        let navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
+        navBtn.addTarget(self, action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
+        
         self.navigationController = UINavigationController()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 2/255, green: 191/255, blue: 141/255, alpha: 1)
+        self.navigationController?.navigationBar.addSubview(navBtn)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 0)
         let titleShadow: NSShadow = NSShadow()
         titleShadow.shadowColor = UIColor(red: 218/255, green: 147/255, blue: 171/255, alpha: 1)
         titleShadow.shadowOffset = CGSizeMake(1, 1)
@@ -41,12 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-//        let SPNavigationBarItem = UINavigationItem()
-//        SPNavigationBarItem.title = "SnapShot"
-//        SPNavigationBarItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "searchButtonAction")
-//        self.navigationController?.navigationController?.navigationItem.title = "SnapShot"
-//        self.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "")
-//        self.navigationController?.navigationItem.title = "SnapShot"
         
         self.window?.rootViewController = navigationController
         
@@ -142,9 +141,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func leftViewShowAction() {
+        self.revealController?.showViewController(self.leftViewController)
+    }
 
     func popToSearchView() {
-        let searchViewController = SearchViewController()
+        let searchViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("searchViewController") as! SearchViewController
         self.navigationController?.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(searchViewController, animated: true)
     }

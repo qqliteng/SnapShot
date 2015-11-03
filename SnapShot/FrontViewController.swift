@@ -13,6 +13,7 @@ import SwiftyJSON
 class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate {
 
     @IBOutlet weak var mainTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,7 +43,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == 0 {
-            return CGFloat(IN_WINDOW_HEIGHT)
+            return 44
         } else {
             return CGFloat(TABLE_CELL_HEIGHT)
         }
@@ -56,27 +57,18 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.backgroundColor = UIColor.clearColor()
             cell.contentView.backgroundColor = UIColor.clearColor()
             cell.clipsToBounds = true
-            
-            let slideRect = CGRect(origin: CGPoint(x: 0, y: 60), size: CGSize(width: tableView.frame.width, height: CGFloat(IMAGE_HEIGHT)))
-            
-            let slideView = SlidScrollView (frame: slideRect)
-            slideView.initWithFrameRect(slideRect)
-            slideView.delegate = self
-            
-            cell.addSubview(slideView)
-            
             return cell
         } else {
             
-            let tmp = tableView.dequeueReusableCellWithIdentifier("cardCell")
+            let tmp = tableView.dequeueReusableCellWithIdentifier("frontCell")
             
             if tmp == nil {
-                cell = CardCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cardCell")
+                cell = FrontCell(style: UITableViewCellStyle.Default, reuseIdentifier: "frontCell")
             } else {
                 cell = tmp!
             }
             
-            _ = cell as! CardCell
+            _ = cell as! FrontCell
             
             if indexPath.section == 0 {
                 cell = doReturnCell(indexPath.row - 1)
@@ -90,11 +82,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     private func doReturnCell(row:Int) -> UITableViewCell {
         
-        let cell = mainTableView.dequeueReusableCellWithIdentifier("cardCell") as! CardCell
-        cell.photographerIDLabel.text = "XXXX"
-        cell.photographerPriceLabel.text = "400"
-        cell.displayImage.image = UIImage(named: "cellDefaultImage")
-        
+        let cell = mainTableView.dequeueReusableCellWithIdentifier("frontCell") as! FrontCell
         return cell
     }
     
