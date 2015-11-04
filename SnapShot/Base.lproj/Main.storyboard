@@ -33,7 +33,154 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="149"/>
+            <point key="canvasLocation" x="898" y="1152"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="FGq-Aq-1cq">
+            <objects>
+                <viewController storyboardIdentifier="loginViewController" id="G3n-fc-ihA" customClass="LoginViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oey-z2-dG8"/>
+                        <viewControllerLayoutGuide type="bottom" id="FuA-tV-ah5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Opd-RY-UQe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="咔     嚓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xx-PM-K9Y">
+                                <rect key="frame" x="167" y="150" width="80" height="43"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yNg-rH-NHb">
+                                <rect key="frame" x="92" y="210" width="230" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngx-Bx-7NX">
+                                <rect key="frame" x="92" y="270" width="230" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljq-uB-UWl">
+                                <rect key="frame" x="194" y="325" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="登陆"/>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="G3n-fc-ihA" eventType="touchUpInside" id="ENc-h2-aXa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4Z-hO-mU8">
+                                <rect key="frame" x="172" y="363" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="新用户注册"/>
+                                <connections>
+                                    <action selector="registerPushButtonAction:" destination="G3n-fc-ihA" eventType="touchUpInside" id="Ieu-Mw-Xcl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlh-JI-GfE">
+                                <rect key="frame" x="364" y="20" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="关闭"/>
+                                <connections>
+                                    <action selector="closeButtonAction:" destination="G3n-fc-ihA" eventType="touchUpInside" id="Ra8-Ob-tLs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="closeButton" destination="Qlh-JI-GfE" id="AWU-lq-I1f"/>
+                        <outlet property="loginButton" destination="ljq-uB-UWl" id="SdX-5s-s7k"/>
+                        <outlet property="passwordTextField" destination="ngx-Bx-7NX" id="UiH-V8-aO3"/>
+                        <outlet property="phoneNumTextField" destination="yNg-rH-NHb" id="pHh-dZ-7Wq"/>
+                        <outlet property="registerPushButton" destination="r4Z-hO-mU8" id="Mbv-e9-EqT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fc-yv-JuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="347"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="yhd-8F-PSi">
+            <objects>
+                <viewController id="qDM-F1-Bdz" customClass="RegisterViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OuX-Dy-jfw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hd1-ci-Jkl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AZs-DB-cab">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="咔     嚓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liL-Cc-em3">
+                                <rect key="frame" x="167" y="150" width="80" height="43"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lGL-hP-7zB">
+                                <rect key="frame" x="92" y="210" width="230" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ylc-Xc-vVt">
+                                <rect key="frame" x="92" y="270" width="230" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCx-2Y-pSx">
+                                <rect key="frame" x="92" y="330" width="230" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0r-RO-rDj">
+                                <rect key="frame" x="92" y="400" width="230" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyD-Df-fIE">
+                                <rect key="frame" x="186" y="452" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="注册"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LS-17-rhp">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="后退"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="qDM-F1-Bdz" eventType="touchUpInside" id="Ycm-hS-H1e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="SMSTextField" destination="ylc-Xc-vVt" id="njQ-gq-qOU"/>
+                        <outlet property="backButton" destination="5LS-17-rhp" id="VOZ-Va-iCA"/>
+                        <outlet property="passwordTextField" destination="KCx-2Y-pSx" id="xOM-es-LCn"/>
+                        <outlet property="passwordValidTextField" destination="n0r-RO-rDj" id="6vU-Ap-KXf"/>
+                        <outlet property="phoneNumTextField" destination="lGL-hP-7zB" id="iaZ-XU-zxa"/>
+                        <outlet property="registerButton" destination="NyD-Df-fIE" id="DoA-r4-K8u"/>
+                        <outlet property="registerButtonAction" destination="NyD-Df-fIE" id="mVi-LJ-1a0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yN8-uz-UEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1330" y="347"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x2M-r0-j0R">
@@ -47,12 +194,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4LD-jx-1vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="248"/>
+            <point key="canvasLocation" x="370" y="279"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="gfH-96-E0r">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FIt-Kb-Qgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="leftViewController" id="oUG-s8-Jeb" customClass="LeftViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pAZ-mt-2Vz"/>
@@ -326,8 +472,9 @@
                         <outlet property="userProfileButton" destination="fgg-gT-8wZ" id="xbY-wx-PIg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIt-Kb-Qgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="1080"/>
+            <point key="canvasLocation" x="370" y="1084"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="qwd-jy-czF">
@@ -363,7 +510,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellDefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="bya-pY-8U8">
@@ -437,7 +584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3b-Q8-bLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="894.75"/>
+            <point key="canvasLocation" x="1330" y="1152"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="1cU-8u-v0v">
@@ -489,7 +636,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2112" y="813.75"/>
+            <point key="canvasLocation" x="1766" y="1152"/>
         </scene>
     </scenes>
     <resources>
