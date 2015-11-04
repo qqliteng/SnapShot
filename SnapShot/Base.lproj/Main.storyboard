@@ -52,6 +52,7 @@
         <!--Left View Controller-->
         <scene sceneID="gfH-96-E0r">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIt-Kb-Qgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="leftViewController" id="oUG-s8-Jeb" customClass="LeftViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pAZ-mt-2Vz"/>
@@ -61,17 +62,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="用户 ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9j-r2-dDB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maria玛丽娅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9j-r2-dDB">
                                 <rect key="frame" x="105" y="129" width="55" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="93" width="94" height="21"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kq-Nn-zqB">
                                 <rect key="frame" x="18" y="242" width="60" height="30"/>
                                 <animations/>
-                                <state key="normal" title="摄影分类"/>
+                                <state key="normal" title="摄影分类">
+                                    <color key="titleColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="75" y="150" width="60" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="serviceCataButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="hjw-yU-TcF"/>
                                 </connections>
@@ -79,7 +88,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-gT-8wZ">
                                 <rect key="frame" x="18" y="297" width="60" height="30"/>
                                 <animations/>
-                                <state key="normal" title="我的咔嚓"/>
+                                <state key="normal" title="我的咔嚓">
+                                    <color key="titleColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="75" y="195" width="60" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="userProfileButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="bQT-Fs-RkV"/>
                                 </connections>
@@ -87,7 +101,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPL-wC-qOC">
                                 <rect key="frame" x="18" y="347" width="30" height="30"/>
                                 <animations/>
-                                <state key="normal" title="团拍"/>
+                                <state key="normal" title="一起团拍">
+                                    <color key="titleColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="75" y="240" width="60" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="groupAppointmentButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="K58-9L-ivB"/>
                                 </connections>
@@ -95,7 +114,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbZ-HV-Aqg">
                                 <rect key="frame" x="18" y="404" width="60" height="30"/>
                                 <animations/>
-                                <state key="normal" title="优惠活动"/>
+                                <state key="normal" title="优惠活动">
+                                    <color key="titleColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="75" y="285" width="60" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="couponButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="30i-8X-Fec"/>
                                 </connections>
@@ -103,78 +127,205 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D93-S3-k48">
                                 <rect key="frame" x="20" y="129" width="70" height="64"/>
                                 <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个性签名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PT-53-bec">
-                                <rect key="frame" x="105" y="172" width="68" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48v-kY-B7b">
-                                <rect key="frame" x="20" y="562" width="30" height="30"/>
-                                <animations/>
-                                <state key="normal" title="设置"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="40" y="667" width="30" height="30"/>
+                                    <rect key="frame" x="25" y="74" width="60" height="60"/>
                                 </variation>
-                            </button>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-W8-W6f">
                                 <rect key="frame" x="25" y="91" width="60" height="30"/>
                                 <animations/>
-                                <state key="normal" title="身份转换"/>
+                                <state key="normal" title="身份转换">
+                                    <color key="titleColor" red="0.5607843137254902" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="75" y="396" width="60" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="changeStatusButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="jdX-6C-6d1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0u-yw-LeL">
-                                <rect key="frame" x="143" y="562" width="30" height="30"/>
-                                <animations/>
-                                <state key="normal" title="关于"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="143" y="667" width="30" height="30"/>
-                                </variation>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWc-GZ-Cus">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="注销登录"/>
+                                <state key="normal" title="设置">
+                                    <color key="titleColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="18" y="468" width="60" height="30"/>
+                                    <rect key="frame" x="75" y="330" width="30" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="logoutButton:" destination="oUG-s8-Jeb" eventType="touchUpInside" id="N8w-Eg-eJe"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="CcX-9n-4dF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="195" width="30" height="30"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-B7-s9b">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="240" width="30" height="30"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couponIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="X8L-jb-hWG">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="285" width="30" height="30"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="Qtr-nM-t9C">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="330" width="30" height="30"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cataIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-Ar-TcC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="150" width="30" height="30"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRightImage" translatesAutoresizingMaskIntoConstraints="NO" id="AXW-iv-FNc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="200" width="15" height="20"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRightImage" translatesAutoresizingMaskIntoConstraints="NO" id="tsV-e7-W55">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="245" width="15" height="20"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRightImage" translatesAutoresizingMaskIntoConstraints="NO" id="2rE-pq-ss9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="290" width="15" height="20"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRightImage" translatesAutoresizingMaskIntoConstraints="NO" id="sHC-gh-0xM">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="155" width="15" height="20"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seperateLineImage" translatesAutoresizingMaskIntoConstraints="NO" id="OOQ-SG-B9b">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="185" width="180" height="5"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seperateLineImage" translatesAutoresizingMaskIntoConstraints="NO" id="5ue-sH-Ot5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="230" width="180" height="5"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seperateLineImage" translatesAutoresizingMaskIntoConstraints="NO" id="sVI-3B-IXk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="275" width="180" height="5"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seperateLineImage" translatesAutoresizingMaskIntoConstraints="NO" id="tFh-dG-0Sp">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="320" width="180" height="5"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seperateLineImage" translatesAutoresizingMaskIntoConstraints="NO" id="GJm-bU-hRR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="140" width="180" height="5"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seperateLineImage" translatesAutoresizingMaskIntoConstraints="NO" id="o1z-Qm-iKG">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="365" width="180" height="5"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRightImage" translatesAutoresizingMaskIntoConstraints="NO" id="U5d-1j-6ED">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="335" width="15" height="20"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="dWc-GZ-Cus"/>
+                                <exclude reference="CcX-9n-4dF"/>
+                                <exclude reference="1oa-B7-s9b"/>
+                                <exclude reference="X8L-jb-hWG"/>
+                                <exclude reference="Qtr-nM-t9C"/>
+                                <exclude reference="ebu-Ar-TcC"/>
+                                <exclude reference="AXW-iv-FNc"/>
+                                <exclude reference="tsV-e7-W55"/>
+                                <exclude reference="2rE-pq-ss9"/>
+                                <exclude reference="sHC-gh-0xM"/>
+                                <exclude reference="OOQ-SG-B9b"/>
+                                <exclude reference="5ue-sH-Ot5"/>
+                                <exclude reference="sVI-3B-IXk"/>
+                                <exclude reference="tFh-dG-0Sp"/>
+                                <exclude reference="GJm-bU-hRR"/>
+                                <exclude reference="o1z-Qm-iKG"/>
+                                <exclude reference="U5d-1j-6ED"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="dWc-GZ-Cus"/>
+                                <include reference="CcX-9n-4dF"/>
+                                <include reference="1oa-B7-s9b"/>
+                                <include reference="X8L-jb-hWG"/>
+                                <include reference="Qtr-nM-t9C"/>
+                                <include reference="ebu-Ar-TcC"/>
+                                <include reference="AXW-iv-FNc"/>
+                                <include reference="tsV-e7-W55"/>
+                                <include reference="2rE-pq-ss9"/>
+                                <include reference="sHC-gh-0xM"/>
+                                <include reference="OOQ-SG-B9b"/>
+                                <include reference="5ue-sH-Ot5"/>
+                                <include reference="sVI-3B-IXk"/>
+                                <include reference="tFh-dG-0Sp"/>
+                                <include reference="GJm-bU-hRR"/>
+                                <include reference="o1z-Qm-iKG"/>
+                                <include reference="U5d-1j-6ED"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="aboutButton" destination="y0u-yw-LeL" id="SUS-xT-Wne"/>
                         <outlet property="changeStatuesButton" destination="cEc-W8-W6f" id="yx5-iF-fvD"/>
                         <outlet property="couponButton" destination="RbZ-HV-Aqg" id="JJ3-ub-YjT"/>
                         <outlet property="groupAppointmentButton" destination="PPL-wC-qOC" id="fwF-Za-iJj"/>
                         <outlet property="logoutButton" destination="dWc-GZ-Cus" id="rrj-7g-scD"/>
                         <outlet property="profileImage" destination="D93-S3-k48" id="AV2-iJ-yJy"/>
                         <outlet property="serviceCataButton" destination="6Kq-Nn-zqB" id="Aeb-5H-VWk"/>
-                        <outlet property="settingButton" destination="48v-kY-B7b" id="BEl-pc-WiB"/>
-                        <outlet property="signatureLabel" destination="0PT-53-bec" id="ojh-gg-xcv"/>
                         <outlet property="userIDLabel" destination="p9j-r2-dDB" id="iui-L4-R4j"/>
                         <outlet property="userProfileButton" destination="fgg-gT-8wZ" id="xbY-wx-PIg"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FIt-Kb-Qgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="618" y="1080"/>
         </scene>
@@ -342,6 +493,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowRightImage" width="15" height="26"/>
+        <image name="cataIconImage" width="32" height="24"/>
         <image name="cellDefaultImage" width="500" height="409"/>
+        <image name="couponIconImage" width="32" height="31"/>
+        <image name="groupIconImage" width="33" height="23"/>
+        <image name="profileIconImage" width="33" height="26"/>
+        <image name="seperateLineImage" width="1" height="1"/>
+        <image name="settingIconImage" width="32" height="33"/>
     </resources>
 </document>

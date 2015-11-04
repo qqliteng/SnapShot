@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var revealController: PKRevealController?
     var frontViewController: FrontViewController?
     var leftViewController: LeftViewController?
-    var navBtn: UIButton?
+    var searchViewController: SearchViewController?
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -50,9 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.navigationController = nil
         self.navigationController = UINavigationController()
         
-        self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
-        self.navBtn?.addTarget(self, action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
-        self.navigationController?.navigationBar.addSubview(self.navBtn!)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 0)
         let titleShadow: NSShadow = NSShadow()
         titleShadow.shadowColor = UIColor(red: 218/255, green: 147/255, blue: 171/255, alpha: 1)
@@ -155,10 +153,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func popToSearchView() {
-        self.navBtn?.removeFromSuperview()
-        let searchViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("searchViewController") as! SearchViewController
+        self.searchViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("searchViewController") as? SearchViewController
         self.navigationController?.navigationItem.hidesBackButton = true
-        self.navigationController?.pushViewController(searchViewController, animated: true)
+        self.navigationController?.pushViewController(searchViewController!, animated: true)
     }
 }
 

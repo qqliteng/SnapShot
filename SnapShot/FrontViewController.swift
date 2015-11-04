@@ -11,8 +11,16 @@ import Alamofire
 import SwiftyJSON
 
 class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate {
-
+    var navBtn: UIButton?
     @IBOutlet weak var mainTableView: UITableView!
+    
+    override func viewWillAppear(animated: Bool) {
+        if self.navBtn == nil {
+        self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
+        self.navBtn?.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
+        self.navigationController?.navigationBar.addSubview(self.navBtn!)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +33,11 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "popToSearchViewController")
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        self.navBtn?.removeFromSuperview()
+        self.navBtn = nil
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -111,6 +124,5 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     func popToSearchViewController() {
         
     }
-    
 }
 
