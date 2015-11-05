@@ -66,6 +66,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell
+        var cataCell: CataCell?
         
         if indexPath.section == 0 && indexPath.row == 0 {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
@@ -74,22 +75,21 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.clipsToBounds = true
             return cell
         } else if indexPath.section == 0 && indexPath.row == 1 {
-            let tmp = tableView.dequeueReusableCellWithIdentifier("frontCell")
+            cataCell = CataCell()
+            cataCell?.cataLabel.text = "萌娃外拍"
+            cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")
+
+//            let tmp = tableView.dequeueReusableCellWithIdentifier("cataCell")
+//            
+//            if tmp == nil {
+//                cell =  CataCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cataCell")
+//            } else {
+//                cell = tmp!
+//            }
+//            
+//            cell = self.doRetureCataCell()
             
-            if tmp == nil {
-                cell = FrontCell(style: UITableViewCellStyle.Default, reuseIdentifier: "frontCell")
-            } else {
-                cell = tmp!
-            }
-            
-            _ = cell as! FrontCell
-            
-            if indexPath.section == 0 {
-                cell = doReturnCell(indexPath.row - 1)
-            } else {
-                cell = self.doReturnCell(indexPath.row)
-            }
-            return cell
+            return cataCell!
 
         } else {
             
@@ -112,6 +112,13 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
 
+    
+    private func doRetureCataCell() -> UITableViewCell {
+        let cell = mainTableView.dequeueReusableCellWithIdentifier("cataCell") as! CataCell
+        cell.cataLabel.text = "萌娃外拍"
+        cell.cataImageView.image = UIImage(named: "cataImageDefault")
+        return cell
+    }
     
     private func doReturnCell(row:Int) -> UITableViewCell {
         
