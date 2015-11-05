@@ -57,6 +57,8 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == 0 {
             return 44
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            return 200
         } else {
             return 300
         }
@@ -71,6 +73,24 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.contentView.backgroundColor = UIColor.clearColor()
             cell.clipsToBounds = true
             return cell
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            let tmp = tableView.dequeueReusableCellWithIdentifier("frontCell")
+            
+            if tmp == nil {
+                cell = FrontCell(style: UITableViewCellStyle.Default, reuseIdentifier: "frontCell")
+            } else {
+                cell = tmp!
+            }
+            
+            _ = cell as! FrontCell
+            
+            if indexPath.section == 0 {
+                cell = doReturnCell(indexPath.row - 1)
+            } else {
+                cell = self.doReturnCell(indexPath.row)
+            }
+            return cell
+
         } else {
             
             let tmp = tableView.dequeueReusableCellWithIdentifier("frontCell")
@@ -102,7 +122,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //=======================UITableViewDelegate 的实现===================================
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

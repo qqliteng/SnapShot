@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 //主页上得各种高度的变量
-let TABLE_CELL_HEIGHT : Float = 120
+let TABLE_CELL_HEIGHT : Float = 100
 let SECTION_HEIGHT:Float = 24
 let SCROLL_HEIGHT:Float = 80
 let IMAGE_HEIGHT:Float = 400
@@ -21,3 +21,8 @@ let VALUE_CELL_HEIGHT:Float = 140
 
 let SCREEN_WIDTH:Float = Float(UIScreen.mainScreen().bounds.width)
 let SCREEN_HEIGHT:Float = Float(UIScreen.mainScreen().bounds.height)
+
+//字体颜色
+let TEXT_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
+let TEXT_COLOR_LIGHT_GREY:UIColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1)
+let NAVIGATION_BAR_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)

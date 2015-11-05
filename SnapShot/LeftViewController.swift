@@ -58,8 +58,8 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     
     func initLeftViewController(){
         if isLogin == false {
-            
-//            self.profileImage.hidden = true
+
+            self.profileImage.hidden = true
 //            self.userIDLabel.hidden = true
 //            self.userIDLabel.hidden = true
 //            self.changeStatuesButton.hidden = true
