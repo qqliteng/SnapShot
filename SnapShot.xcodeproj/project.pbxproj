@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021695501BD8C7CE006A022F /* LaunchScreen.storyboard */; };
 		022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022487F31BCF4B3B0019D7CF /* Assets.xcassets */; };
+		0227D7591BEB562F00F7A704 /* CataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0227D7581BEB562F00F7A704 /* CataCell.xib */; };
+		0227D75B1BEB588900F7A704 /* CataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227D75A1BEB588900F7A704 /* CataCell.swift */; };
 		023994E01BE34A5E0010122F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023994DF1BE34A5E0010122F /* SearchViewController.swift */; };
 		024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024C7D3D1BD4EE0A002666FB /* SPNavigationViewController.swift */; };
 		024E862C1BE8B27C00E44628 /* FrontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E862B1BE8B27C00E44628 /* FrontCell.swift */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		021695511BD8C7CE006A022F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		022487F31BCF4B3B0019D7CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0227D7581BEB562F00F7A704 /* CataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CataCell.xib; sourceTree = "<group>"; };
+		0227D75A1BEB588900F7A704 /* CataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CataCell.swift; sourceTree = "<group>"; };
 		023994DF1BE34A5E0010122F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		024C7D3D1BD4EE0A002666FB /* SPNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPNavigationViewController.swift; sourceTree = "<group>"; };
 		024E862B1BE8B27C00E44628 /* FrontCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontCell.swift; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 				02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */,
 				024E862B1BE8B27C00E44628 /* FrontCell.swift */,
 				024E862D1BE8B2CD00E44628 /* FrontCell.xib */,
+				0227D7581BEB562F00F7A704 /* CataCell.xib */,
+				0227D75A1BEB588900F7A704 /* CataCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0227D7591BEB562F00F7A704 /* CataCell.xib in Resources */,
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
 				02F96CB41BDA152100AA3D5E /* ProfileCell.xib in Resources */,
 				02715E041BCE2B94008A11D7 /* Icon.jpg in Resources */,
@@ -440,6 +447,7 @@
 				027F16271BC762C700D9B721 /* FrontViewController.swift in Sources */,
 				024E862C1BE8B27C00E44628 /* FrontCell.swift in Sources */,
 				02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */,
+				0227D75B1BEB588900F7A704 /* CataCell.swift in Sources */,
 				02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */,
 				02817FE61BDA16FD00166DC2 /* ProfileCell.swift in Sources */,
 				024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */,
