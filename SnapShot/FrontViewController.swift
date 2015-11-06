@@ -77,18 +77,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         } else if indexPath.section == 0 && indexPath.row == 1 {
             cataCell = CataCell()
             cataCell?.cataLabel.text = "萌娃外拍"
-            cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")
-
-//            let tmp = tableView.dequeueReusableCellWithIdentifier("cataCell")
-//            
-//            if tmp == nil {
-//                cell =  CataCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cataCell")
-//            } else {
-//                cell = tmp!
-//            }
-//            
-//            cell = self.doRetureCataCell()
-            
+            cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")            
             return cataCell!
 
         } else {
@@ -134,7 +123,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-                return 0
+                return 30
         }
         
         return CGFloat(SECTION_HEIGHT)
