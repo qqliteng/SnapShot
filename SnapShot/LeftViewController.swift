@@ -27,7 +27,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var aboutButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     
-//    var loginButton: UIButton?
+    var loginButton: UIButton?
 //    var registerButton: UIButton?
 //    var userIDInputLabel:UILabel?
 //    var passwordLabel:UILabel?
@@ -43,10 +43,12 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(animated: Bool) {
         
         
-        self.profileImage.image = UIImage(named: "profileImageDefault")
+        
     }
     
     override func viewDidLoad() {
+        self.initLeftViewController()
+        self.profileImage.image = UIImage(named: "profileImageDefault")
         self.initLeftViewController()
         self.view.backgroundColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
         
@@ -60,7 +62,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         if isLogin == false {
 
             self.profileImage.hidden = true
-//            self.userIDLabel.hidden = true
+            self.userIDLabel.hidden = true
 //            self.userIDLabel.hidden = true
 //            self.changeStatuesButton.hidden = true
 //            self.serviceCataButton.hidden = true
@@ -72,15 +74,17 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
 //            self.settingButton.hidden = true
 //            self.aboutButton.hidden = true
 //            
-//            self.loginButton = UIButton(frame: CGRectMake(70, 300, 80, 40))
-//            self.loginButton?.layer.masksToBounds = true
-//            self.loginButton?.layer.cornerRadius = 5.0
-//            self.loginButton?.layer.borderWidth = 1.0
-//            self.loginButton?.layer.borderColor =  UIColor.whiteColor().CGColor
-//            self.loginButton?.setTitle("登录", forState:  UIControlState.Normal)
-//            self.loginButton?.addTarget(self, action: "loginViewDisplay", forControlEvents: UIControlEvents.TouchUpInside)
-//            self.view.addSubview(self.loginButton!)
-//            
+            self.loginButton = UIButton(frame: CGRectMake(70, 80, 60, 30))
+            self.loginButton?.layer.masksToBounds = true
+            self.loginButton?.layer.cornerRadius = 5.0
+            self.loginButton?.layer.borderWidth = 1.0
+            self.loginButton?.layer.borderColor =  TEXT_COLOR_LIGHT_GREY.CGColor
+            self.loginButton?.setTitle("登录", forState:  UIControlState.Normal)
+            self.loginButton?.setTitleColor(TEXT_COLOR_LIGHT_GREY, forState: UIControlState.Normal)
+            self.loginButton?.setTitleColor(UIColor.blackColor(), forState: UIControlState.Selected)
+            self.loginButton?.addTarget(self, action: "loginViewDisplay", forControlEvents: UIControlEvents.TouchUpInside)
+            self.view.addSubview(self.loginButton!)
+//
 //            self.registerButton = UIButton(frame: CGRectMake(70, 400, 80, 40))
 //            self.registerButton?.layer.masksToBounds = true
 //            self.registerButton?.layer.cornerRadius = 5.0
@@ -119,6 +123,8 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     
     func loginViewDisplay() {
         print("login button is pressed!")
+        let loginViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("loginViewController") as? LoginViewController
+        self.navigationController?.pushViewController(loginViewController!, animated: true)
 //        self.loginButton?.center = CGPoint(x: 110, y: 200)
 //        self.userIDInputLabel = UILabel(frame: CGRectMake(10, 250, 70, 40))
 //        self.userIDInputLabel?.font = UIFont(name: "Heiti SC", size: 17)
@@ -249,6 +255,8 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func serviceCataButton(sender: AnyObject) {
         print("changStatusButton button is pressed!")
+        let cataViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("cataViewController") as! CataViewController
+        self.navigationController?.pushViewController(cataViewController, animated: true)
     }
     
     @IBAction func userProfileButton(sender: AnyObject) {

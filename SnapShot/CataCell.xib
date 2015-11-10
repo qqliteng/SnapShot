@@ -6,34 +6,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="cataCell" id="iN0-l3-epB" customClass="CataCell" customModule="SnapShot" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="198" id="ojp-9S-NBF" customClass="CataCell" customModule="SnapShot" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EVw-f5-0mx">
-                    <rect key="frame" x="8" y="8" width="398" height="184"/>
-                    <animations/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataShadowBannerImage" translatesAutoresizingMaskIntoConstraints="NO" id="dpU-kP-OZu">
-                    <rect key="frame" x="8" y="131" width="398" height="61"/>
-                    <animations/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-5a-FcV">
-                    <rect key="frame" x="175" y="145" width="64" height="33"/>
-                    <animations/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-            </subviews>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ojp-9S-NBF" id="yQv-8D-miH">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EVw-f5-0mx">
+                        <rect key="frame" x="8" y="8" width="398" height="184"/>
+                        <animations/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataShadowBannerImage" translatesAutoresizingMaskIntoConstraints="NO" id="dpU-kP-OZu">
+                        <rect key="frame" x="8" y="131" width="398" height="61"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="萌娃外拍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-5a-FcV">
+                        <rect key="frame" x="165" y="145" width="84" height="33"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+            </tableViewCellContentView>
             <animations/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="cataImageView" destination="EVw-f5-0mx" id="cfQ-dY-Mmj"/>
-                <outlet property="cataLabel" destination="ahW-5a-FcV" id="jg8-UF-nJs"/>
+                <outlet property="cataImageView" destination="EVw-f5-0mx" id="jIk-Q8-EHB"/>
+                <outlet property="cataLabel" destination="ahW-5a-FcV" id="SBr-BF-zCQ"/>
             </connections>
-        </view>
+            <point key="canvasLocation" x="589" y="768"/>
+        </tableViewCell>
     </objects>
     <resources>
         <image name="cataShadowBannerImage" width="476" height="59"/>

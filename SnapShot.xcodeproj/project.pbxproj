@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021695501BD8C7CE006A022F /* LaunchScreen.storyboard */; };
+		021C1C201BF06CFD0064DC45 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C1C1F1BF06CFD0064DC45 /* BasicViewController.swift */; };
+		021C1C221BF08C170064DC45 /* CataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C1C211BF08C160064DC45 /* CataViewController.swift */; };
+		021C1C241BF08E330064DC45 /* CataDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 021C1C231BF08E330064DC45 /* CataDetailCell.xib */; };
+		021C1C261BF08E600064DC45 /* CataDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C1C251BF08E600064DC45 /* CataDetailCell.swift */; };
 		022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022487F31BCF4B3B0019D7CF /* Assets.xcassets */; };
 		0227D7591BEB562F00F7A704 /* CataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0227D7581BEB562F00F7A704 /* CataCell.xib */; };
 		0227D75B1BEB588900F7A704 /* CataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227D75A1BEB588900F7A704 /* CataCell.swift */; };
@@ -60,6 +64,10 @@
 
 /* Begin PBXFileReference section */
 		021695511BD8C7CE006A022F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		021C1C1F1BF06CFD0064DC45 /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		021C1C211BF08C160064DC45 /* CataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CataViewController.swift; sourceTree = "<group>"; };
+		021C1C231BF08E330064DC45 /* CataDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CataDetailCell.xib; sourceTree = "<group>"; };
+		021C1C251BF08E600064DC45 /* CataDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CataDetailCell.swift; sourceTree = "<group>"; };
 		022487F31BCF4B3B0019D7CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0227D7581BEB562F00F7A704 /* CataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CataCell.xib; sourceTree = "<group>"; };
 		0227D75A1BEB588900F7A704 /* CataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CataCell.swift; sourceTree = "<group>"; };
@@ -147,6 +155,8 @@
 				023994DF1BE34A5E0010122F /* SearchViewController.swift */,
 				67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */,
 				67A06FF31BEA50020049BD54 /* RegisterViewController.swift */,
+				021C1C1F1BF06CFD0064DC45 /* BasicViewController.swift */,
+				021C1C211BF08C160064DC45 /* CataViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +235,8 @@
 				024E862D1BE8B2CD00E44628 /* FrontCell.xib */,
 				0227D7581BEB562F00F7A704 /* CataCell.xib */,
 				0227D75A1BEB588900F7A704 /* CataCell.swift */,
+				021C1C231BF08E330064DC45 /* CataDetailCell.xib */,
+				021C1C251BF08E600064DC45 /* CataDetailCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -369,6 +381,7 @@
 				021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */,
 				022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */,
 				02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */,
+				021C1C241BF08E330064DC45 /* CataDetailCell.xib in Resources */,
 				0284B2C41BCBA7AD007779A4 /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,14 +456,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				023994E01BE34A5E0010122F /* SearchViewController.swift in Sources */,
+				021C1C201BF06CFD0064DC45 /* BasicViewController.swift in Sources */,
 				0284B2C21BCBA798007779A4 /* CardCell.swift in Sources */,
 				027F16271BC762C700D9B721 /* FrontViewController.swift in Sources */,
 				024E862C1BE8B27C00E44628 /* FrontCell.swift in Sources */,
+				021C1C261BF08E600064DC45 /* CataDetailCell.swift in Sources */,
 				02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */,
 				0227D75B1BEB588900F7A704 /* CataCell.swift in Sources */,
 				02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */,
 				02817FE61BDA16FD00166DC2 /* ProfileCell.swift in Sources */,
 				024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */,
+				021C1C221BF08C170064DC45 /* CataViewController.swift in Sources */,
 				0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */,
 				67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,

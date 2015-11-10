@@ -18,18 +18,32 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var registerPushButton: UIButton!
     
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var phoneWarningLabel: UILabel!
+    
+    @IBOutlet weak var passwordWarningLabel: UILabel!
+    
+    @IBOutlet weak var checkBox: UIButton!
+    
+    @IBOutlet weak var forgetPasswordButton: UIButton!
+    
     override func viewDidLoad() {
+        self.phoneWarningLabel.hidden = true
+        self.passwordWarningLabel.hidden = true
+        self.phoneNumTextField.placeholder = "请输入电话号码"
+        self.passwordTextField.placeholder = "请输入密码"
+        self.checkBox.setImage(UIImage(named: "checkBoxImage"), forState: UIControlState.Normal)
+        self.checkBox.setImage(UIImage(named: "checkBoxSelectedImage"), forState: UIControlState.Selected)
         self.title = "登陆"
-        self.navigationController?.navigationBarHidden = true
+        
     }
     @IBAction func loginButtonAction(sender: AnyObject) {
     }
     
     @IBAction func registerPushButtonAction(sender: AnyObject) {
+        let registerViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("registerViewController") as? RegisterViewController
+        self.navigationController?.pushViewController(registerViewController!, animated: true)
     }
     
     
-    @IBAction func closeButtonAction(sender: AnyObject) {
-    }
+   
 }

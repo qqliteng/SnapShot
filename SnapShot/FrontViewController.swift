@@ -25,9 +25,10 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "咔嚓"
-        let nib = UINib(nibName: "FrontCell", bundle: nil)
-        mainTableView.registerNib(nib, forCellReuseIdentifier: "frontCell")
+        
+        
+        mainTableView.registerNib(UINib(nibName: "FrontCell", bundle: nil), forCellReuseIdentifier: "frontCell")
+        mainTableView.registerNib(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
         mainTableView.delegate = self
         mainTableView.dataSource = self
         self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "popToSearchViewController")
@@ -46,7 +47,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if  section == 0 {
             
-            return 1
+            return 2
         }else {
             
             return 1
@@ -75,7 +76,8 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.clipsToBounds = true
             return cell
         } else if indexPath.section == 0 && indexPath.row == 1 {
-            cataCell = CataCell()
+            cataCell = CataCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cataCell")
+            cataCell = mainTableView.dequeueReusableCellWithIdentifier("cataCell") as? CataCell
             cataCell?.cataLabel.text = "萌娃外拍"
             cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")            
             return cataCell!
@@ -101,14 +103,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
 
-    
-    private func doRetureCataCell() -> UITableViewCell {
-        let cell = mainTableView.dequeueReusableCellWithIdentifier("cataCell") as! CataCell
-        cell.cataLabel.text = "萌娃外拍"
-        cell.cataImageView.image = UIImage(named: "cataImageDefault")
-        return cell
-    }
-    
+
     private func doReturnCell(row:Int) -> UITableViewCell {
         
         let cell = mainTableView.dequeueReusableCellWithIdentifier("frontCell") as! FrontCell
@@ -137,8 +132,5 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
-    func popToSearchViewController() {
-        
-    }
 }
 

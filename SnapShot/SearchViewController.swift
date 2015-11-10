@@ -46,6 +46,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         self.SVsearchBar?.removeFromSuperview()
         self.locationBtn?.removeFromSuperview()
         self.cancelBtn?.removeFromSuperview()
+        self.priceSortButton?.removeFromSuperview()
+        self.appointSortButton?.removeFromSuperview()
+        self.rateSortButton?.removeFromSuperview()
+        self.navigationController?.navigationBar.frame = CGRectMake(0, 20, CGFloat(SCREEN_WIDTH), 44)
+        self.navigationController?.navigationBar.viewWithTag(100)?.removeFromSuperview()
+        self.navigationController?.navigationBar.viewWithTag(101)?.removeFromSuperview()
         let appDelegate = AppDelegate()
         appDelegate.initNavigationController()
     }
@@ -92,6 +98,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         for var i = 0; i < 2; i++ {
             let verticalShortLine: UIImageView = UIImageView(frame: CGRect(x: Double((SCREEN_WIDTH/3) * Float(i + 1)), y: 49, width: 0.5, height: 32))
             verticalShortLine.image = UIImage(named: "verticalLineImage")
+            verticalShortLine.tag = 100+i
             self.navigationController?.navigationBar.addSubview(verticalShortLine)
         }
 

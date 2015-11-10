@@ -33,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.revealController!.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
         self.revealController!.recognizesPanningOnFrontView = true
         self.revealController!.title = "咔嚓"
-
         self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
         self.navigationController = UINavigationController()
         
@@ -54,8 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.navigationController?.navigationBar.barTintColor = NAVIGATION_BAR_COLOR_GREY
         let titleShadow: NSShadow = NSShadow()
         titleShadow.shadowColor = UIColor(red: 218/255, green: 147/255, blue: 171/255, alpha: 1)
-        titleShadow.shadowOffset = CGSizeMake(0.5, 0.5)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Heiti SC", size: 24.0)!, NSShadowAttributeName:titleShadow]
+        titleShadow.shadowOffset = CGSizeMake(0, 0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Heiti SC", size: 20)!, NSShadowAttributeName:titleShadow]
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         return self.navigationController!
