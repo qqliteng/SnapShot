@@ -81,17 +81,6 @@
                                     <action selector="loginButtonAction:" destination="G3n-fc-ihA" eventType="touchUpInside" id="ENc-h2-aXa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4Z-hO-mU8">
-                                <rect key="frame" x="172" y="363" width="75" height="30"/>
-                                <animations/>
-                                <state key="normal" title="注册"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="364" y="28" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="registerPushButtonAction:" destination="G3n-fc-ihA" eventType="touchUpInside" id="Ieu-Mw-Xcl"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VW-aI-q7H">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
@@ -170,7 +159,6 @@
                         <outlet property="passwordWarningLabel" destination="WN1-GF-4Dv" id="UB3-g5-9zz"/>
                         <outlet property="phoneNumTextField" destination="yNg-rH-NHb" id="pHh-dZ-7Wq"/>
                         <outlet property="phoneWarningLabel" destination="8VW-aI-q7H" id="J2A-db-F5s"/>
-                        <outlet property="registerPushButton" destination="r4Z-hO-mU8" id="Mbv-e9-EqT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fc-yv-JuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,69 +177,166 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="咔     嚓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liL-Cc-em3">
-                                <rect key="frame" x="167" y="150" width="80" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyD-Df-fIE">
+                                <rect key="frame" x="186" y="452" width="30" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="注册" backgroundImage="registerButtonImage">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="470" width="335" height="45"/>
+                                </variation>
+                                <connections>
+                                    <action selector="registerButtonAction:" destination="qDM-F1-Bdz" eventType="touchUpInside" id="Ym1-sr-DAp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdz-tv-Yjr">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" backgroundImage="SMSButtonImage">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="214" y="290" width="160" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendSMSButtonAction:" destination="qDM-F1-Bdz" eventType="touchUpInside" id="Waz-v1-Psr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKV-Xp-vI1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button" backgroundImage="checkBoxSelectedImage">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="400" width="20" height="20"/>
+                                </variation>
+                                <connections>
+                                    <action selector="licenseCheckBoxAction:" destination="qDM-F1-Bdz" eventType="touchUpInside" id="9ku-c4-7A8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我已阅读并同意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5K-mn-stU">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="399" width="88" height="21"/>
+                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-yi-AZe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="《咔嚓平台服务协议》"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="144" y="399" width="124" height="21"/>
+                                </variation>
+                                <connections>
+                                    <action selector="licenseDisplayButtonAction:" destination="qDM-F1-Bdz" eventType="touchUpInside" id="qUH-Ub-idw"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lGL-hP-7zB">
                                 <rect key="frame" x="92" y="210" width="230" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="156" width="335" height="30"/>
+                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ylc-Xc-vVt">
                                 <rect key="frame" x="92" y="270" width="230" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="223" width="335" height="30"/>
+                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCx-2Y-pSx">
                                 <rect key="frame" x="92" y="330" width="230" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="290" width="160" height="30"/>
+                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0r-RO-rDj">
                                 <rect key="frame" x="92" y="400" width="230" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="357" width="335" height="30"/>
+                                </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyD-Df-fIE">
-                                <rect key="frame" x="186" y="452" width="30" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fsf-NT-jDC">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
-                                <state key="normal" title="注册"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LS-17-rhp">
-                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="39" y="89" width="335" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrw-tK-Y3t">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
-                                <state key="normal" title="后退"/>
-                                <connections>
-                                    <action selector="backButtonAction:" destination="qDM-F1-Bdz" eventType="touchUpInside" id="Ycm-hS-H1e"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="249" y="295" width="98" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Kdz-tv-Yjr"/>
+                                <exclude reference="GKV-Xp-vI1"/>
+                                <exclude reference="v5K-mn-stU"/>
+                                <exclude reference="hLA-yi-AZe"/>
+                                <exclude reference="fsf-NT-jDC"/>
+                                <exclude reference="Nrw-tK-Y3t"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="Kdz-tv-Yjr"/>
+                                <include reference="GKV-Xp-vI1"/>
+                                <include reference="v5K-mn-stU"/>
+                                <include reference="hLA-yi-AZe"/>
+                                <include reference="fsf-NT-jDC"/>
+                                <include reference="Nrw-tK-Y3t"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
                     <connections>
                         <outlet property="SMSTextField" destination="ylc-Xc-vVt" id="njQ-gq-qOU"/>
-                        <outlet property="backButton" destination="5LS-17-rhp" id="VOZ-Va-iCA"/>
+                        <outlet property="licenseCheckBox" destination="GKV-Xp-vI1" id="gba-Of-PeN"/>
+                        <outlet property="licenseDisplayButton" destination="hLA-yi-AZe" id="KJF-XT-NHY"/>
                         <outlet property="passwordTextField" destination="KCx-2Y-pSx" id="xOM-es-LCn"/>
                         <outlet property="passwordValidTextField" destination="n0r-RO-rDj" id="6vU-Ap-KXf"/>
                         <outlet property="phoneNumTextField" destination="lGL-hP-7zB" id="iaZ-XU-zxa"/>
                         <outlet property="registerButton" destination="NyD-Df-fIE" id="DoA-r4-K8u"/>
-                        <outlet property="registerButtonAction" destination="NyD-Df-fIE" id="mVi-LJ-1a0"/>
+                        <outlet property="sendSMSButton" destination="Kdz-tv-Yjr" id="1oS-RD-iw7"/>
+                        <outlet property="timeLabel" destination="Nrw-tK-Y3t" id="a7J-vi-V1U"/>
+                        <outlet property="userIDTextField" destination="fsf-NT-jDC" id="Vsi-86-rt1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yN8-uz-UEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330" y="347"/>
+            <point key="canvasLocation" x="1330" y="346.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x2M-r0-j0R">
@@ -754,14 +839,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SMSButtonImage" width="201" height="57"/>
         <image name="arrowRightImage" width="15" height="26"/>
         <image name="cataIconImage" width="32" height="24"/>
         <image name="cellDefaultImage" width="224" height="112"/>
         <image name="checkBoxImage" width="33" height="31"/>
+        <image name="checkBoxSelectedImage" width="33" height="31"/>
         <image name="couponIconImage" width="32" height="31"/>
         <image name="groupIconImage" width="33" height="23"/>
         <image name="loginButtonImage" width="472" height="57"/>
         <image name="profileIconImage" width="33" height="26"/>
+        <image name="registerButtonImage" width="472" height="57"/>
         <image name="seperateLineImage" width="1" height="1"/>
         <image name="settingIconImage" width="32" height="33"/>
     </resources>

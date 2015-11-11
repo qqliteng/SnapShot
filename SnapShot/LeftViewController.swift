@@ -74,7 +74,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
 //            self.settingButton.hidden = true
 //            self.aboutButton.hidden = true
 //            
-            self.loginButton = UIButton(frame: CGRectMake(70, 80, 60, 30))
+            self.loginButton = UIButton(frame: CGRectMake(75, 90, 60, 30))
             self.loginButton?.layer.masksToBounds = true
             self.loginButton?.layer.cornerRadius = 5.0
             self.loginButton?.layer.borderWidth = 1.0
@@ -123,6 +123,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     
     func loginViewDisplay() {
         print("login button is pressed!")
+        self.title = ""
         let loginViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("loginViewController") as? LoginViewController
         self.navigationController?.pushViewController(loginViewController!, animated: true)
 //        self.loginButton?.center = CGPoint(x: 110, y: 200)

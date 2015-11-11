@@ -32,9 +32,12 @@ class ViewWidgest {
     }
     
     static func addRightButton(buttonName:String) -> UIButton {
-        let rightBtn: UIButton = UIButton(frame: CGRect(x: Int(SCREEN_WIDTH - 62), y: 5, width: 60, height: 30))
+        let rightBtn: UIButton = UIButton(frame: CGRect(x: Int(SCREEN_WIDTH - 62), y: 7, width: 60, height: 30))
         rightBtn.setTitle(buttonName, forState: UIControlState.Normal)
         return rightBtn
     }
     
+    static func backToRoot(navgationViewController: UINavigationController) {
+        navgationViewController.popToRootViewControllerAnimated(true)
+    }
 }
