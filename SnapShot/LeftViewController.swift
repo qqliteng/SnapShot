@@ -269,6 +269,9 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func groupAppointmentButton(sender: AnyObject) {
         print("groupAppointmentButton button is pressed!")
+        let groupViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("groupViewController") as! GroupViewController
+        self.navigationController?.pushViewController(groupViewController, animated: true)
+        
     }
     
     

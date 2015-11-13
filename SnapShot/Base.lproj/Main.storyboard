@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PG5-8l-tWK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PG5-8l-tWK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Front View Controller-->
@@ -75,7 +77,7 @@
                                 </state>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                    <rect key="frame" x="40" y="345" width="335" height="45"/>
+                                    <rect key="frame" x="40" y="326" width="335" height="45"/>
                                 </variation>
                                 <connections>
                                     <action selector="loginButtonAction:" destination="G3n-fc-ihA" eventType="touchUpInside" id="ENc-h2-aXa"/>
@@ -121,12 +123,57 @@
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="68" y="229" width="68" height="21"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seperateLineImage" translatesAutoresizingMaskIntoConstraints="NO" id="m8d-vk-Z7Q">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="410" width="110" height="2"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seperateLineImage" translatesAutoresizingMaskIntoConstraints="NO" id="3uw-LS-IjB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="265" y="410" width="110" height="2"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="社交账号登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yg-O6-EwO">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="162" y="400" width="91" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weiboIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="rfj-FO-j0J">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="460" width="40" height="40"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qqIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="Gr2-fM-GzA">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="335" y="460" width="40" height="40"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wechatIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="vfO-eu-u79">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="187" y="460" width="40" height="40"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,6 +184,12 @@
                                 <exclude reference="2mA-iI-Zgt"/>
                                 <exclude reference="WN1-GF-4Dv"/>
                                 <exclude reference="Tyc-al-4SV"/>
+                                <exclude reference="m8d-vk-Z7Q"/>
+                                <exclude reference="3uw-LS-IjB"/>
+                                <exclude reference="7Yg-O6-EwO"/>
+                                <exclude reference="rfj-FO-j0J"/>
+                                <exclude reference="Gr2-fM-GzA"/>
+                                <exclude reference="vfO-eu-u79"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -146,6 +199,12 @@
                                 <include reference="2mA-iI-Zgt"/>
                                 <include reference="WN1-GF-4Dv"/>
                                 <include reference="Tyc-al-4SV"/>
+                                <include reference="m8d-vk-Z7Q"/>
+                                <include reference="3uw-LS-IjB"/>
+                                <include reference="7Yg-O6-EwO"/>
+                                <include reference="rfj-FO-j0J"/>
+                                <include reference="Gr2-fM-GzA"/>
+                                <include reference="vfO-eu-u79"/>
                             </mask>
                         </variation>
                     </view>
@@ -222,7 +281,7 @@
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="65" y="399" width="88" height="21"/>
@@ -813,6 +872,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="68" width="414" height="668"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                </variation>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -835,7 +897,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHo-Le-b3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2203" y="1152"/>
+            <point key="canvasLocation" x="2421" y="1152"/>
+        </scene>
+        <!--Group View Controller-->
+        <scene sceneID="rfe-Iy-rQe">
+            <objects>
+                <viewController storyboardIdentifier="groupViewController" id="YiO-Ve-un3" customClass="GroupViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BPb-aS-fgL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kz4-ou-UAI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2vf-iD-pZq">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iJ7-0R-nfZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iJ7-0R-nfZ" firstAttribute="width" secondItem="2vf-iD-pZq" secondAttribute="width" id="1YX-SB-amT"/>
+                            <constraint firstItem="iJ7-0R-nfZ" firstAttribute="height" secondItem="2vf-iD-pZq" secondAttribute="height" multiplier="0.8" id="3gs-vx-iwq"/>
+                            <constraint firstItem="iJ7-0R-nfZ" firstAttribute="top" secondItem="BPb-aS-fgL" secondAttribute="bottom" constant="44" id="5rT-NU-VMI"/>
+                            <constraint firstItem="iJ7-0R-nfZ" firstAttribute="leading" secondItem="2vf-iD-pZq" secondAttribute="leadingMargin" constant="-20" id="6Sn-cv-B8c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iJ7-0R-nfZ" secondAttribute="trailing" constant="-20" id="ckK-ra-TC9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="iJ7-0R-nfZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1YX-SB-amT"/>
+                                <exclude reference="3gs-vx-iwq"/>
+                                <exclude reference="5rT-NU-VMI"/>
+                                <exclude reference="6Sn-cv-B8c"/>
+                                <exclude reference="ckK-ra-TC9"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="iJ7-0R-nfZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1YX-SB-amT"/>
+                                <include reference="3gs-vx-iwq"/>
+                                <include reference="5rT-NU-VMI"/>
+                                <include reference="6Sn-cv-B8c"/>
+                                <include reference="ckK-ra-TC9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="groupTableView" destination="iJ7-0R-nfZ" id="Cva-WQ-7Qp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkn-T8-GC0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3075" y="1176"/>
         </scene>
     </scenes>
     <resources>
@@ -849,8 +970,11 @@
         <image name="groupIconImage" width="33" height="23"/>
         <image name="loginButtonImage" width="472" height="57"/>
         <image name="profileIconImage" width="33" height="26"/>
+        <image name="qqIconImage" width="42" height="44"/>
         <image name="registerButtonImage" width="472" height="57"/>
         <image name="seperateLineImage" width="1" height="1"/>
         <image name="settingIconImage" width="32" height="33"/>
+        <image name="wechatIconImage" width="56" height="42"/>
+        <image name="weiboIconImage" width="45" height="42"/>
     </resources>
 </document>

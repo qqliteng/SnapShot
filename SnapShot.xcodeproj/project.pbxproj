@@ -35,6 +35,8 @@
 		0284B2C21BCBA798007779A4 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284B2C11BCBA798007779A4 /* CardCell.swift */; };
 		0284B2C41BCBA7AD007779A4 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0284B2C31BCBA7AD007779A4 /* CardCell.xib */; };
 		0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */; };
+		02BD41E41BF475560078451A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD41E31BF475560078451A /* GroupCell.swift */; };
+		02BD41E61BF4788E0078451A /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BD41E51BF4788E0078451A /* GroupCell.xib */; };
 		02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */; };
 		02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C228A71BD9DA4E00BC83C3 /* ValueCell.xib */; };
 		02C228AC1BDA061200BC83C3 /* ArtsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C228AB1BDA061200BC83C3 /* ArtsCell.swift */; };
@@ -98,6 +100,8 @@
 		0284B2C11BCBA798007779A4 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		0284B2C31BCBA7AD007779A4 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardCell.xib; path = ../CardCell.xib; sourceTree = "<group>"; };
 		0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPNavigationBar.swift; sourceTree = "<group>"; };
+		02BD41E31BF475560078451A /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		02BD41E51BF4788E0078451A /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 		02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		02C228A71BD9DA4E00BC83C3 /* ValueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueCell.xib; sourceTree = "<group>"; };
 		02C228AB1BDA061200BC83C3 /* ArtsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtsCell.swift; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 				0227D75A1BEB588900F7A704 /* CataCell.swift */,
 				021C1C231BF08E330064DC45 /* CataDetailCell.xib */,
 				021C1C251BF08E600064DC45 /* CataDetailCell.swift */,
+				02BD41E31BF475560078451A /* GroupCell.swift */,
+				02BD41E51BF4788E0078451A /* GroupCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -382,6 +388,7 @@
 				024E862E1BE8B2CD00E44628 /* FrontCell.xib in Resources */,
 				02715DFF1BCE29CF008A11D7 /* logo.jpg in Resources */,
 				021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */,
+				02BD41E61BF4788E0078451A /* GroupCell.xib in Resources */,
 				022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */,
 				02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */,
 				021C1C241BF08E330064DC45 /* CataDetailCell.xib in Resources */,
@@ -473,6 +480,7 @@
 				021C1C221BF08C170064DC45 /* CataViewController.swift in Sources */,
 				0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */,
 				67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */,
+				02BD41E41BF475560078451A /* GroupCell.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
