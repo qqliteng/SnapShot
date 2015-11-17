@@ -29,6 +29,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         mainTableView.registerNib(UINib(nibName: "FrontCell", bundle: nil), forCellReuseIdentifier: "frontCell")
         mainTableView.registerNib(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
+        mainTableView.separatorColor = UIColor.clearColor()
         mainTableView.delegate = self
         mainTableView.dataSource = self
         self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "popToSearchViewController")
@@ -59,9 +60,9 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         if indexPath.section == 0 && indexPath.row == 0 {
             return 44
         } else if indexPath.section == 0 && indexPath.row == 1 {
-            return 200
+            return CATA_CELL_HEIGHT
         } else {
-            return 300
+            return FRONT_CELL_HEIGHT
         }
     }
     

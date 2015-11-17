@@ -32,9 +32,9 @@ class CataViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 200
+            return CATA_CELL_HEIGHT
         } else {
-            return 100
+            return CATA_DETAIL_CELL_HEIGHT
         }
     }
     

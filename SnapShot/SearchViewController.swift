@@ -30,7 +30,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         let nib = UINib(nibName: "CardCell", bundle: nil)
         if self.SVTableView != nil {
             SVTableView!.registerNib(nib, forCellReuseIdentifier: "cardCell")
-            self.navigationController?.navigationBar.frame = CGRectMake(0, 20, CGFloat(SCREEN_WIDTH), 83)
+            
             SVTableView!.delegate = self
             SVTableView!.dataSource = self
         }
@@ -38,22 +38,14 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         self.priceSortButton = UIButton()
         self.appointSortButton = UIButton()
         self.rateSortButton = UIButton()
-        
-        self.initSortButtons([self.priceSortButton!,self.appointSortButton!,self.rateSortButton!], titleArray: ["价格优先","预约量优先","评级优先"], targetArrary: ["priceSortAction" , "appointSortAction", "rateSortAction"])
+        ViewWidgest.navigatiobBarButtomButton([self.priceSortButton!,self.appointSortButton!,self.rateSortButton!], titleArray: ["价格优先","预约量优先","评级优先"], targetArrary: ["priceSortAction" , "appointSortAction", "rateSortAction"], navigationController: self.navigationController!)
     }
     
     override func viewWillDisappear(animated: Bool) {
         self.SVsearchBar?.removeFromSuperview()
         self.locationBtn?.removeFromSuperview()
         self.cancelBtn?.removeFromSuperview()
-        self.priceSortButton?.removeFromSuperview()
-        self.appointSortButton?.removeFromSuperview()
-        self.rateSortButton?.removeFromSuperview()
-        self.navigationController?.navigationBar.frame = CGRectMake(0, 20, CGFloat(SCREEN_WIDTH), 44)
-        self.navigationController?.navigationBar.viewWithTag(100)?.removeFromSuperview()
-        self.navigationController?.navigationBar.viewWithTag(101)?.removeFromSuperview()
-        let appDelegate = AppDelegate()
-        appDelegate.initNavigationController()
+        ViewWidgest.recoverNavigationBar([self.SVsearchBar!, self.locationBtn!, self.cancelBtn!, self.priceSortButton!, self.appointSortButton!,self.rateSortButton!], navigationController: self.navigationController!)
     }
     
     // 初始化导航栏

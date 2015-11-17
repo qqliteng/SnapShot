@@ -27,9 +27,14 @@ class GroupCell: UITableViewCell {
     
     @IBOutlet weak var groupCellPhotographerLabel: UILabel!
     
+    @IBOutlet weak var likeBtn: UIButton!
     
+    @IBOutlet weak var commentBtn: UIButton!
     
+    @IBOutlet weak var repostBtn: UIButton!
     
+    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

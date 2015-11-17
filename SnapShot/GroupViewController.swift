@@ -12,12 +12,38 @@ import UIKit
 class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var groupTableView: UITableView!
+    var navBtn: UIButton?
+    var priceSortButton: UIButton?
+    var distanceSortButton: UIButton?
+    var dateSortButton: UIButton?
+    var titleLabel: UILabel?
     
     override func viewDidLoad() {
-        self.title = "一起团拍"
+        
+        if self.navBtn == nil {
+            self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
+            self.navBtn?.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
+            self.navigationController?.navigationBar.addSubview(self.navBtn!)
+        }
+
         groupTableView.registerNib(UINib(nibName: "GroupCell", bundle: nil), forCellReuseIdentifier: "groupCell")
         groupTableView.delegate = self
         groupTableView.dataSource = self
+        titleLabel = UILabel(frame: CGRectMake(CGFloat(SCREEN_WIDTH/2 - Float(40)), 6, 80, 30))
+        titleLabel?.text = "一起团拍"
+        titleLabel?.tintColor = UIColor.whiteColor()
+        self.titleLabel?.textColor = UIColor.whiteColor()
+        titleLabel?.font = UIFont.systemFontOfSize(20)
+        self.navigationController?.navigationBar.addSubview(titleLabel!)
+        
+        self.priceSortButton = UIButton()
+        self.distanceSortButton = UIButton()
+        self.dateSortButton = UIButton()
+        ViewWidgest.navigatiobBarButtomButton([self.priceSortButton!,self.distanceSortButton!,self.dateSortButton!], titleArray: ["价格优先","距离优先","日期优先"], targetArrary: ["priceSortAction" , "distanceSortAction", "dateSortAction"], navigationController: self.navigationController!)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        ViewWidgest.recoverNavigationBar([self.titleLabel!, self.priceSortButton!,self.distanceSortButton!,self.dateSortButton!], navigationController: self.navigationController!)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -36,13 +62,34 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return 400
     }
     
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    //==================================Button Actions========================//
+    func priceSortAction() {
+        
+    }
+    
+    func distanceSortACtion() {
+    
+    }
+    
+    func dateSortAction() {
+    
+    }
     
 }

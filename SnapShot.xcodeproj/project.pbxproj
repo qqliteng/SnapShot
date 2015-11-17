@@ -42,6 +42,7 @@
 		02C228AC1BDA061200BC83C3 /* ArtsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C228AB1BDA061200BC83C3 /* ArtsCell.swift */; };
 		02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */; };
 		02E96BBA1BF33F5300B6388F /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E96BB91BF33F5300B6388F /* GroupViewController.swift */; };
+		02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7B0901BFB20660095C415 /* GroupDetailViewController.swift */; };
 		02F96CB41BDA152100AA3D5E /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F96CB31BDA152100AA3D5E /* ProfileCell.xib */; };
 		67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */; };
 		67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF31BEA50020049BD54 /* RegisterViewController.swift */; };
@@ -107,6 +108,7 @@
 		02C228AB1BDA061200BC83C3 /* ArtsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtsCell.swift; sourceTree = "<group>"; };
 		02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWidgest.swift; sourceTree = "<group>"; };
 		02E96BB91BF33F5300B6388F /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		02F7B0901BFB20660095C415 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		02F96CB31BDA152100AA3D5E /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		27DFFBBF8D222EA135C2405F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36641F4D68FB6F42685324F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				021C1C1F1BF06CFD0064DC45 /* BasicViewController.swift */,
 				021C1C211BF08C160064DC45 /* CataViewController.swift */,
 				02E96BB91BF33F5300B6388F /* GroupViewController.swift */,
+				02F7B0901BFB20660095C415 /* GroupDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
+				02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */,
 				027F162D1BC762C700D9B721 /* SnapShot.xcdatamodeld in Sources */,
 				02C228AC1BDA061200BC83C3 /* ArtsCell.swift in Sources */,
 				02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */,
