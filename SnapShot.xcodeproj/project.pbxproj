@@ -19,9 +19,11 @@
 		024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024C7D3D1BD4EE0A002666FB /* SPNavigationViewController.swift */; };
 		024E862C1BE8B27C00E44628 /* FrontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E862B1BE8B27C00E44628 /* FrontCell.swift */; };
 		024E862E1BE8B2CD00E44628 /* FrontCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024E862D1BE8B2CD00E44628 /* FrontCell.xib */; };
+		025659351BFDAF3300057A72 /* UrlAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025659341BFDAF3300057A72 /* UrlAssembler.swift */; };
+		025659371BFDAF6A00057A72 /* HttpControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025659361BFDAF6A00057A72 /* HttpControl.swift */; };
+		0256593B1BFDB69D00057A72 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256593A1BFDB69D00057A72 /* Parameters.swift */; };
+		025659401BFDC64200057A72 /* libcommonCrypto.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */; };
 		0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256646C1BC8A02B00A04D21 /* LeftViewController.swift */; };
-		02715DFF1BCE29CF008A11D7 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02715DFE1BCE29CF008A11D7 /* logo.jpg */; };
-		02715E041BCE2B94008A11D7 /* Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02715E031BCE2B94008A11D7 /* Icon.jpg */; };
 		02715E061BCE59BA008A11D7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02715E051BCE59BA008A11D7 /* Constant.swift */; };
 		02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02715E071BCE5A77008A11D7 /* SlideScrollView.swift */; };
 		027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F16241BC762C700D9B721 /* AppDelegate.swift */; };
@@ -43,6 +45,8 @@
 		02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */; };
 		02E96BBA1BF33F5300B6388F /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E96BB91BF33F5300B6388F /* GroupViewController.swift */; };
 		02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7B0901BFB20660095C415 /* GroupDetailViewController.swift */; };
+		02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F90BC61BFD763A00949D9B /* LowerCell.xib */; };
+		02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F90BC81BFD764B00949D9B /* LowerCell.swift */; };
 		02F96CB41BDA152100AA3D5E /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F96CB31BDA152100AA3D5E /* ProfileCell.xib */; };
 		67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */; };
 		67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF31BEA50020049BD54 /* RegisterViewController.swift */; };
@@ -79,9 +83,12 @@
 		024C7D3D1BD4EE0A002666FB /* SPNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPNavigationViewController.swift; sourceTree = "<group>"; };
 		024E862B1BE8B27C00E44628 /* FrontCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontCell.swift; sourceTree = "<group>"; };
 		024E862D1BE8B2CD00E44628 /* FrontCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrontCell.xib; sourceTree = "<group>"; };
+		025659341BFDAF3300057A72 /* UrlAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlAssembler.swift; sourceTree = "<group>"; };
+		025659361BFDAF6A00057A72 /* HttpControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpControl.swift; sourceTree = "<group>"; };
+		0256593A1BFDB69D00057A72 /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		0256593D1BFDC3BE00057A72 /* SPBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPBridging-H\U0010eader.h"; sourceTree = "<group>"; };
+		0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcommonCrypto.tbd; path = usr/lib/system/libcommonCrypto.tbd; sourceTree = SDKROOT; };
 		0256646C1BC8A02B00A04D21 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
-		02715DFE1BCE29CF008A11D7 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = Assets.xcassets/Icon.imageset/logo.jpg; sourceTree = "<group>"; };
-		02715E031BCE2B94008A11D7 /* Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon.jpg; sourceTree = "<group>"; };
 		02715E051BCE59BA008A11D7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		02715E071BCE5A77008A11D7 /* SlideScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideScrollView.swift; sourceTree = "<group>"; };
 		027F16211BC762C700D9B721 /* SnapShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +116,8 @@
 		02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWidgest.swift; sourceTree = "<group>"; };
 		02E96BB91BF33F5300B6388F /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		02F7B0901BFB20660095C415 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
+		02F90BC61BFD763A00949D9B /* LowerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LowerCell.xib; sourceTree = "<group>"; };
+		02F90BC81BFD764B00949D9B /* LowerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerCell.swift; sourceTree = "<group>"; };
 		02F96CB31BDA152100AA3D5E /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		27DFFBBF8D222EA135C2405F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36641F4D68FB6F42685324F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025659401BFDC64200057A72 /* libcommonCrypto.tbd in Frameworks */,
 				B05B60A36145281EB59C405C /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,13 +153,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02715E001BCE2ADE008A11D7 /* Icons */ = {
+		025659331BFDAE0100057A72 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				02715E031BCE2B94008A11D7 /* Icon.jpg */,
-				02715DFE1BCE29CF008A11D7 /* logo.jpg */,
+				025659341BFDAF3300057A72 /* UrlAssembler.swift */,
+				025659361BFDAF6A00057A72 /* HttpControl.swift */,
+				0256593A1BFDB69D00057A72 /* Parameters.swift */,
+				02715E051BCE59BA008A11D7 /* Constant.swift */,
 			);
-			name = Icons;
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		0273CA521BCCADFE00918455 /* Controllers */ = {
@@ -196,8 +208,9 @@
 		027F16231BC762C700D9B721 /* SnapShot */ = {
 			isa = PBXGroup;
 			children = (
+				0256593D1BFDC3BE00057A72 /* SPBridging-Header.h */,
+				025659331BFDAE0100057A72 /* Tools */,
 				02E068921BD6222600530B8F /* Model */,
-				02715E001BCE2ADE008A11D7 /* Icons */,
 				0273CA521BCCADFE00918455 /* Controllers */,
 				0284B2C51BCBA7B8007779A4 /* Views */,
 				027F16241BC762C700D9B721 /* AppDelegate.swift */,
@@ -206,7 +219,6 @@
 				021695501BD8C7CE006A022F /* LaunchScreen.storyboard */,
 				027F16331BC762C700D9B721 /* Info.plist */,
 				027F162B1BC762C700D9B721 /* SnapShot.xcdatamodeld */,
-				02715E051BCE59BA008A11D7 /* Constant.swift */,
 			);
 			path = SnapShot;
 			sourceTree = "<group>";
@@ -249,6 +261,8 @@
 				021C1C251BF08E600064DC45 /* CataDetailCell.swift */,
 				02BD41E31BF475560078451A /* GroupCell.swift */,
 				02BD41E51BF4788E0078451A /* GroupCell.xib */,
+				02F90BC61BFD763A00949D9B /* LowerCell.xib */,
+				02F90BC81BFD764B00949D9B /* LowerCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -272,6 +286,7 @@
 		9264CB8C256BF35A8C24C870 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */,
 				27DFFBBF8D222EA135C2405F /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -386,10 +401,9 @@
 			files = (
 				0227D7591BEB562F00F7A704 /* CataCell.xib in Resources */,
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
+				02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */,
 				02F96CB41BDA152100AA3D5E /* ProfileCell.xib in Resources */,
-				02715E041BCE2B94008A11D7 /* Icon.jpg in Resources */,
 				024E862E1BE8B2CD00E44628 /* FrontCell.xib in Resources */,
-				02715DFF1BCE29CF008A11D7 /* logo.jpg in Resources */,
 				021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */,
 				02BD41E61BF4788E0078451A /* GroupCell.xib in Resources */,
 				022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */,
@@ -482,17 +496,21 @@
 				024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */,
 				021C1C221BF08C170064DC45 /* CataViewController.swift in Sources */,
 				0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */,
+				025659371BFDAF6A00057A72 /* HttpControl.swift in Sources */,
 				67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */,
 				02BD41E41BF475560078451A /* GroupCell.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
+				02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */,
 				02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */,
 				027F162D1BC762C700D9B721 /* SnapShot.xcdatamodeld in Sources */,
 				02C228AC1BDA061200BC83C3 /* ArtsCell.swift in Sources */,
 				02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */,
 				67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */,
+				025659351BFDAF3300057A72 /* UrlAssembler.swift in Sources */,
 				02715E061BCE59BA008A11D7 /* Constant.swift in Sources */,
+				0256593B1BFDB69D00057A72 /* Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,9 +656,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SnapShot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Jacob.SnapShot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapShot/SPBridging-H\U0010eader.h";
 			};
 			name = Debug;
 		};
@@ -654,9 +677,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SnapShot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Jacob.SnapShot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapShot/SPBridging-H\U0010eader.h";
 			};
 			name = Release;
 		};
