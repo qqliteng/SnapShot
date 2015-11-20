@@ -88,10 +88,10 @@
 		025659341BFDAF3300057A72 /* UrlAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlAssembler.swift; sourceTree = "<group>"; };
 		025659361BFDAF6A00057A72 /* HttpControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpControl.swift; sourceTree = "<group>"; };
 		0256593A1BFDB69D00057A72 /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
-		0256593D1BFDC3BE00057A72 /* SPBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPBridging-H\U0010eader.h"; sourceTree = "<group>"; };
 		0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcommonCrypto.tbd; path = usr/lib/system/libcommonCrypto.tbd; sourceTree = SDKROOT; };
 		0256646C1BC8A02B00A04D21 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		0265B5E01BFF08460024586B /* UT8Encoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UT8Encoding.swift; sourceTree = "<group>"; };
+		0265B5E21BFF21F20024586B /* SPBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPBridging-H\U0010eader.h"; sourceTree = "<group>"; };
 		02715E051BCE59BA008A11D7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		02715E071BCE5A77008A11D7 /* SlideScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideScrollView.swift; sourceTree = "<group>"; };
 		027F16211BC762C700D9B721 /* SnapShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,13 +213,13 @@
 		027F16231BC762C700D9B721 /* SnapShot */ = {
 			isa = PBXGroup;
 			children = (
-				0256593D1BFDC3BE00057A72 /* SPBridging-Header.h */,
 				0297AFF31BFEB24F007E8435 /* Task */,
 				025659331BFDAE0100057A72 /* Tools */,
 				02E068921BD6222600530B8F /* Model */,
 				0273CA521BCCADFE00918455 /* Controllers */,
 				0284B2C51BCBA7B8007779A4 /* Views */,
 				027F16241BC762C700D9B721 /* AppDelegate.swift */,
+				0265B5E21BFF21F20024586B /* SPBridging-Header.h */,
 				022487F31BCF4B3B0019D7CF /* Assets.xcassets */,
 				027F16281BC762C700D9B721 /* Main.storyboard */,
 				021695501BD8C7CE006A022F /* LaunchScreen.storyboard */,
