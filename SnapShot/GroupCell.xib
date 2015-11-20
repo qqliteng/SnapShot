@@ -23,17 +23,10 @@
                         <rect key="frame" x="26" y="50" width="362" height="4"/>
                         <animations/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" misplaced="YES" text="奥森萌娃外拍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydE-vn-0kx">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" misplaced="YES" text="奥森萌娃外拍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ydE-vn-0kx">
                         <rect key="frame" x="156" y="21" width="102" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" misplaced="YES" text="摄影师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lu-4d-kUO">
-                        <rect key="frame" x="26" y="176" width="42" height="21"/>
-                        <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -77,6 +70,13 @@
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" misplaced="YES" text="摄影师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lu-4d-kUO">
+                        <rect key="frame" x="26" y="176" width="42" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="242" misplaced="YES" text="时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aei-gZ-j1W">
@@ -132,15 +132,6 @@
                         </constraints>
                         <state key="normal" image="repostBtn"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz3-r3-Cjf">
-                        <rect key="frame" x="64" y="368" width="25" height="25"/>
-                        <animations/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="0J8-Xm-bXS"/>
-                            <constraint firstAttribute="width" constant="25" id="lbj-JE-ESm"/>
-                        </constraints>
-                        <state key="normal" image="likeBtn"/>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="22" translatesAutoresizingMaskIntoConstraints="NO" id="ctu-02-NjW">
                         <rect key="frame" x="91" y="363" width="21" height="21"/>
                         <animations/>
@@ -160,6 +151,15 @@
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </state>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz3-r3-Cjf">
+                        <rect key="frame" x="64" y="368" width="25" height="25"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="0J8-Xm-bXS"/>
+                            <constraint firstAttribute="width" constant="25" id="lbj-JE-ESm"/>
+                        </constraints>
+                        <state key="normal" image="likeBtn"/>
+                    </button>
                 </subviews>
                 <animations/>
                 <constraints>
@@ -173,7 +173,7 @@
                     <constraint firstAttribute="bottomMargin" secondItem="9Sr-hL-caW" secondAttribute="bottom" constant="30" id="AQB-ro-Gyu"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Tz3-r3-Cjf" secondAttribute="bottom" priority="750" constant="7" id="AXo-8w-Nor"/>
                     <constraint firstItem="jI2-7k-G62" firstAttribute="top" secondItem="ydE-vn-0kx" secondAttribute="bottom" constant="8" id="Ad5-4m-ohc"/>
-                    <constraint firstItem="ydE-vn-0kx" firstAttribute="leading" secondItem="89W-1o-AVf" secondAttribute="leadingMargin" constant="148" id="B3b-bi-8Lm"/>
+                    <constraint firstItem="ydE-vn-0kx" firstAttribute="leading" secondItem="89W-1o-AVf" secondAttribute="leadingMargin" constant="130" id="B3b-bi-8Lm"/>
                     <constraint firstItem="u8t-2b-Nev" firstAttribute="top" secondItem="bJ0-vy-2lV" secondAttribute="bottom" constant="8" id="BH6-GT-3FV"/>
                     <constraint firstItem="bJ0-vy-2lV" firstAttribute="top" secondItem="Aei-gZ-j1W" secondAttribute="bottom" constant="8" id="CA0-pO-Yjc"/>
                     <constraint firstItem="k9p-Xd-Xl0" firstAttribute="leading" secondItem="89W-1o-AVf" secondAttribute="leadingMargin" constant="18" id="CLC-Ww-HPL"/>

@@ -28,10 +28,10 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
     var delegate:SlideScrollViewDelegate?
     var titleArray:[String]!
     
-    func initWithFrameRect(rect:CGRect) -> AnyObject {
+    func initWithFrameRect(rect:CGRect, picAddressArray:[String], titleArray:[String]) -> AnyObject {
         
         var tempArray:[String] = ["http://img.article.pchome.net/game/00/25/32/06/248_131117202025_1.jpg", "http://img.article.pchome.net/game/00/25/32/06/248_131117202039_1.jpg","http://img.article.pchome.net/game/00/25/32/06/248_131117202057_1.jpg"]
-        self.titleArray = ["巫妖王","尤迪安","冰封王座"]
+        self.titleArray = titleArray
         arrayCount = tempArray.count
         viewSize = rect;
         let pageCount: Int = tempArray.count

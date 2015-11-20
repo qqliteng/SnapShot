@@ -21,12 +21,20 @@ let VALUE_CELL_HEIGHT: CGFloat = 140
 let CATA_CELL_HEIGHT: CGFloat = 200
 let CATA_DETAIL_CELL_HEIGHT: CGFloat = 100
 let FRONT_CELL_HEIGHT: CGFloat = 305
-
-
-let SCREEN_WIDTH:Float = Float(UIScreen.mainScreen().bounds.width)
-let SCREEN_HEIGHT:Float = Float(UIScreen.mainScreen().bounds.height)
+let DETAIL_CELL_HEIGHT: CGFloat = CGFloat((UIScreen.mainScreen().bounds.height - 20)/2)
+let SCREEN_WIDTH:CGFloat = UIScreen.mainScreen().bounds.width
+let SCREEN_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.height
 
 //字体颜色
 let TEXT_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
 let TEXT_COLOR_LIGHT_GREY:UIColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1)
 let NAVIGATION_BAR_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
+let SP_BLUE_COLOR:UIColor = UIColor(red: 0/255, green: 85/255, blue: 170/255, alpha: 1)
+
+//网络参数
+let ROOT_URL = "http://111.13.47.169:8080/"
+let VALID_NUM_URL = ROOT_URL + "sms/authCode/send"
+let SECRET_KEY = "f4a8yoxG9F6b1gUB"
+
+//任务
+let TASK_ID = 0

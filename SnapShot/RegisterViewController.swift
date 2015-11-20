@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var userIDTextField: UITextField!
@@ -30,6 +31,10 @@ class RegisterViewController: UIViewController {
     private var startCount = 60
     private var loginPushButton:UIButton?
     
+    var phoneNum:String?
+    var validCode:String?
+    var password:String?
+    
     override func viewDidLoad() {
         self.title = "咔嚓"
         self.userIDTextField.placeholder = "请输入昵称"
@@ -46,6 +51,10 @@ class RegisterViewController: UIViewController {
         
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        self.loginPushButton?.removeFromSuperview()
+    }
+    
     @IBAction func licenseCheckBoxAction(sender: AnyObject) {
     
     }
@@ -56,12 +65,44 @@ class RegisterViewController: UIViewController {
     @IBAction func sendSMSButtonAction(sender: AnyObject) {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("countDown"), userInfo: nil, repeats: true)
         self.sendSMSButton.enabled = false
+        
+        let sendSMSUrl = "POSThttp://111.13.47.169:8080/sms/authCode/sendphoneNum=13426198753time=1447917334486f4a8yoxG9F6b1gUB"
+        let sig = sendSMSUrl.md5
+        let parametersDic:Dictionary = ["phoneNum": "13426198753", "time": "1447917334486"]
+        let sortedDic = parametersDic.sort({$0.0 < $1.0})
+        print(sortedDic)
+        
+        var paraData: String = ""
+        
+        
+        for (parameter, parameterValue) in sortedDic {
+            print(parameter)
+            paraData += "\(parameter)=\(parameterValue)&"
+            print(paraData)
+        }
+        
+        
+        let url = VALID_NUM_URL + "\(paraData)sig=\(sig!)"
+        print(sig)
+        Alamofire.Manager.sharedInstance.request(.POST, url).responseJSON {
+            response in
+            if(response.result.error != nil) {
+                print("Error: \(response.result.error)")
+                print(response.request)
+                print(response.response)
+                
+            }
+            else {
+                print("Success: \(sendSMSUrl)")
+                print(response.request)
+                print(response.result.value)
+            }
+        }
     }
-    
+
     func countDown() {
         self.startCount--
         self.timeLabel.text = "请\(self.startCount)秒后重试"
-        print(self.timeLabel.text)
         
         if self.startCount < 0 {
             if self.timer == nil {

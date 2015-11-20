@@ -22,8 +22,8 @@
 		025659351BFDAF3300057A72 /* UrlAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025659341BFDAF3300057A72 /* UrlAssembler.swift */; };
 		025659371BFDAF6A00057A72 /* HttpControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025659361BFDAF6A00057A72 /* HttpControl.swift */; };
 		0256593B1BFDB69D00057A72 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256593A1BFDB69D00057A72 /* Parameters.swift */; };
-		025659401BFDC64200057A72 /* libcommonCrypto.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */; };
 		0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256646C1BC8A02B00A04D21 /* LeftViewController.swift */; };
+		0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265B5E01BFF08460024586B /* UT8Encoding.swift */; };
 		02715E061BCE59BA008A11D7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02715E051BCE59BA008A11D7 /* Constant.swift */; };
 		02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02715E071BCE5A77008A11D7 /* SlideScrollView.swift */; };
 		027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F16241BC762C700D9B721 /* AppDelegate.swift */; };
@@ -37,6 +37,8 @@
 		0284B2C21BCBA798007779A4 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284B2C11BCBA798007779A4 /* CardCell.swift */; };
 		0284B2C41BCBA7AD007779A4 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0284B2C31BCBA7AD007779A4 /* CardCell.xib */; };
 		0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */; };
+		0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF41BFEB27A007E8435 /* BaseTask.swift */; };
+		0297AFF71BFEB2EE007E8435 /* RegisterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */; };
 		02BD41E41BF475560078451A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD41E31BF475560078451A /* GroupCell.swift */; };
 		02BD41E61BF4788E0078451A /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BD41E51BF4788E0078451A /* GroupCell.xib */; };
 		02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */; };
@@ -89,6 +91,7 @@
 		0256593D1BFDC3BE00057A72 /* SPBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPBridging-H\U0010eader.h"; sourceTree = "<group>"; };
 		0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcommonCrypto.tbd; path = usr/lib/system/libcommonCrypto.tbd; sourceTree = SDKROOT; };
 		0256646C1BC8A02B00A04D21 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		0265B5E01BFF08460024586B /* UT8Encoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UT8Encoding.swift; sourceTree = "<group>"; };
 		02715E051BCE59BA008A11D7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		02715E071BCE5A77008A11D7 /* SlideScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideScrollView.swift; sourceTree = "<group>"; };
 		027F16211BC762C700D9B721 /* SnapShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +111,8 @@
 		0284B2C11BCBA798007779A4 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		0284B2C31BCBA7AD007779A4 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardCell.xib; path = ../CardCell.xib; sourceTree = "<group>"; };
 		0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPNavigationBar.swift; sourceTree = "<group>"; };
+		0297AFF41BFEB27A007E8435 /* BaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTask.swift; sourceTree = "<group>"; };
+		0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTask.swift; sourceTree = "<group>"; };
 		02BD41E31BF475560078451A /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		02BD41E51BF4788E0078451A /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 		02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				025659401BFDC64200057A72 /* libcommonCrypto.tbd in Frameworks */,
 				B05B60A36145281EB59C405C /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +164,7 @@
 				025659361BFDAF6A00057A72 /* HttpControl.swift */,
 				0256593A1BFDB69D00057A72 /* Parameters.swift */,
 				02715E051BCE59BA008A11D7 /* Constant.swift */,
+				0265B5E01BFF08460024586B /* UT8Encoding.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				0256593D1BFDC3BE00057A72 /* SPBridging-Header.h */,
+				0297AFF31BFEB24F007E8435 /* Task */,
 				025659331BFDAE0100057A72 /* Tools */,
 				02E068921BD6222600530B8F /* Model */,
 				0273CA521BCCADFE00918455 /* Controllers */,
@@ -265,6 +271,15 @@
 				02F90BC81BFD764B00949D9B /* LowerCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		0297AFF31BFEB24F007E8435 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				0297AFF41BFEB27A007E8435 /* BaseTask.swift */,
+				0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */,
+			);
+			name = Task;
 			sourceTree = "<group>";
 		};
 		02E068921BD6222600530B8F /* Model */ = {
@@ -495,14 +510,17 @@
 				02817FE61BDA16FD00166DC2 /* ProfileCell.swift in Sources */,
 				024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */,
 				021C1C221BF08C170064DC45 /* CataViewController.swift in Sources */,
+				0297AFF71BFEB2EE007E8435 /* RegisterTask.swift in Sources */,
 				0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */,
 				025659371BFDAF6A00057A72 /* HttpControl.swift in Sources */,
 				67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */,
 				02BD41E41BF475560078451A /* GroupCell.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
+				0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
 				02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */,
+				0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */,
 				02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */,
 				027F162D1BC762C700D9B721 /* SnapShot.xcdatamodeld in Sources */,
 				02C228AC1BDA061200BC83C3 /* ArtsCell.swift in Sources */,

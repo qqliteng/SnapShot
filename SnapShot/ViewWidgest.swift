@@ -41,30 +41,35 @@ class ViewWidgest {
         navgationViewController.popToRootViewControllerAnimated(true)
     }
     
-    static func navigatiobBarButtomButton(ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector], navigationController:UINavigationController) {
+    static func navigatiobBarButtomButton(ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector], view:UIView) {
         
-        navigationController.navigationBar.frame = CGRectMake(0, 20, CGFloat(SCREEN_WIDTH), 83)
+//        navigationController!.navigationBar.frame = CGRectMake(0, 20, CGFloat(SCREEN_WIDTH), 83)
+        
+        let buttonView = UIView(frame: CGRect(x: 0, y: 64, width: CGFloat(SCREEN_WIDTH), height: 40))
+        buttonView.backgroundColor = UIColor.blackColor()
+       
         
         // 画按钮
         for var i = 0; i < 3; i++ {
-            ButtonArray[i].frame = CGRect(x: Double((SCREEN_WIDTH/3) * Float(i)), y: 44, width: Double(SCREEN_WIDTH/3), height: 40)
+            ButtonArray[i].frame = CGRect(x: Double((SCREEN_WIDTH/3) * CGFloat(i)), y: 0, width: Double(SCREEN_WIDTH/3), height: 40)
             ButtonArray[i].setTitle(titleArray[i], forState: UIControlState.Normal)
             ButtonArray[i].setTitleColor(TEXT_COLOR_GREY, forState: UIControlState.Normal)
             ButtonArray[i].setTitleColor(TEXT_COLOR_LIGHT_GREY, forState: UIControlState.Highlighted)
             ButtonArray[i].titleLabel?.font = UIFont.systemFontOfSize(14)
             ButtonArray[i].backgroundColor = UIColor.whiteColor()
             ButtonArray[i].addTarget(self, action: targetArrary[i], forControlEvents: UIControlEvents.TouchUpInside)
-            navigationController.navigationBar.addSubview(ButtonArray[i])
-            
+            buttonView.addSubview(ButtonArray[i])
         }
         
         // 画分割线
         for var i = 0; i < 2; i++ {
-            let verticalShortLine: UIImageView = UIImageView(frame: CGRect(x: Double((SCREEN_WIDTH/3) * Float(i + 1)), y: 49, width: 0.5, height: 32))
+            let verticalShortLine: UIImageView = UIImageView(frame: CGRect(x: Double((SCREEN_WIDTH/3) * CGFloat(i + 1)), y: 0, width: 0.5, height: 32))
             verticalShortLine.image = UIImage(named: "verticalLineImage")
             verticalShortLine.tag = 100+i
-            navigationController.navigationBar.addSubview(verticalShortLine)
+            buttonView.addSubview(verticalShortLine)
         }
+        
+         view.addSubview(buttonView)
     }
     
     static func recoverNavigationBar(viewsArrary:[UIView], navigationController:UINavigationController) {
@@ -81,4 +86,17 @@ class ViewWidgest {
             navigationController.navigationBar.viewWithTag(101)?.removeFromSuperview()
         }
     }
+    
+    static func getHorizontalSeporatorImageView (y: CGFloat) -> UIImageView  {
+        let seporator = UIImageView(image: UIImage(named: "seperateLineImage"))
+        seporator.frame = CGRectMake(20, y, SCREEN_WIDTH - 40, 1)
+        return seporator
+    }
+    
+    static func getVerticalSeporatorImageView (x:CGFloat, y: CGFloat) -> UIImageView  {
+        let seporator = UIImageView(image: UIImage(named: "verticalLineImage"))
+        seporator.frame = CGRectMake(x, y, 1, 40)
+        return seporator
+    }
+
 }

@@ -38,7 +38,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         self.priceSortButton = UIButton()
         self.appointSortButton = UIButton()
         self.rateSortButton = UIButton()
-        ViewWidgest.navigatiobBarButtomButton([self.priceSortButton!,self.appointSortButton!,self.rateSortButton!], titleArray: ["价格优先","预约量优先","评级优先"], targetArrary: ["priceSortAction" , "appointSortAction", "rateSortAction"], navigationController: self.navigationController!)
+        self.initSortButtons([self.priceSortButton!,self.appointSortButton!,self.rateSortButton!], titleArray: ["价格优先","预约量优先","评级优先"], targetArrary: ["priceSortAction" , "appointSortAction", "rateSortAction"])
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -75,7 +75,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     func initSortButtons(var ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector]) {
         // 画按钮
         for var i = 0; i < 3; i++ {
-            ButtonArray[i].frame = CGRect(x: Double((SCREEN_WIDTH/3) * Float(i)), y: 44, width: Double(SCREEN_WIDTH/3), height: 40)
+            ButtonArray[i].frame = CGRect(x: Double((SCREEN_WIDTH/3) * CGFloat(i)), y: 44, width: Double(SCREEN_WIDTH/3), height: 40)
             ButtonArray[i].setTitle(titleArray[i], forState: UIControlState.Normal)
             ButtonArray[i].setTitleColor(TEXT_COLOR_GREY, forState: UIControlState.Normal)
             ButtonArray[i].setTitleColor(TEXT_COLOR_LIGHT_GREY, forState: UIControlState.Highlighted)
@@ -88,7 +88,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         
         // 画分割线
         for var i = 0; i < 2; i++ {
-            let verticalShortLine: UIImageView = UIImageView(frame: CGRect(x: Double((SCREEN_WIDTH/3) * Float(i + 1)), y: 49, width: 0.5, height: 32))
+            let verticalShortLine: UIImageView = UIImageView(frame: CGRect(x: Double((SCREEN_WIDTH/3) * CGFloat(i + 1)), y: 49, width: 0.5, height: 32))
             verticalShortLine.image = UIImage(named: "verticalLineImage")
             verticalShortLine.tag = 100+i
             self.navigationController?.navigationBar.addSubview(verticalShortLine)
