@@ -82,8 +82,14 @@ class RegisterViewController: UIViewController {
         }
         
         
-        let url = VALID_NUM_URL + "\(paraData)sig=\(sig!)"
+        let url = VALID_NUM_URL + "?\(paraData)sig=\(sig!)"
         print(sig)
+        
+        Alamofire.request(.POST, VALID_NUM_URL, parameters: ["sendphoneNum": "13426198753", "time": "1447917334486", "sig": sig]).responseJSON() {
+            respones in
+            print(respones.result.value)
+        }
+        
         Alamofire.Manager.sharedInstance.request(.POST, url).responseJSON {
             response in
             if(response.result.error != nil) {
