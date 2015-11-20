@@ -11,11 +11,15 @@ import CoreData
 import PKRevealController
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, SPNavigationBarDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var navController: SPNavigationViewController?
-
+    var navigationController: UINavigationController?
+    var revealController: PKRevealController?
+    var frontViewController: FrontViewController?
+    var leftViewController: LeftViewController?
+    var searchViewController: SearchViewController?
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -23,20 +27,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPNavigationBarDelegate {
         
         NSThread .sleepForTimeInterval(1)
         
-        let frontViewController: FrontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as! FrontViewController
-        let leftViewController: LeftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as! LeftViewController
-        let revealController: PKRevealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
-        revealController.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
-        revealController.recognizesPanningOnFrontView = true
-        self.navController = SPNavigationViewController()
+        self.frontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as? FrontViewController
+         self.leftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as? LeftViewController
+        self.revealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
+        self.revealController!.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
+        self.revealController!.recognizesPanningOnFrontView = true
+        self.revealController!.title = "咔嚓"
+        self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
+        self.navigationController = UINavigationController()
         
-        self.window?.rootViewController = navController
         
         
-        self.navController!.pushViewController(revealController, animated: false)
+        
+        self.window?.rootViewController = self.initNavigationController()
+        
+        
+        self.navigationController!.pushViewController(revealController!, animated: false)
         return true
     }
 
+    func initNavigationController()-> UINavigationController {
+        self.navigationController = nil
+        self.navigationController = UINavigationController()
+        
+        self.navigationController?.navigationBar.barTintColor = NAVIGATION_BAR_COLOR_GREY
+        let titleShadow: NSShadow = NSShadow()
+        titleShadow.shadowColor = UIColor(red: 218/255, green: 147/255, blue: 171/255, alpha: 1)
+        titleShadow.shadowOffset = CGSizeMake(0, 0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Heiti SC", size: 20)!, NSShadowAttributeName:titleShadow]
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        return self.navigationController!
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -124,21 +147,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPNavigationBarDelegate {
         }
     }
     
-    func addBackButton() {
-        let navBarItem: UINavigationItem = UINavigationItem(title: "XXXX")
-        navBarItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction")
-        self.navController?.navigationBarHidden = true
-        self.navController?.SPNavigationBarItem?.setLeftBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction"), animated: false)
-        self.navController?.SPNavigationBarItem?.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction")
-        self.navController?.SPNavigationBar?.pushNavigationItem(navBarItem, animated: false)
-        
-//        
-//        self.navController?.SPNavigationBarItem?.title = "XXXX"
-//        self.navController?.SPNavigationBarItem?.leftItemsSupplementBackButton = true
-//        self.navController?.SPNavigationBarItem?.leftBarButtonItem = nil
-        
+    func leftViewShowAction() {
+        self.revealController?.showViewController(self.leftViewController)
     }
-    
 
+    func popToSearchView() {
+        self.searchViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("searchViewController") as? SearchViewController
+        self.navigationController?.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(searchViewController!, animated: true)
+    }
 }
 

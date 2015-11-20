@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ProfileViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class ProfileViewController: BasicViewController,UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var profileTableView: UITableView!
     
@@ -23,6 +23,11 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
     
     
     override func viewDidLoad() {
+        self.title = "我的咔嚓"
+        let leftButton = ViewWidgest.addLeftButton("backButtonImage", imageAfter: "backButtonImage")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+        leftButton.addTarget(self, action: "pushView", forControlEvents: UIControlEvents.TouchUpInside)
+        
         self.artsCollectionView.delegate = self
         self.artsCollectionView.dataSource = self
         self.artsCollectionView.backgroundColor = UIColor.clearColor()
@@ -37,10 +42,6 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
         let nibVC = UINib(nibName: "ValueCell", bundle: nil)
         self.profileTableView.registerNib(nibPC, forCellReuseIdentifier: "profileCell")
         self.profileTableView.registerNib(nibVC, forCellReuseIdentifier: "valueCell")
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Redo, target: self, action: "popUpAction")
-        let appDelegate: AppDelegate = AppDelegate()
-        appDelegate.addBackButton()
     }
     
     override func didReceiveMemoryWarning() {
@@ -104,6 +105,10 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
     
     func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
+    }
+
+    func pushView() {
+        self.navigationController!.popToRootViewControllerAnimated(true)
     }
 
     

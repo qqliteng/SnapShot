@@ -17,11 +17,10 @@ class SPNavigationViewController: UINavigationController {
     
     var SPNavigationBar:UINavigationBar?
     var SPNavigationBarItem: UINavigationItem?
-    var letButtonItem: UIBarButtonItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SPNavigationBar = UINavigationBar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 64))
+        SPNavigationBar = UINavigationBar(frame: CGRectMake(0, 0, CGFloat(SCREEN_WIDTH), 64))
         let titleShadow: NSShadow = NSShadow()
         titleShadow.shadowColor = UIColor(red: 218/255, green: 147/255, blue: 171/255, alpha: 1)
         titleShadow.shadowOffset = CGSizeMake(1, 1)

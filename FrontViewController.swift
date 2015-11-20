@@ -11,17 +11,35 @@ import Alamofire
 import SwiftyJSON
 
 class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate {
-
+    var navBtn: UIButton?
     @IBOutlet weak var mainTableView: UITableView!
+    
+    override func viewWillAppear(animated: Bool) {
+        if self.navBtn == nil {
+        self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
+        self.navBtn?.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
+        self.navigationController?.navigationBar.addSubview(self.navBtn!)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let nib = UINib(nibName: "CardCell", bundle: nil)
-        mainTableView.registerNib(nib, forCellReuseIdentifier: "cardCell")
+        
+        
+        mainTableView.registerNib(UINib(nibName: "FrontCell", bundle: nil), forCellReuseIdentifier: "frontCell")
+        mainTableView.registerNib(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
+        mainTableView.separatorColor = UIColor.clearColor()
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "popToSearchViewController")
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        self.navBtn?.removeFromSuperview()
+        self.navBtn = nil
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,51 +48,52 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if  section == 0 {
             
-            return 1
+            return 2
         }else {
             
-            return 2
+            return 1
         }
 
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == 0 {
-            return CGFloat(IN_WINDOW_HEIGHT)
+            return 44
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            return CATA_CELL_HEIGHT
         } else {
-            return CGFloat(TABLE_CELL_HEIGHT)
+            return FRONT_CELL_HEIGHT
         }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell
+        var cataCell: CataCell?
         
         if indexPath.section == 0 && indexPath.row == 0 {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
             cell.backgroundColor = UIColor.clearColor()
             cell.contentView.backgroundColor = UIColor.clearColor()
             cell.clipsToBounds = true
-            
-            var slideRect = CGRect(origin: CGPoint(x: 0, y: 60), size: CGSize(width: tableView.frame.width, height: CGFloat(IMAGE_HEIGHT)))
-            
-            var slideView = SlidScrollView (frame: slideRect)
-            slideView.initWithFrameRect(slideRect)
-            slideView.delegate = self
-            
-            cell.addSubview(slideView)
-            
             return cell
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            cataCell = CataCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cataCell")
+            cataCell = mainTableView.dequeueReusableCellWithIdentifier("cataCell") as? CataCell
+            cataCell?.cataLabel.text = "萌娃外拍"
+            cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")            
+            return cataCell!
+
         } else {
             
-            let tmp = tableView.dequeueReusableCellWithIdentifier("cardCell")
+            let tmp = tableView.dequeueReusableCellWithIdentifier("frontCell")
             
             if tmp == nil {
-                cell = CardCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cardCell")
+                cell = FrontCell(style: UITableViewCellStyle.Default, reuseIdentifier: "frontCell")
             } else {
                 cell = tmp!
             }
             
-            let c = cell as! CardCell
+            _ = cell as! FrontCell
             
             if indexPath.section == 0 {
                 cell = doReturnCell(indexPath.row - 1)
@@ -85,26 +104,22 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
 
-    
+
     private func doReturnCell(row:Int) -> UITableViewCell {
         
-        let cell = mainTableView.dequeueReusableCellWithIdentifier("cardCell") as! CardCell
-        cell.photographerIDLabel.text = "XXXX"
-        cell.photographerPriceLabel.text = "400"
-        cell.displayImage.image = UIImage(named: "cellDefaultImage")
-        
+        let cell = mainTableView.dequeueReusableCellWithIdentifier("frontCell") as! FrontCell
         return cell
     }
     
     
     //=======================UITableViewDelegate 的实现===================================
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 4
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-                return 0
+                return 30
         }
         
         return CGFloat(SECTION_HEIGHT)
