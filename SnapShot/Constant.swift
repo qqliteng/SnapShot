@@ -33,8 +33,7 @@ let SP_BLUE_COLOR:UIColor = UIColor(red: 0/255, green: 85/255, blue: 170/255, al
 
 //网络参数
 let ROOT_URL = "http://111.13.47.169:8080/"
-let VALID_NUM_URL = ROOT_URL + "sms/authCode/send"
+let AUTHENTICATION_CODE_URL = ROOT_URL + "sms/authCode/send"
+let REGISTER_URL = ROOT_URL + "/user/register"
 let SECRET_KEY = "f4a8yoxG9F6b1gUB"
-
-//任务
-let TASK_ID = 0
+ 

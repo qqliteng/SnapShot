@@ -32,6 +32,7 @@ class RegisterViewController: UIViewController {
     private var loginPushButton:UIButton?
     
     var phoneNum:String?
+    var userName:String?
     var validCode:String?
     var password:String?
     
@@ -55,6 +56,7 @@ class RegisterViewController: UIViewController {
         self.loginPushButton?.removeFromSuperview()
     }
     
+    
     @IBAction func licenseCheckBoxAction(sender: AnyObject) {
     
     }
@@ -66,38 +68,8 @@ class RegisterViewController: UIViewController {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("countDown"), userInfo: nil, repeats: true)
         self.sendSMSButton.enabled = false
         
-        let sendSMSUrl = "POSThttp://111.13.47.169:8080/sms/authCode/sendphoneNum=13426198753time=1447917334486f4a8yoxG9F6b1gUB"
-        let sig = sendSMSUrl.md5
-        let parametersDic:Dictionary = ["phoneNum": "13426198753", "time": "1447917334486"]
-        let sortedDic = parametersDic.sort({$0.0 < $1.0})
-        print(sortedDic)
-        
-        var paraData: String = ""
-        
-        
-        for (parameter, parameterValue) in sortedDic {
-            print(parameter)
-            paraData += "\(parameter)=\(parameterValue)&"
-            print(paraData)
-        }
-        
-        
-        let url = VALID_NUM_URL + "\(paraData)sig=\(sig!)"
-        print(sig)
-        Alamofire.Manager.sharedInstance.request(.POST, url).responseJSON {
-            response in
-            if(response.result.error != nil) {
-                print("Error: \(response.result.error)")
-                print(response.request)
-                print(response.response)
-                
-            }
-            else {
-                print("Success: \(sendSMSUrl)")
-                print(response.request)
-                print(response.result.value)
-            }
-        }
+        let registerTask = RegisterTask(taskID: 01, taskUrl: AUTHENTICATION_CODE_URL)
+        registerTask.getSMSValidCode("13811245934")
     }
 
     func countDown() {
@@ -122,5 +94,14 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerButtonAction(sender: AnyObject) {
+        if phoneNumTextField.text != nil && userIDTextField.text != nil && self.SMSTextField.text != nil && passwordTextField != nil && passwordValidTextField.text != nil && passwordTextField.text == passwordValidTextField.text {
+            self.phoneNum = phoneNumTextField.text
+            self.userName = userIDTextField.text
+            self.validCode = SMSTextField.text
+            self.password = passwordTextField.text
+        }
+        
+        let registerTask = RegisterTask(taskID: 02, taskUrl: REGISTER_URL)
+        registerTask.doRegister(self.phoneNum!, username: self.userName!, password:self.password!, authCode: self.validCode!)
     }
 }

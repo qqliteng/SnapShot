@@ -26,6 +26,10 @@ class LoginViewController: UIViewController {
     
     var registerPushButton: UIButton!
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.addSubview(self.registerPushButton)
+    }
+    
     override func viewDidLoad() {
         self.phoneWarningLabel.hidden = true
         self.passwordWarningLabel.hidden = true
@@ -37,7 +41,6 @@ class LoginViewController: UIViewController {
         self.title = "咔嚓"
         self.registerPushButton = ViewWidgest.addRightButton("注册")
         self.registerPushButton.addTarget(self, action: "registerPushButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
-        self.navigationController?.navigationBar.addSubview(self.registerPushButton)
     }
     
     override func viewWillDisappear(animated: Bool) {

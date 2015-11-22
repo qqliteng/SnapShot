@@ -7,14 +7,20 @@
 //
 
 import Foundation
+import Alamofire
 
 class BaseTask:NSObject {
-    var taskID:Int!
-    
-    
-    init(taskID:Int) {
+    var taskID: Int!
+    var taskUrl: String!
+    var httpControl: HttpControl!
+    init(taskID:Int, taskUrl: String) {
         super.init()
         self.taskID = taskID
-       
+        self.taskUrl = taskUrl
     }
+}
+
+protocol BaseTaskProtocol {
+    func success(data:AnyObject) -> Dictionary<String, String>
+    func fail(error:AnyObject)
 }

@@ -50,6 +50,7 @@
 		02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F90BC61BFD763A00949D9B /* LowerCell.xib */; };
 		02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F90BC81BFD764B00949D9B /* LowerCell.swift */; };
 		02F96CB41BDA152100AA3D5E /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F96CB31BDA152100AA3D5E /* ProfileCell.xib */; };
+		6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677154991C009C4300D3A35D /* ToolKit.swift */; };
 		67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */; };
 		67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF31BEA50020049BD54 /* RegisterViewController.swift */; };
 		B05B60A36145281EB59C405C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DFFBBF8D222EA135C2405F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -127,6 +128,7 @@
 		36641F4D68FB6F42685324F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		532A0CC2C5DA932C31807160 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		677154981BFF55DC00D3A35D /* SPBridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPBridging-Header.h"; sourceTree = "<group>"; };
+		677154991C009C4300D3A35D /* ToolKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolKit.swift; sourceTree = "<group>"; };
 		67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewContoller.swift; sourceTree = "<group>"; };
 		67A06FF31BEA50020049BD54 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 				0256593A1BFDB69D00057A72 /* Parameters.swift */,
 				02715E051BCE59BA008A11D7 /* Constant.swift */,
 				0265B5E01BFF08460024586B /* UT8Encoding.swift */,
+				677154991C009C4300D3A35D /* ToolKit.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */,
 				0227D75B1BEB588900F7A704 /* CataCell.swift in Sources */,
 				02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */,
+				6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */,
 				02817FE61BDA16FD00166DC2 /* ProfileCell.swift in Sources */,
 				024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */,
 				021C1C221BF08C170064DC45 /* CataViewController.swift in Sources */,
