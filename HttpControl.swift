@@ -12,11 +12,9 @@ import Alamofire
 class HttpControl {
     
     var delegate: HttpProtocol
-    var taskID: Int?
     
-    init(delegate:HttpProtocol, id:Int) {
+    init(delegate:HttpProtocol) {
         self.delegate = delegate
-        self.taskID = id
     }
     
     /**
@@ -25,9 +23,12 @@ class HttpControl {
      */
     
     func onRequest(url: String) {
-        Alamofire.request(.GET, url)
-            .responseJSON {response in
+        Alamofire.request(.POST, url).responseJSON {response in
+            if(response.result.error != nil) {
+                self.delegate.didRecieveError(response.result.error!)
+            } else {
                 self.delegate.didRecieveResults(response.result.value!)
+            }
         }
     }
     
@@ -37,10 +38,13 @@ class HttpControl {
      - parameter 参数:
      */
     func onRequestWithParams (url: String, param: Parameters) {
-        Alamofire.Manager.sharedInstance.request(Method.GET, url, parameters:param.parametersDics, encoding:ParameterEncoding.JSON).responseJSON(options: NSJSONReadingOptions.MutableContainers){
+        print(param.parametersDic)
+        Alamofire.Manager.sharedInstance.request(Method.POST, url, parameters:param.parametersDic, encoding:ParameterEncoding.URL).responseJSON(options: NSJSONReadingOptions.MutableContainers){
             response -> Void in
-            if let result:AnyObject = response.data {
-                self.delegate.didRecieveResults(result)
+            if(response.result.error != nil) {
+                self.delegate.didRecieveError(response.result.error!)
+            } else {
+                self.delegate.didRecieveResults(response.result.value!)
             }
         }
     }
@@ -49,4 +53,5 @@ class HttpControl {
 
 protocol HttpProtocol {
     func didRecieveResults(results:AnyObject)
+    func didRecieveError(error:AnyObject)
 }

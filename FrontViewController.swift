@@ -119,7 +119,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-                return 30
+                return 0
         }
         
         return CGFloat(SECTION_HEIGHT)
