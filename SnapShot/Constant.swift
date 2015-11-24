@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+// Universe Varible
+var isLogin = false
+var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+
 //主页上得各种高度的变量
 let TABLE_CELL_HEIGHT : Float = 100
 let SECTION_HEIGHT:Float = 24
@@ -32,8 +36,9 @@ let NAVIGATION_BAR_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue
 let SP_BLUE_COLOR:UIColor = UIColor(red: 0/255, green: 85/255, blue: 170/255, alpha: 1)
 
 //网络参数
-let ROOT_URL = "http://111.13.47.169:8080/"
-let AUTHENTICATION_CODE_URL = ROOT_URL + "sms/authCode/send"
+let ROOT_URL = "http://111.13.47.169:8080"
+let AUTHENTICATION_CODE_URL = ROOT_URL + "/sms/authCode/send"
 let REGISTER_URL = ROOT_URL + "/user/register"
+let LOGIN_URL = ROOT_URL + "/user/login"
 let SECRET_KEY = "f4a8yoxG9F6b1gUB"
  

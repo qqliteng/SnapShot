@@ -8,19 +8,22 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class BaseTask:NSObject {
     var taskID: Int!
     var taskUrl: String!
+    var timeStamp: String?
     var httpControl: HttpControl!
-    init(taskID:Int, taskUrl: String) {
+    var viewController: BasicViewController?
+        
+    init(taskID:Int, taskUrl: String, viewController: BasicViewController?) {
         super.init()
         self.taskID = taskID
         self.taskUrl = taskUrl
+        
+        if viewController != nil {
+            self.viewController = viewController
+        }
     }
-}
-
-protocol BaseTaskProtocol {
-    func success(data:AnyObject) -> Dictionary<String, String>
-    func fail(error:AnyObject)
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ViewWidgest {
+class ViewWidgest{
     static func addLeftButton(imageBefore:String, imageAfter:String) -> UIButton {
         let leftBtn: UIButton = UIButton(frame: CGRect(x: 7, y: 7, width: 30, height: 30))
         leftBtn.contentMode = UIViewContentMode.ScaleAspectFit
@@ -98,5 +98,14 @@ class ViewWidgest {
         seporator.frame = CGRectMake(x, y, 1, 40)
         return seporator
     }
-
+    
+    static func displayAlert(title:String, message:String, actions:[UIAlertAction]) -> UIAlertController{
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        for action in actions {
+            alert.addAction(action)
+        }
+        
+        return alert
+    }
 }

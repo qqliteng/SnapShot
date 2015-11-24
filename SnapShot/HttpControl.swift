@@ -38,7 +38,8 @@ class HttpControl {
      - parameter 参数:
      */
     func onRequestWithParams (url: String, param: Parameters) {
-        Alamofire.Manager.sharedInstance.request(Method.POST, url, parameters:param.parametersDic, encoding:ParameterEncoding.JSON).responseJSON(options: NSJSONReadingOptions.MutableContainers){
+        print(param.parametersDic)
+        Alamofire.Manager.sharedInstance.request(Method.POST, url, parameters:param.parametersDic, encoding:ParameterEncoding.URL).responseJSON(options: NSJSONReadingOptions.MutableContainers){
             response -> Void in
             if(response.result.error != nil) {
                 self.delegate.didRecieveError(response.result.error!)

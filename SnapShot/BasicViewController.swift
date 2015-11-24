@@ -11,9 +11,11 @@ import UIKit
 
 class BasicViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         self.navigationController!.navigationBar.tintColor = NAVIGATION_BAR_COLOR_GREY
-
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
     }
 }

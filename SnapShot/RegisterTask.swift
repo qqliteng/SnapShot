@@ -7,46 +7,56 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-
-class RegisterTask: BaseTask, BaseTaskProtocol, HttpProtocol {
+class RegisterTask: BaseTask, HttpProtocol {
     
-    
-    override init(taskID: Int, taskUrl: String) {
-        super.init(taskID: taskID, taskUrl: taskUrl)
+    var phoneNum:String?
+    var username:String?
+    var authCode:String?
+    var password:String?
+   
+    override init(taskID: Int, taskUrl: String, viewController: BasicViewController?) {
+        super.init(taskID: taskID, taskUrl: taskUrl, viewController:viewController)
     }
     
     func getSMSValidCode(phoneNum: String) {
-        
-        
-        let signature = "POST\(self.taskUrl)phoneNum=\(phoneNum)time=\(ToolKit.getTimeStamp())\(SECRET_KEY)"
-        let parametersDic:Dictionary<String, String> = ["phoneNum": phoneNum, "time": ToolKit.getTimeStamp()]
-        
-        let urlaAssembler = UrlAssembler(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5)
-    
+        self.timeStamp = ToolKit.getTimeStamp()
+        let signature = "POST\(self.taskUrl)phoneNum=\(phoneNum)time=\(self.timeStamp)\(SECRET_KEY)"
+        let parametersDic:Dictionary<String, String> = ["phoneNum": phoneNum, "time": self.timeStamp!]
         self.httpControl = HttpControl(delegate: self)
-        
-        self.httpControl.onRequest(urlaAssembler.url)
-        self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature))
-        
+        self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }
     
     func doRegister(phoneNum: String, username: String, password: String, authCode: String) {
+       
+        self.phoneNum = phoneNum
+        self.username = username
+        self.authCode = authCode
+        self.password = password.md5
         
-        let signature = "POST\(self.taskUrl)authCode=\(authCode)password=\(password)phoneNum=\(phoneNum)time=\(ToolKit.getTimeStamp())username=\(username)\(SECRET_KEY)"
-        let parametersDic:Dictionary<String, String> = ["phoneNum": phoneNum, "time": ToolKit.getTimeStamp(),"username":username , "password": password, "authCode": authCode]
+        self.timeStamp = ToolKit.getTimeStamp()
+        let signature = "POST\(self.taskUrl)authCode=\(authCode)password=\(self.password!)phoneNum=\(self.phoneNum!)time=\(timeStamp)username=\(self.username!)\(SECRET_KEY)"
         
-        let urlaAssembler = UrlAssembler(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5)
-        
+        let parametersDic:Dictionary<String, String> = ["phoneNum": self.phoneNum!, "username": self.username!, "password": self.password!, "authCode": self.authCode!, "time": self.timeStamp!]
         self.httpControl = HttpControl(delegate: self)
-        
-        self.httpControl.onRequest(urlaAssembler.url)
-
-    
+        self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }
     
     func didRecieveResults(results: AnyObject) {
-        print(results)
+        if JSON(results)["succeed"].int! == 1{
+            if self.taskID == 02 {
+                userDefaults.setObject(self.phoneNum, forKey: "phoneNum")
+                userDefaults.setObject(self.password?.md5, forKey: "password")
+                userDefaults.setObject(self.username, forKey: "username")
+                isLogin = true
+                self.viewController?.navigationController!.popToRootViewControllerAnimated(true)
+            } else {
+                print("get a")
+            }
+        } else {
+            didRecieveError("requestFailed")
+        }
         print("httpProtocol is called")
     }
     
@@ -54,12 +64,4 @@ class RegisterTask: BaseTask, BaseTaskProtocol, HttpProtocol {
         print("httpProtocol is called")
     }
     
-    func success(data: AnyObject) -> Dictionary<String, String> {
-        let resultDictionary:Dictionary<String, String> = ["":""]
-        return resultDictionary
-    }
-    
-    func fail(error: AnyObject) {
-        
-    }
 }
