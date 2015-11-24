@@ -9,11 +9,17 @@
 import Foundation
 import UIKit
 
-class ProfileViewController: BasicViewController,UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class ProfileViewController: BasicViewController,UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var profileTableView: UITableView!
+    @IBOutlet weak var headImageView: UIImageView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileUserIDLabel: UILabel!
+    @IBOutlet weak var profileAppointLabel: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var starButton: UIButton!
     
-    @IBOutlet weak var artsCollectionView: UICollectionView!
+
     
     var artsImageArray: [String]!
     
@@ -23,14 +29,11 @@ class ProfileViewController: BasicViewController,UITableViewDataSource, UITableV
     
     
     override func viewDidLoad() {
-        self.title = "我的咔嚓"
+        self.navigationController?.navigationBar.hidden = true
         let leftButton = ViewWidgest.addLeftButton("backButtonImage", imageAfter: "backButtonImage")
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+        self.headImageView.addSubview(leftButton)
         leftButton.addTarget(self, action: "pushView", forControlEvents: UIControlEvents.TouchUpInside)
         
-        self.artsCollectionView.delegate = self
-        self.artsCollectionView.dataSource = self
-        self.artsCollectionView.backgroundColor = UIColor.clearColor()
         
         self.profileTableView.scrollEnabled = false
         self.profileTableView.delegate = self
@@ -82,29 +85,9 @@ class ProfileViewController: BasicViewController,UITableViewDataSource, UITableV
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         tableView.reloadData()
     }
-    //==================UICollectionViewDataSource====================================================//
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (self.artsImageArray?.count)!
-    }
     
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:ArtsCell = artsCollectionView.dequeueReusableCellWithReuseIdentifier("artsCell", forIndexPath: indexPath) as! ArtsCell
-        cell.albumIDLabel.text = "\(indexPath.section):\(indexPath.row)"
-        
-        cell.artsImageView.hnk_setImageFromURL(NSURL(string: self.artsImageArray[indexPath.row])!)
-        return cell
-    }
-    
-    //=================UICollectionViewDelegate=======================================================//
-    
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-    }
-    
-    func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
     }
 
     func pushView() {

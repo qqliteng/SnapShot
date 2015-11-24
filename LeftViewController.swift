@@ -34,6 +34,10 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         self.initLeftViewController()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.initLeftViewController()
+    }
+    
     override func viewDidLoad() {
         self.profileImage.image = UIImage(named: "profileImageDefault")
         self.initLeftViewController()
@@ -64,6 +68,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
             self.view.addSubview(self.loginButton!)
             
         } else {
+            self.loginButton?.removeFromSuperview()
             self.loginButton?.hidden = true
             self.loginButton?.frame = CGRect(x: -10, y: -10, width: 0, height: 0)
             self.profileImage.hidden = false
