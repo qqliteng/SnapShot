@@ -13,15 +13,16 @@ import UIKit
 var isLogin = false
 var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
-//主页上得各种高度的变量
-let TABLE_CELL_HEIGHT : Float = 100
-let SECTION_HEIGHT:Float = 24
-let SCROLL_HEIGHT:Float = 80
-let IMAGE_HEIGHT:Float = 400
-let IN_WINDOW_HEIGHT:Float = 250
-let TITLE_HEIGHT:Float = 44
-let PROFILE_CELL_HEIGHT: Float = 120
-let VALUE_CELL_HEIGHT: CGFloat = 140
+//各种高度的变量
+let TABLE_CELL_HEIGHT: CGFloat = 100
+let SECTION_HEIGHT: CGFloat = 24
+let SCROLL_HEIGHT: CGFloat = 80
+let IMAGE_HEIGHT: CGFloat = 400
+let IN_WINDOW_HEIGHT: CGFloat = 250
+let TITLE_HEIGHT: CGFloat = 44
+let SERVICE_CELL_HEIGHT: CGFloat = 120
+let VALUE_CELL_HEIGHT: CGFloat = 187
+let USER_INFO_CELL_HEIGHT: CGFloat = 35
 let CATA_CELL_HEIGHT: CGFloat = 200
 let CATA_DETAIL_CELL_HEIGHT: CGFloat = 100
 let FRONT_CELL_HEIGHT: CGFloat = 305
@@ -34,6 +35,9 @@ let TEXT_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, 
 let TEXT_COLOR_LIGHT_GREY:UIColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1)
 let NAVIGATION_BAR_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
 let SP_BLUE_COLOR:UIColor = UIColor(red: 0/255, green: 85/255, blue: 170/255, alpha: 1)
+let HEITI:String = "Heiti SC"
+let TITLE_FONT_SIZE:CGFloat = 20.0
+let CONTENT_FONT_SIZE:CGFloat = 12.0
 
 //网络参数
 let ROOT_URL = "http://111.13.47.169:8080"

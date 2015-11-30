@@ -63,7 +63,7 @@ class GroupDetailViewController: UIViewController, UITableViewDataSource, UITabl
                             titleArray: ["巫妖王","尤迪安","冰封王座"])
             let priceLabel = UILabel(frame: CGRect(x: 10, y: DETAIL_CELL_HEIGHT * 0.6 + 30, width: 80, height: 30))
             priceLabel.text = "￥350"
-            priceLabel.font = UIFont(name: "Heiti SC", size: 27)
+            priceLabel.font = UIFont(name: HEITI, size: 27)
             priceLabel.textColor = SP_BLUE_COLOR
             
             let appointButton = UIButton(frame: CGRect(x: SCREEN_WIDTH/2 + 45, y: DETAIL_CELL_HEIGHT * 0.6 + 25, width: 120, height: 40))
@@ -75,12 +75,12 @@ class GroupDetailViewController: UIViewController, UITableViewDataSource, UITabl
             let occupiedNum = 4
             occupiedLabel.text = "已有\(occupiedNum)个家庭报名"
             occupiedLabel.textColor = TEXT_COLOR_GREY
-            occupiedLabel.font = UIFont(name: "Heiti SC", size: 15)
+            occupiedLabel.font = UIFont(name: HEITI, size: 15)
             let vacancyLabel = UILabel(frame: CGRect(x: Int(SCREEN_WIDTH/2 + 40), y: Int(DETAIL_CELL_HEIGHT * 0.6 + 85), width: 150, height: 30))
             let vacancyNum = 1
             vacancyLabel.text = "剩余\(vacancyNum)个家庭名额"
             vacancyLabel.textColor = TEXT_COLOR_GREY
-            vacancyLabel.font = UIFont(name: "Heiti SC", size: 15)
+            vacancyLabel.font = UIFont(name: HEITI, size: 15)
             
             
             

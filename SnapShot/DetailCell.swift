@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class ProfileCell: UITableViewCell {
+class DetailCell: UITableViewCell {
     
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var userIDLabel: UILabel!
-    @IBOutlet weak var userDescriptionLabel: UILabel!
-    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var serviceCity: UILabel!
+    @IBOutlet weak var serviceCata: UILabel!
+    @IBOutlet weak var personIntro: UILabel!
+  
     
     override func awakeFromNib() {
         super.awakeFromNib()

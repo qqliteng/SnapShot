@@ -31,7 +31,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.priceSortButton = UIButton()
         self.distanceSortButton = UIButton()
         self.dateSortButton = UIButton()
-        ViewWidgest.navigatiobBarButtomButton([self.priceSortButton!,self.distanceSortButton!,self.dateSortButton!], titleArray: ["价格优先","距离优先","日期优先"], targetArrary: ["priceSortAction" , "distanceSortAction", "dateSortAction"], view: self.view)
+        ViewWidgest.navigatiobBarButtomButton([self.priceSortButton!,self.distanceSortButton!,self.dateSortButton!], titleArray: ["价格优先","距离优先","日期优先"], targetArrary: ["priceSortAction" , "distanceSortAction", "dateSortAction"], view: self.view, yPosition: 64)
     }
     
     override func viewDidLoad() {

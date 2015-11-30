@@ -41,11 +41,11 @@ class ViewWidgest{
         navgationViewController.popToRootViewControllerAnimated(true)
     }
     
-    static func navigatiobBarButtomButton(ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector], view:UIView) {
+    static func navigatiobBarButtomButton(ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector], view:UIView, yPosition: CGFloat) {
         
 //        navigationController!.navigationBar.frame = CGRectMake(0, 20, CGFloat(SCREEN_WIDTH), 83)
         
-        let buttonView = UIView(frame: CGRect(x: 0, y: 64, width: CGFloat(SCREEN_WIDTH), height: 40))
+        let buttonView = UIView(frame: CGRect(x: 0, y: yPosition, width: CGFloat(SCREEN_WIDTH), height: 40))
         buttonView.backgroundColor = UIColor.blackColor()
        
         

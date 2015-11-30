@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let titleShadow: NSShadow = NSShadow()
         titleShadow.shadowColor = UIColor(red: 218/255, green: 147/255, blue: 171/255, alpha: 1)
         titleShadow.shadowOffset = CGSizeMake(0, 0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Heiti SC", size: 20)!, NSShadowAttributeName:titleShadow]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: HEITI, size: TITLE_FONT_SIZE)!, NSShadowAttributeName:titleShadow]
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         return self.navigationController!
