@@ -1319,29 +1319,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNv-np-KQc">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="335" id="aS2-ff-dZ8"/>
-                                    <constraint firstAttribute="height" constant="45" id="y1C-vk-rJm"/>
-                                </constraints>
-                                <state key="normal" title="立即预约">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="aS2-ff-dZ8"/>
-                                        <exclude reference="y1C-vk-rJm"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="aS2-ff-dZ8"/>
-                                        <include reference="y1C-vk-rJm"/>
-                                    </mask>
-                                </variation>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="安琪胡桃夹子" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1qc-qM-bEx">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -1426,6 +1403,13 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-Ey-syH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="backButtonImage"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="48" width="15" height="25"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1443,32 +1427,26 @@
                             <constraint firstItem="TzX-d5-jSR" firstAttribute="leading" secondItem="Ubh-Wj-Kdf" secondAttribute="leadingMargin" constant="147" id="beL-xK-V3C"/>
                             <constraint firstItem="9dg-DO-fv1" firstAttribute="leading" secondItem="Ubh-Wj-Kdf" secondAttribute="leadingMargin" priority="999" constant="330" id="cep-TT-vxa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r3D-b8-8Ol" secondAttribute="trailing" constant="-10" id="jzf-6H-s6k"/>
-                            <constraint firstItem="Gbc-v9-zCW" firstAttribute="top" secondItem="zNv-np-KQc" secondAttribute="bottom" constant="7" id="nVv-dm-TtE"/>
                             <constraint firstItem="V7Y-CO-Q8I" firstAttribute="leading" secondItem="Ubh-Wj-Kdf" secondAttribute="leadingMargin" constant="-20" id="p0E-SK-1Gd"/>
                             <constraint firstItem="9dg-DO-fv1" firstAttribute="top" secondItem="bSS-dc-Cw1" secondAttribute="bottom" priority="999" constant="28" id="rog-jX-O0d"/>
-                            <constraint firstItem="zNv-np-KQc" firstAttribute="leading" secondItem="Ubh-Wj-Kdf" secondAttribute="leadingMargin" constant="20" id="tNn-eM-Iz9"/>
                             <constraint firstItem="SVP-Ol-7yA" firstAttribute="top" secondItem="1qc-qM-bEx" secondAttribute="bottom" constant="8" id="tR0-pJ-7zz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zNv-np-KQc" secondAttribute="trailing" constant="19" id="uX7-Md-f1e"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="V7Y-CO-Q8I"/>
                                 <exclude reference="TzX-d5-jSR"/>
-                                <exclude reference="zNv-np-KQc"/>
                                 <exclude reference="1qc-qM-bEx"/>
                                 <exclude reference="9dg-DO-fv1"/>
                                 <exclude reference="r3D-b8-8Ol"/>
                                 <exclude reference="SVP-Ol-7yA"/>
+                                <exclude reference="0r5-Ey-syH"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="nVv-dm-TtE"/>
                                 <exclude reference="cep-TT-vxa"/>
                                 <exclude reference="rog-jX-O0d"/>
                                 <exclude reference="QuG-qd-7CL"/>
                                 <exclude reference="Yvv-Vt-0G5"/>
                                 <exclude reference="jzf-6H-s6k"/>
-                                <exclude reference="tNn-eM-Iz9"/>
-                                <exclude reference="uX7-Md-f1e"/>
                                 <exclude reference="HR5-sZ-i5Y"/>
                                 <exclude reference="Qj7-Fu-Lnk"/>
                                 <exclude reference="Zz3-eb-eRg"/>
@@ -1487,21 +1465,18 @@
                             <mask key="subviews">
                                 <include reference="V7Y-CO-Q8I"/>
                                 <include reference="TzX-d5-jSR"/>
-                                <include reference="zNv-np-KQc"/>
                                 <include reference="1qc-qM-bEx"/>
                                 <include reference="9dg-DO-fv1"/>
                                 <include reference="r3D-b8-8Ol"/>
                                 <include reference="SVP-Ol-7yA"/>
+                                <include reference="0r5-Ey-syH"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="nVv-dm-TtE"/>
                                 <include reference="cep-TT-vxa"/>
                                 <include reference="rog-jX-O0d"/>
                                 <include reference="QuG-qd-7CL"/>
                                 <include reference="Yvv-Vt-0G5"/>
                                 <include reference="jzf-6H-s6k"/>
-                                <include reference="tNn-eM-Iz9"/>
-                                <include reference="uX7-Md-f1e"/>
                                 <include reference="HR5-sZ-i5Y"/>
                                 <include reference="Qj7-Fu-Lnk"/>
                                 <include reference="Zz3-eb-eRg"/>
@@ -1521,6 +1496,7 @@
                     <size key="freeformSize" width="414" height="736"/>
                     <connections>
                         <outlet property="headImageView" destination="V7Y-CO-Q8I" id="SZe-Od-1ej"/>
+                        <outlet property="leftBtn" destination="0r5-Ey-syH" id="QdO-hv-eVc"/>
                         <outlet property="profileAppointLabel" destination="SVP-Ol-7yA" id="N6o-ZP-vsD"/>
                         <outlet property="profileImageView" destination="TzX-d5-jSR" id="S6R-6H-Ua1"/>
                         <outlet property="profileUserIDLabel" destination="1qc-qM-bEx" id="rY9-zM-SeE"/>
@@ -1698,6 +1674,7 @@
     <resources>
         <image name="SMSButtonImage" width="201" height="57"/>
         <image name="arrowRightImage" width="15" height="26"/>
+        <image name="backButtonImage" width="19" height="33"/>
         <image name="cataIconImage" width="32" height="24"/>
         <image name="checkBoxImage" width="33" height="31"/>
         <image name="checkBoxSelectedImage" width="33" height="31"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020763241C0D803000750BCE /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020763231C0D803000750BCE /* CommentCell.xib */; };
+		020763261C0D80D000750BCE /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020763251C0D80D000750BCE /* CommentCell.swift */; };
 		021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021695501BD8C7CE006A022F /* LaunchScreen.storyboard */; };
 		021C1C201BF06CFD0064DC45 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C1C1F1BF06CFD0064DC45 /* BasicViewController.swift */; };
 		021C1C221BF08C170064DC45 /* CataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C1C211BF08C160064DC45 /* CataViewController.swift */; };
@@ -40,6 +42,8 @@
 		0284B2C21BCBA798007779A4 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284B2C11BCBA798007779A4 /* CardCell.swift */; };
 		0284B2C41BCBA7AD007779A4 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0284B2C31BCBA7AD007779A4 /* CardCell.xib */; };
 		0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */; };
+		028F209C1C0D3FA600AAAF68 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F209B1C0D3FA600AAAF68 /* ArtCell.swift */; };
+		028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028F209D1C0D3FBB00AAAF68 /* ArtCell.xib */; };
 		0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF41BFEB27A007E8435 /* BaseTask.swift */; };
 		0297AFF71BFEB2EE007E8435 /* RegisterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */; };
 		02BD41E41BF475560078451A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD41E31BF475560078451A /* GroupCell.swift */; };
@@ -78,6 +82,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020763231C0D803000750BCE /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		020763251C0D80D000750BCE /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		021695511BD8C7CE006A022F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		021C1C1F1BF06CFD0064DC45 /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		021C1C211BF08C160064DC45 /* CataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CataViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 		0284B2C11BCBA798007779A4 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		0284B2C31BCBA7AD007779A4 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardCell.xib; path = ../CardCell.xib; sourceTree = "<group>"; };
 		0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPNavigationBar.swift; sourceTree = "<group>"; };
+		028F209B1C0D3FA600AAAF68 /* ArtCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
+		028F209D1C0D3FBB00AAAF68 /* ArtCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtCell.xib; sourceTree = "<group>"; };
 		0297AFF41BFEB27A007E8435 /* BaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTask.swift; sourceTree = "<group>"; };
 		0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTask.swift; sourceTree = "<group>"; };
 		02BD41E31BF475560078451A /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
@@ -283,6 +291,10 @@
 				02BD41E51BF4788E0078451A /* GroupCell.xib */,
 				02F90BC61BFD763A00949D9B /* LowerCell.xib */,
 				02F90BC81BFD764B00949D9B /* LowerCell.swift */,
+				028F209B1C0D3FA600AAAF68 /* ArtCell.swift */,
+				028F209D1C0D3FBB00AAAF68 /* ArtCell.xib */,
+				020763231C0D803000750BCE /* CommentCell.xib */,
+				020763251C0D80D000750BCE /* CommentCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -432,6 +444,7 @@
 				0227D7591BEB562F00F7A704 /* CataCell.xib in Resources */,
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
 				02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */,
+				028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */,
 				02F96CB41BDA152100AA3D5E /* DetailCell.xib in Resources */,
 				024E862E1BE8B2CD00E44628 /* FrontCell.xib in Resources */,
 				021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */,
@@ -439,6 +452,7 @@
 				022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */,
 				02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */,
 				021C1C241BF08E330064DC45 /* CataDetailCell.xib in Resources */,
+				020763241C0D803000750BCE /* CommentCell.xib in Resources */,
 				0284B2C41BCBA7AD007779A4 /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,11 +552,13 @@
 				0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
 				026B978A1C0C3AF000C853F0 /* ArtsDisplayTableView.swift in Sources */,
+				020763261C0D80D000750BCE /* CommentCell.swift in Sources */,
 				02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */,
 				02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */,
 				0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */,
 				02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */,
 				027F162D1BC762C700D9B721 /* SnapShot.xcdatamodeld in Sources */,
+				028F209C1C0D3FA600AAAF68 /* ArtCell.swift in Sources */,
 				02C228AC1BDA061200BC83C3 /* ArtsCell.swift in Sources */,
 				02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */,
 				67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */,

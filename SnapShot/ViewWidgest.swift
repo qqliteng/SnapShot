@@ -41,7 +41,7 @@ class ViewWidgest{
         navgationViewController.popToRootViewControllerAnimated(true)
     }
     
-    static func navigatiobBarButtomButton(ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector], view:UIView, yPosition: CGFloat) {
+    static func navigatiobBarButtomButton(ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector], viewController:UIViewController, yPosition: CGFloat) {
         
 //        navigationController!.navigationBar.frame = CGRectMake(0, 20, CGFloat(SCREEN_WIDTH), 83)
         
@@ -57,7 +57,7 @@ class ViewWidgest{
             ButtonArray[i].setTitleColor(TEXT_COLOR_LIGHT_GREY, forState: UIControlState.Highlighted)
             ButtonArray[i].titleLabel?.font = UIFont.systemFontOfSize(14)
             ButtonArray[i].backgroundColor = UIColor.whiteColor()
-            ButtonArray[i].addTarget(self, action: targetArrary[i], forControlEvents: UIControlEvents.TouchUpInside)
+            ButtonArray[i].addTarget(viewController, action: targetArrary[i], forControlEvents: UIControlEvents.TouchUpInside)
             buttonView.addSubview(ButtonArray[i])
         }
         
@@ -69,7 +69,7 @@ class ViewWidgest{
             buttonView.addSubview(verticalShortLine)
         }
         
-         view.addSubview(buttonView)
+         viewController.view.addSubview(buttonView)
     }
     
     static func recoverNavigationBar(viewsArrary:[UIView], navigationController:UINavigationController) {
