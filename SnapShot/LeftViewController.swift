@@ -113,6 +113,8 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func couponButton(sender: AnyObject) {
         print("couponButton button is pressed!")
+        let couponViewController = CouponViewController()
+        self.navigationController?.pushViewController(couponViewController, animated: true)
     }
 
     @IBAction func logoutButton(sender: AnyObject) {
