@@ -60,6 +60,8 @@
 		02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC9BCB1C02F53400E67EAF /* LoginTask.swift */; };
 		676917B21C0DD86B00B73A1F /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676917B11C0DD86B00B73A1F /* CouponViewController.swift */; };
 		6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677154991C009C4300D3A35D /* ToolKit.swift */; };
+		678352F51C0F1D8900529B0F /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678352F41C0F1D8900529B0F /* CouponCell.swift */; };
+		678352F71C0F1DCE00529B0F /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678352F61C0F1DCE00529B0F /* CouponCell.xib */; };
 		67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */; };
 		67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF31BEA50020049BD54 /* RegisterViewController.swift */; };
 		B05B60A36145281EB59C405C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DFFBBF8D222EA135C2405F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -147,6 +149,8 @@
 		676917B11C0DD86B00B73A1F /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		677154981BFF55DC00D3A35D /* SPBridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPBridging-Header.h"; sourceTree = "<group>"; };
 		677154991C009C4300D3A35D /* ToolKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolKit.swift; sourceTree = "<group>"; };
+		678352F41C0F1D8900529B0F /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
+		678352F61C0F1DCE00529B0F /* CouponCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
 		67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewContoller.swift; sourceTree = "<group>"; };
 		67A06FF31BEA50020049BD54 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -298,6 +302,8 @@
 				028F209D1C0D3FBB00AAAF68 /* ArtCell.xib */,
 				020763231C0D803000750BCE /* CommentCell.xib */,
 				020763251C0D80D000750BCE /* CommentCell.swift */,
+				678352F41C0F1D8900529B0F /* CouponCell.swift */,
+				678352F61C0F1DCE00529B0F /* CouponCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */,
 				02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */,
 				021C1C241BF08E330064DC45 /* CataDetailCell.xib in Resources */,
+				678352F71C0F1DCE00529B0F /* CouponCell.xib in Resources */,
 				020763241C0D803000750BCE /* CommentCell.xib in Resources */,
 				0284B2C41BCBA7AD007779A4 /* CardCell.xib in Resources */,
 			);
@@ -569,6 +576,7 @@
 				025659351BFDAF3300057A72 /* UrlAssembler.swift in Sources */,
 				02715E061BCE59BA008A11D7 /* Constant.swift in Sources */,
 				0256593B1BFDB69D00057A72 /* Parameters.swift in Sources */,
+				678352F51C0F1D8900529B0F /* CouponCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

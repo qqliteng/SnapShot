@@ -11,10 +11,6 @@ import UIKit
 
 class BasicViewController: UIViewController {
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func viewDidLoad() {
         self.navigationController!.navigationBar.tintColor = NAVIGATION_BAR_COLOR_GREY
     }
