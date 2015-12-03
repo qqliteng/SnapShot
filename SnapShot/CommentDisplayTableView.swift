@@ -42,7 +42,7 @@ class CommentDisplayTableView: UITableView, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 70
+        return COMMENT_CELL_HEIGHT
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {

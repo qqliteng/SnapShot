@@ -98,7 +98,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func userProfileButton(sender: AnyObject) {
         print("serviceCataButton button is pressed!")
-        let profileViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("profileViewController") as! ProfileViewController
+        let photographerProfileViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("photographerViewController") as! PhotographerViewController
         self.navigationController?.pushViewController(profileViewController, animated: true)
     }
     

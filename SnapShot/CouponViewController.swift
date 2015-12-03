@@ -96,9 +96,9 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 220
+            return COUPON_HEADER_CELL_HEIGHT
         } else {
-            return 100
+            return COUPON_CELL_HEIGHT
         }
     }
     

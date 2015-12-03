@@ -31,6 +31,12 @@
 		026B978C1C0C3B0600C853F0 /* CommentDisplayTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026B978B1C0C3B0600C853F0 /* CommentDisplayTableView.swift */; };
 		02715E061BCE59BA008A11D7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02715E051BCE59BA008A11D7 /* Constant.swift */; };
 		02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02715E071BCE5A77008A11D7 /* SlideScrollView.swift */; };
+		027162A21C100F0900A8F22B /* PhotographerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027162A11C100F0900A8F22B /* PhotographerViewController.swift */; };
+		027162A41C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027162A31C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift */; };
+		027162A61C10173000A8F22B /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027162A51C10173000A8F22B /* CameraCell.swift */; };
+		027162A81C10177200A8F22B /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027162A71C10177200A8F22B /* ServiceCell.swift */; };
+		027162AA1C101A6C00A8F22B /* CameraCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027162A91C101A6C00A8F22B /* CameraCell.xib */; };
+		027162AC1C101A7700A8F22B /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027162AB1C101A7700A8F22B /* ServiceCell.xib */; };
 		027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F16241BC762C700D9B721 /* AppDelegate.swift */; };
 		027F16271BC762C700D9B721 /* FrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F16261BC762C700D9B721 /* FrontViewController.swift */; };
 		027F162A1BC762C700D9B721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027F16281BC762C700D9B721 /* Main.storyboard */; };
@@ -110,6 +116,12 @@
 		026B978B1C0C3B0600C853F0 /* CommentDisplayTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentDisplayTableView.swift; sourceTree = "<group>"; };
 		02715E051BCE59BA008A11D7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		02715E071BCE5A77008A11D7 /* SlideScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideScrollView.swift; sourceTree = "<group>"; };
+		027162A11C100F0900A8F22B /* PhotographerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerViewController.swift; sourceTree = "<group>"; };
+		027162A31C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerProfileDetailTableView.swift; sourceTree = "<group>"; };
+		027162A51C10173000A8F22B /* CameraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
+		027162A71C10177200A8F22B /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		027162A91C101A6C00A8F22B /* CameraCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraCell.xib; sourceTree = "<group>"; };
+		027162AB1C101A7700A8F22B /* ServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
 		027F16211BC762C700D9B721 /* SnapShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027F16241BC762C700D9B721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027F16261BC762C700D9B721 /* FrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +214,7 @@
 				0256646C1BC8A02B00A04D21 /* LeftViewController.swift */,
 				024C7D3D1BD4EE0A002666FB /* SPNavigationViewController.swift */,
 				02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */,
+				027162A11C100F0900A8F22B /* PhotographerViewController.swift */,
 				0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */,
 				023994DF1BE34A5E0010122F /* SearchViewController.swift */,
 				67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */,
@@ -213,6 +226,7 @@
 				026B97871C0C3AA400C853F0 /* ProfileDetailTableView.swift */,
 				026B97891C0C3AF000C853F0 /* ArtsDisplayTableView.swift */,
 				026B978B1C0C3B0600C853F0 /* CommentDisplayTableView.swift */,
+				027162A31C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift */,
 				676917B11C0DD86B00B73A1F /* CouponViewController.swift */,
 			);
 			name = Controllers;
@@ -304,6 +318,10 @@
 				020763251C0D80D000750BCE /* CommentCell.swift */,
 				678352F41C0F1D8900529B0F /* CouponCell.swift */,
 				678352F61C0F1DCE00529B0F /* CouponCell.xib */,
+				027162A51C10173000A8F22B /* CameraCell.swift */,
+				027162A91C101A6C00A8F22B /* CameraCell.xib */,
+				027162A71C10177200A8F22B /* ServiceCell.swift */,
+				027162AB1C101A7700A8F22B /* ServiceCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -451,6 +469,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0227D7591BEB562F00F7A704 /* CataCell.xib in Resources */,
+				027162AC1C101A7700A8F22B /* ServiceCell.xib in Resources */,
+				027162AA1C101A6C00A8F22B /* CameraCell.xib in Resources */,
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
 				02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */,
 				028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */,
@@ -548,6 +568,7 @@
 				02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */,
 				0227D75B1BEB588900F7A704 /* CataCell.swift in Sources */,
 				02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */,
+				027162A81C10177200A8F22B /* ServiceCell.swift in Sources */,
 				6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */,
 				02817FE61BDA16FD00166DC2 /* DetailCell.swift in Sources */,
 				024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */,
@@ -556,10 +577,12 @@
 				0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */,
 				025659371BFDAF6A00057A72 /* HttpControl.swift in Sources */,
 				67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */,
+				027162A61C10173000A8F22B /* CameraCell.swift in Sources */,
 				02BD41E41BF475560078451A /* GroupCell.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
 				0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */,
+				027162A21C100F0900A8F22B /* PhotographerViewController.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
 				026B978A1C0C3AF000C853F0 /* ArtsDisplayTableView.swift in Sources */,
 				020763261C0D80D000750BCE /* CommentCell.swift in Sources */,
@@ -573,6 +596,7 @@
 				02C228AC1BDA061200BC83C3 /* ArtsCell.swift in Sources */,
 				02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */,
 				67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */,
+				027162A41C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift in Sources */,
 				025659351BFDAF3300057A72 /* UrlAssembler.swift in Sources */,
 				02715E061BCE59BA008A11D7 /* Constant.swift in Sources */,
 				0256593B1BFDB69D00057A72 /* Parameters.swift in Sources */,
@@ -718,7 +742,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guo Ye (89439ERF39)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SnapShot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -739,7 +763,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guo Ye (89439ERF39)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SnapShot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
