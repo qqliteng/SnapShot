@@ -50,7 +50,7 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
             couponLabel.font = UIFont(name: HEITI, size: 25)
             
             
-            let checkDetailLabel = UILabel(frame: CGRect(x: 20, y: 260, width: 80, height: 40))
+            let checkDetailLabel = UILabel(frame: CGRect(x: 20, y: 200, width: 80, height: 40))
             checkDetailLabel.text = "查看详情"
             checkDetailLabel.textColor = TEXT_COLOR_GREY
             checkDetailLabel.tintColor = TEXT_COLOR_GREY

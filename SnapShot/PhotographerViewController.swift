@@ -23,7 +23,7 @@ class PhotographerViewController: BasicViewController {
     var profileBtn: UIButton = UIButton()
     var artsDisplayBtn: UIButton = UIButton()
     var commentDisplayBtn: UIButton = UIButton()
-    var profileDetailTableView: ProfileDetailTableView?
+    var photographerDetailTableView: PhotographerDetailTableView?
     var artsDisplayTableView: ArtsDisplayTableView?
     var commentDisplayTableVeiw: CommentDisplayTableView?
     var appointButton: UIButton = UIButton(frame: CGRect(x: 20, y: SCREEN_HEIGHT - 45, width: SCREEN_WIDTH - 40, height: 40))
@@ -43,14 +43,14 @@ class PhotographerViewController: BasicViewController {
         self.appointButton.setTitle("立即预约", forState: .Normal)
         self.appointButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         
-        let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: 500)
+        let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: 800)
         
-        self.photographerTableView = photo (frame: tableRect, style: UITableViewStyle.Grouped)
+        self.photographerDetailTableView = PhotographerDetailTableView(frame: tableRect, style: UITableViewStyle.Grouped)
         self.artsDisplayTableView = ArtsDisplayTableView(frame: tableRect, style: UITableViewStyle.Grouped, numberOfSection: 5)
         self.commentDisplayTableVeiw = CommentDisplayTableView(frame: tableRect, style: UITableViewStyle.Grouped, numberOfSection: 1)
         
         if self.profileBtn.selected == true {
-            self.view.addSubview(self.profileDetailTableView!)
+            self.view.addSubview(self.photographerDetailTableView!)
             self.view.addSubview(self.appointButton)
         }
         
@@ -80,7 +80,7 @@ class PhotographerViewController: BasicViewController {
             self.commentDisplayBtn.selected = false
             self.artsDisplayTableView?.removeFromSuperview()
             self.commentDisplayTableVeiw?.removeFromSuperview()
-            self.view.addSubview(self.profileDetailTableView!)
+            self.view.addSubview(self.photographerDetailTableView!)
             self.appointButton.removeFromSuperview()
             self.view.addSubview(self.appointButton)
         }
@@ -91,7 +91,7 @@ class PhotographerViewController: BasicViewController {
             self.artsDisplayBtn.selected = true
             self.profileBtn.selected = false
             self.commentDisplayBtn.selected = false
-            self.profileDetailTableView?.removeFromSuperview()
+            self.photographerDetailTableView?.removeFromSuperview()
             self.commentDisplayTableVeiw?.removeFromSuperview()
             self.view.addSubview(self.artsDisplayTableView!)
             self.appointButton.removeFromSuperview()
@@ -103,7 +103,7 @@ class PhotographerViewController: BasicViewController {
             self.commentDisplayBtn.selected = true
             self.artsDisplayBtn.selected = false
             self.profileBtn.selected = false
-            self.profileDetailTableView?.removeFromSuperview()
+            self.photographerDetailTableView?.removeFromSuperview()
             self.artsDisplayTableView?.removeFromSuperview()
             self.view.addSubview(self.commentDisplayTableVeiw!)
             self.appointButton.removeFromSuperview()

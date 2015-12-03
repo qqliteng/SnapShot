@@ -1332,10 +1332,10 @@
             </objects>
             <point key="canvasLocation" x="-3" y="1151.25"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Photographer View Controller-->
         <scene sceneID="qwd-jy-czF">
             <objects>
-                <viewController storyboardIdentifier="profileViewController" id="ZNK-uW-3CR" customClass="ProfileViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="photographerViewController" id="ZNK-uW-3CR" customClass="PhotographerViewController" customModule="SnapShot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bSS-dc-Cw1"/>
                         <viewControllerLayoutGuide type="bottom" id="Gbc-v9-zCW"/>

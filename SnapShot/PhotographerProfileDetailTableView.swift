@@ -21,7 +21,7 @@ class PhotographerDetailTableView: UITableView, UITableViewDataSource, UITableVi
         let nibCameraCell = UINib(nibName: "CameraCell", bundle: nil)
         let nibServiceCell = UINib(nibName: "ServiceCell", bundle: nil)
         self.registerNib(nibValueCell, forCellReuseIdentifier: "valueCell")
-        self.registerNib(nibServiceCell, forCellReuseIdentifier: "cameraCell")
+        self.registerNib(nibCameraCell, forCellReuseIdentifier: "cameraCell")
         self.registerNib(nibServiceCell, forCellReuseIdentifier: "serviceCell")
     }
     
@@ -39,12 +39,12 @@ class PhotographerDetailTableView: UITableView, UITableViewDataSource, UITableVi
             return cell!
             
         } else if indexPath.section == 1{
-            let detailCell: DetailCell?
+            let detailCell: ServiceCell?
             detailCell = self.dequeueReusableCellWithIdentifier("serviceCell") as? ServiceCell
             return detailCell!
         } else if indexPath.section == 2 {
             let cameraCell: CameraCell?
-            CameraCell = self.dequeueReusableCellWithIdentifier("cameraCell") as? CameraCell
+            cameraCell = self.dequeueReusableCellWithIdentifier("cameraCell") as? CameraCell
             return cameraCell!
         } else if indexPath.section == 3{
             cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "userInfoCell")
@@ -69,7 +69,7 @@ class PhotographerDetailTableView: UITableView, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 2 {
+        if section == 3 {
             return 3
         } else {
             return 1
@@ -87,9 +87,9 @@ class PhotographerDetailTableView: UITableView, UITableViewDataSource, UITableVi
         } else if indexPath.section == 1{
             return SERVICE_CELL_HEIGHT
         } else if indexPath.section == 2{
-            return USER_INFO_CELL_HEIGHT
-        } else if indexPath.section == 3{
             return CAMERA_CELL_HEIGHT
+        } else if indexPath.section == 3{
+            return USER_INFO_CELL_HEIGHT
         } else {
             return 200
         }

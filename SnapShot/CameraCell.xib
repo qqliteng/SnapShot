@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pfO-hp-iVo" id="p8n-QU-KgU">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="器材详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-qP-rXH">
@@ -67,7 +67,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraImageDefault1" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-CS-ehh">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cameraImageDefault1" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-CS-ehh">
                         <rect key="frame" x="15" y="105" width="60" height="60"/>
                         <animations/>
                         <constraints>
@@ -76,7 +76,7 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraImageDefault2" translatesAutoresizingMaskIntoConstraints="NO" id="5FA-du-Gre">
-                        <rect key="frame" x="83" y="105" width="60" height="60"/>
+                        <rect key="frame" x="83" y="102" width="60" height="60"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="UAv-kr-Ixl"/>
@@ -84,7 +84,7 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cameraImageDefault3" translatesAutoresizingMaskIntoConstraints="NO" id="E2G-t6-zUI">
-                        <rect key="frame" x="151" y="105" width="60" height="60"/>
+                        <rect key="frame" x="151" y="101" width="60" height="60"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="JSj-ri-auL"/>
@@ -94,14 +94,14 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="5FA-du-Gre" firstAttribute="top" secondItem="Cva-26-yy3" secondAttribute="bottom" constant="8" id="4Ly-ns-7Go"/>
+                    <constraint firstItem="5FA-du-Gre" firstAttribute="top" secondItem="Cva-26-yy3" secondAttribute="bottom" constant="6" id="4Ly-ns-7Go"/>
                     <constraint firstItem="MmE-MM-qO1" firstAttribute="leading" secondItem="p8n-QU-KgU" secondAttribute="leadingMargin" constant="7" id="9si-37-37l"/>
                     <constraint firstAttribute="trailingMargin" secondItem="GC0-oY-Ni2" secondAttribute="trailing" constant="15" id="DIu-Ub-FUS"/>
                     <constraint firstItem="Nq3-hv-sdv" firstAttribute="leading" secondItem="p8n-QU-KgU" secondAttribute="leadingMargin" constant="7" id="DVF-4Q-JS2"/>
                     <constraint firstItem="GC0-oY-Ni2" firstAttribute="leading" secondItem="rhs-B8-EDC" secondAttribute="trailing" constant="12" id="Emd-xv-jt3"/>
                     <constraint firstItem="N9P-CS-ehh" firstAttribute="leading" secondItem="p8n-QU-KgU" secondAttribute="leadingMargin" constant="7" id="G3U-KO-eoc"/>
                     <constraint firstItem="m5p-qP-rXH" firstAttribute="top" secondItem="p8n-QU-KgU" secondAttribute="topMargin" id="GDQ-6E-uBF"/>
-                    <constraint firstItem="E2G-t6-zUI" firstAttribute="top" secondItem="rhs-B8-EDC" secondAttribute="bottom" constant="39" id="HJ2-eG-c1p"/>
+                    <constraint firstItem="E2G-t6-zUI" firstAttribute="top" secondItem="rhs-B8-EDC" secondAttribute="bottom" constant="35" id="HJ2-eG-c1p"/>
                     <constraint firstItem="Nq3-hv-sdv" firstAttribute="top" secondItem="MmE-MM-qO1" secondAttribute="bottom" constant="8" id="IWs-XL-zra"/>
                     <constraint firstItem="rhs-B8-EDC" firstAttribute="top" secondItem="MmE-MM-qO1" secondAttribute="bottom" constant="8" id="JvM-eo-LxN"/>
                     <constraint firstItem="lrH-Wb-JeM" firstAttribute="leading" secondItem="p8n-QU-KgU" secondAttribute="leadingMargin" constant="7" id="Kaw-f3-6ry"/>
@@ -123,8 +123,8 @@
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="VDU-dD-rIa"/>
                         <exclude reference="DIu-Ub-FUS"/>
+                        <exclude reference="VDU-dD-rIa"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
