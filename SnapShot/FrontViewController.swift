@@ -108,7 +108,15 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     private func doReturnCell(row:Int) -> UITableViewCell {
         
         let cell = mainTableView.dequeueReusableCellWithIdentifier("frontCell") as! FrontCell
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: "pushToPhotograher")
+        cell.userIDLabel.userInteractionEnabled = true
+        cell.addGestureRecognizer(tapRecognizer)
         return cell
+    }
+    
+    func pushToPhotograher() {
+        let profileviewController =  UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("profileViewController") as! ProfileViewController
+        self.navigationController?.pushViewController(profileviewController, animated: true)
     }
     
     

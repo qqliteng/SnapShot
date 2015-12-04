@@ -11,12 +11,14 @@ import UIKit
 
 class PhotographerDetailTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
+    var naviController: UINavigationController?
+    
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
-        
+        self.naviController = UINavigationController()
         self.dataSource = self
         self.delegate = self
-        self.contentSize = CGSize(width: SCREEN_WIDTH, height: 600)
+        self.contentSize = CGSize(width: SCREEN_WIDTH, height: 650)
         let nibValueCell = UINib(nibName: "ValueCell", bundle: nil)
         let nibCameraCell = UINib(nibName: "CameraCell", bundle: nil)
         let nibServiceCell = UINib(nibName: "ServiceCell", bundle: nil)
@@ -52,7 +54,7 @@ class PhotographerDetailTableView: UITableView, UITableViewDataSource, UITableVi
             cell?.detailTextLabel?.font = UIFont(name: HEITI, size: CONTENT_FONT_SIZE)
             cell?.detailTextLabel?.textColor = TEXT_COLOR_GREY
             if indexPath.row == 0 {
-                cell?.textLabel?.text = "我的预约"
+                cell?.textLabel?.text = "我的订单"
                 cell?.detailTextLabel?.text = "20"
             } else if indexPath.row == 1{
                 cell?.textLabel?.text = "我的收藏"
@@ -105,10 +107,17 @@ class PhotographerDetailTableView: UITableView, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if section == 2 {
-            return 100
+        if section == 3 {
+            return 35
         } else {
             return 0
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 3 || indexPath.row == 0 {
+            let myOrderViewController = MyOrderViewController()
+            self.naviController?.pushViewController(myOrderViewController, animated: true)
         }
     }
 }

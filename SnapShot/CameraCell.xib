@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pfO-hp-iVo" id="p8n-QU-KgU">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="器材详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-qP-rXH">
@@ -67,7 +67,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cameraImageDefault1" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-CS-ehh">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraImageDefault1" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-CS-ehh">
                         <rect key="frame" x="15" y="105" width="60" height="60"/>
                         <animations/>
                         <constraints>
@@ -76,15 +76,15 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraImageDefault2" translatesAutoresizingMaskIntoConstraints="NO" id="5FA-du-Gre">
-                        <rect key="frame" x="83" y="102" width="60" height="60"/>
+                        <rect key="frame" x="83" y="105" width="60" height="60"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="UAv-kr-Ixl"/>
                             <constraint firstAttribute="height" constant="60" id="yKA-j0-JB9"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cameraImageDefault3" translatesAutoresizingMaskIntoConstraints="NO" id="E2G-t6-zUI">
-                        <rect key="frame" x="151" y="101" width="60" height="60"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraImageDefault3" translatesAutoresizingMaskIntoConstraints="NO" id="E2G-t6-zUI">
+                        <rect key="frame" x="151" y="105" width="60" height="60"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="JSj-ri-auL"/>
@@ -106,6 +106,7 @@
                     <constraint firstItem="rhs-B8-EDC" firstAttribute="top" secondItem="MmE-MM-qO1" secondAttribute="bottom" constant="8" id="JvM-eo-LxN"/>
                     <constraint firstItem="lrH-Wb-JeM" firstAttribute="leading" secondItem="p8n-QU-KgU" secondAttribute="leadingMargin" constant="7" id="Kaw-f3-6ry"/>
                     <constraint firstItem="N9P-CS-ehh" firstAttribute="top" secondItem="lrH-Wb-JeM" secondAttribute="bottom" constant="8" id="NZn-06-7mC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="E2G-t6-zUI" secondAttribute="bottom" constant="2" id="THf-yC-itZ"/>
                     <constraint firstItem="E2G-t6-zUI" firstAttribute="leading" secondItem="5FA-du-Gre" secondAttribute="trailing" constant="8" id="UKp-a6-0p3"/>
                     <constraint firstItem="GC0-oY-Ni2" firstAttribute="leading" secondItem="rhs-B8-EDC" secondAttribute="trailing" constant="8" id="VDU-dD-rIa"/>
                     <constraint firstItem="MmE-MM-qO1" firstAttribute="top" secondItem="m5p-qP-rXH" secondAttribute="bottom" constant="6" id="W2h-3X-4je"/>
@@ -114,7 +115,9 @@
                     <constraint firstAttribute="bottomMargin" secondItem="N9P-CS-ehh" secondAttribute="bottom" constant="2" id="cNo-fk-7wN"/>
                     <constraint firstItem="xTS-gJ-gp9" firstAttribute="leading" secondItem="Nq3-hv-sdv" secondAttribute="trailing" constant="8" id="ccg-mO-IAM"/>
                     <constraint firstItem="5FA-du-Gre" firstAttribute="leading" secondItem="N9P-CS-ehh" secondAttribute="trailing" constant="8" id="e6v-QZ-LzZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="N9P-CS-ehh" secondAttribute="bottom" constant="2" id="fb4-Dd-70u"/>
                     <constraint firstItem="xTS-gJ-gp9" firstAttribute="top" secondItem="MmE-MM-qO1" secondAttribute="bottom" constant="8" id="ffA-al-j6e"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5FA-du-Gre" secondAttribute="bottom" constant="2" id="h1b-Km-fNv"/>
                     <constraint firstItem="m5p-qP-rXH" firstAttribute="leading" secondItem="p8n-QU-KgU" secondAttribute="leadingMargin" constant="7" id="hTK-RU-pib"/>
                     <constraint firstAttribute="trailingMargin" secondItem="GC0-oY-Ni2" secondAttribute="trailing" constant="7" id="pbg-G3-N5l"/>
                     <constraint firstItem="GC0-oY-Ni2" firstAttribute="top" secondItem="MmE-MM-qO1" secondAttribute="bottom" constant="12" id="siV-p8-eah"/>
@@ -123,6 +126,9 @@
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="NZn-06-7mC"/>
+                        <exclude reference="4Ly-ns-7Go"/>
+                        <exclude reference="HJ2-eG-c1p"/>
                         <exclude reference="DIu-Ub-FUS"/>
                         <exclude reference="VDU-dD-rIa"/>
                     </mask>

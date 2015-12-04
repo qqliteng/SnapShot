@@ -16,6 +16,7 @@ class ProfileViewController: BasicViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileUserIDLabel: UILabel!
     @IBOutlet weak var profileAppointLabel: UILabel!
+    @IBOutlet weak var profileMarkLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var leftBtn: UIButton!
@@ -43,7 +44,7 @@ class ProfileViewController: BasicViewController {
         self.appointButton.setTitle("立即预约", forState: .Normal)
         self.appointButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         
-        let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: 500)
+        let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 260)
         
         self.profileDetailTableView = ProfileDetailTableView(frame: tableRect, style: UITableViewStyle.Grouped)
         self.artsDisplayTableView = ArtsDisplayTableView(frame: tableRect, style: UITableViewStyle.Grouped, numberOfSection: 5)
@@ -53,10 +54,6 @@ class ProfileViewController: BasicViewController {
             self.view.addSubview(self.profileDetailTableView!)
             self.view.addSubview(self.appointButton)
         }
-        
-       
-        
-        
     }
     
     
